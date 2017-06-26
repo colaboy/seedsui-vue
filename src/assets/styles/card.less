@@ -1,0 +1,57 @@
+/*----------------card.less(start)--------------*/
+.card{
+	display: block;
+    position:relative;
+    margin:@px8;
+    box-sizing:border-box;
+
+    background-color:white;
+    label{
+	    line-height: @px24;
+	}
+}
+/*按钮操作区*/
+.card-handler{
+	display: -webkit-box;
+	-webkit-box-align:center;
+
+	border-style:solid;
+	border-width:@px1 0 0 0;
+	width:100%;
+	height: @px40;
+
+	border-color:@dpborder;
+
+	>a{
+		display: -webkit-box;
+		-webkit-box-align:center;
+		-webkit-box-pack:center;
+		-webkit-box-flex:1;
+
+		height:@px24;
+		box-sizing:border-box;
+		border-style:solid;
+		border-width:0;
+
+		color:@placeholder;
+		border-color:@dpborder;
+	}
+
+	&.card-handler-bordered>a:not(:last-child){
+		border-width:0 @px1 0 0;
+	}
+
+	&[data-col="2"]>a{
+		width:50%;
+	}
+	&[data-col="3"]>a{
+		width:34%;
+	}
+	&[data-col="3"]>a:nth-child(2){
+		width:32%;
+	}
+	&[data-col="4"]>a{
+		width:25%;
+	}
+}
+/*----------------card.less(end)--------------*/

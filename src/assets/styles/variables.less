@@ -1,0 +1,165 @@
+/*基础*/
+@px-scale:1;
+@px1:1px * @px-scale;
+@px2:2px * @px-scale;
+@px3:3px * @px-scale;
+@px4:4px * @px-scale;
+@px5:5px * @px-scale;
+@px6:6px * @px-scale;
+@px7:7px * @px-scale;
+@px8:8px * @px-scale;
+@px9:9px * @px-scale;
+@px10:10px * @px-scale;
+@px11:11px * @px-scale;
+@px12:12px * @px-scale;
+@px13:13px * @px-scale;
+@px14:14px * @px-scale;
+@px15:15px * @px-scale;
+@px16:16px * @px-scale;
+@px17:17px * @px-scale;
+@px18:18px * @px-scale;
+@px20:20px * @px-scale;
+@px22:22px * @px-scale;
+@px24:24px * @px-scale;
+@px25:25px * @px-scale;
+@px26:26px * @px-scale;
+@px28:28px * @px-scale;
+@px30:30px * @px-scale;
+@px31:31px * @px-scale;
+@px32:32px * @px-scale;
+@px34:34px * @px-scale;
+@px35:35px * @px-scale;
+@px36:36px * @px-scale;
+@px40:40px * @px-scale;
+@px41:41px * @px-scale;
+@px42:42px * @px-scale;
+@px43:43px * @px-scale;
+@px44:44px * @px-scale;
+@px45:45px * @px-scale;
+@px46:46px * @px-scale;
+@px48:48px * @px-scale;
+@px50:50px * @px-scale;
+@px52:52px * @px-scale;
+@px54:54px * @px-scale;
+@px56:56px * @px-scale;
+@px60:60px * @px-scale;
+@px61:61px * @px-scale;
+@px62:62px * @px-scale;
+@px70:70px * @px-scale;
+@px74:74px * @px-scale;
+@px80:80px * @px-scale;
+@px85:85px * @px-scale;
+@px86:86px * @px-scale;
+@px90:90px * @px-scale;
+@px94:94px * @px-scale;
+@px97:97px * @px-scale;
+@px100:100px * @px-scale;
+@px120:120px * @px-scale;
+@px150:150px * @px-scale;
+@px170:170px * @px-scale;
+@px200:200px * @px-scale;
+@px215:215px * @px-scale;
+@px250:250px * @px-scale;
+@px264:264px * @px-scale;
+@px270:270px * @px-scale;
+@px300:300px * @px-scale;
+@px750:750px * @px-scale;
+@px960:960px * @px-scale;
+@px1122:1122px * @px-scale;
+@px1136:1136px * @px-scale;
+
+@font-size-L:16px * @px-scale;
+@font-size-M:14px * @px-scale;
+@font-size-S:12px * @px-scale;
+@font-family:Arial,"Microsoft Yahei";
+@body-bg:#f0f0f0;
+@body-color:#333;
+
+@primary-bg:#20aeff;
+@primary-bg-active:lighten(@primary-bg, 20%);
+@primary-color:white;
+@primary-color-active:lighten(@primary-color, 10%);
+
+@mask-bg:rgba(0,0,0,.4);
+
+@sub-color:#9e9e9e;
+@placeholder:#ccc;
+@link:@primary-bg;
+@link-active:@primary-bg-active;
+@border:#d1d1d1;
+@dpborder:#e5e5e5;
+
+/*常用颜色*/
+@disable-bg:#d1d1d1;
+@submit-bg:#68c75f;
+@cancel-bg:#F86868;
+@success-bg:#4DDB63;
+@info-bg:#5bc0de;
+@warn-bg:#f4984e;
+
+@submit-bg-active:lighten(@submit-bg,20%);
+@cancel-bg-active:lighten(@cancel-bg,20%);
+@success-bg-active:lighten(@success-bg,20%);
+@info-bg-active:lighten(@info-bg,20%);
+@warn-bg-active:lighten(@warn-bg,20%);
+
+@tip-bg:#ff5656;
+@tip-color:white;
+
+@random1-bg:#53c6fd;
+@random2-bg:#ffae02;
+@random3-bg:#3ae3ea;
+@random4-bg:#ff6f36;
+@random5-bg:#cf7af3;
+@random6-bg:#4cd32e;
+@random7-bg:#4587f7;
+@random8-bg:#00c2eb;
+@random9-bg:#ff618f;
+@random10-bg:#21d9a1;
+
+/*控件*/
+@aside-bg:@body-bg;
+
+@input-bg:white;
+
+@bar-status-bg:#f8f8f8;
+@bar-status-color:#aaa;
+
+@bar-bg:#f9f9f9;
+@bar-bg-active:#f9f9f9;
+@bar-border:@border;
+@bar-border-active:@primary-bg;
+@bar-button:@primary-bg;
+@bar-button-active:transparentize(@bar-button,0.5);
+@bar-color:#333;
+@bar-color-active:@primary-bg;
+
+@bar-reverse-bg:@primary-bg;
+@bar-reverse-bg-active:@primary-bg;
+@bar-reverse-border:@primary-bg;
+@bar-reverse-border-active:white;
+@bar-reverse-button:white;
+@bar-reverse-button-active:transparentize(@bar-reverse-button,0.5);
+@bar-reverse-color:white;
+@bar-reverse-color-active:white;
+
+@button-bg:white;
+@button-color:@body-color;
+@button-bg-active:#f4f4f4;
+@button-border:@dpborder;
+@button-disable-bg:#e1e1e1;
+@button-disable-color:#adadad;
+
+@button-tip-bg:rgba(0, 0, 0, .15);
+
+@prompt-bg:rgba(0,0,0,.6);
+@toast-bg:rgba(0,0,0,.6);
+
+@photo-bg:#ddd;
+@photo-color:@placeholder;
+
+@calendar-active-color:@primary-color;
+@calendar-active-border:@primary-bg;
+@calendar-active-bg:@primary-bg;
+
+@progress-bg:#f2f2f2;

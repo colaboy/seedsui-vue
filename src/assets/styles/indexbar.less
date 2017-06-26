@@ -1,0 +1,51 @@
+/*---------------indexbar.less(start)---------------*/
+.indexbox,.indexlist{
+    position:relative;
+    height:100%;
+}
+/*列表*/
+.indexlist{
+    overflow:auto;
+}
+/*Bar*/
+.indexbar{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    font-size:@px12;
+    font-weight:bold;
+    a{
+        display:block;
+        height:3.8%;
+        width:@px24;
+        text-align:center;
+        color:@border;
+    }
+    &.active a{
+        color:@body-color;
+    }
+}
+/*Tooltip*/
+.indexbar-tooltip{
+    display:none;
+    position: absolute;
+    width: @px80;
+    height: @px80;
+    left: 50%;
+    top: 50%;
+    margin-left: -@px40;
+    margin-top: -@px40;
+    border-radius: @px40;
+    text-align: center;
+    line-height: @px80;
+    font-size: @px35;
+    color: #fff;
+    -webkit-transition: .2s;
+
+    background-color:@mask-bg;
+}
+.indexbar.active+.indexbar-tooltip{
+    display:block;
+}
+/*---------------indexbar.less(end)---------------*/

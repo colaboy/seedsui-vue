@@ -1,0 +1,172 @@
+/*--------------------badge.less(start)----------------------*/
+.badge,.tip,.close,.dot,.tagline{
+	position:relative;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	overflow: hidden;
+    text-overflow: ellipsis;
+	font-size:@font-size-S;
+}
+/*徽章*/
+.badge{
+	padding:0 @px4;
+	height:@px20;
+	line-height:@px20;
+	text-align:center;
+	border-radius:@px20;
+	min-width:@px24;
+
+	color:@tip-color;
+	background-color:@tip-bg;
+}
+/*圆形徽章*/
+.tip{
+	width:@px24;
+	height:@px24;
+	line-height:@px24;
+	border-radius:100%;
+
+	color:@tip-color;
+	background-color:@tip-bg;
+}
+/*关闭*/
+.close{
+	width:@px24;
+	height:@px24;
+	border-radius:100%;
+
+	display:-webkit-inline-box;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+
+	/*图片*/
+	background-size:cover;
+	border-radius: 100%;
+
+	/*文字图标*/
+	color:white;
+	background-color: rgba(0,0,0,.7);
+
+	i,.icon{
+		display:block;
+	}
+}
+/*小点点*/
+.dot{
+    height:@px5;
+    width:@px5;
+    border-radius: 100%;
+
+    background-color:@primary-bg;
+}
+/*小竖条*/
+.peg {
+    display: inline-block;
+    width: @px4;
+    height: @px16;
+    background-color: @primary-bg;
+}
+/*标签贴*/
+.sticker{
+	position:absolute;
+	width:0px;
+	height:0px;
+	border-width:0;
+	border-style:solid;
+
+	color:@tip-color;
+	border-color:@tip-bg;
+	span{
+		position:absolute;
+		font-size:@font-size-S;
+		padding:0 @px2;
+	}
+	&.top,&.top span{
+		top:0;
+	}
+	&.top{
+		border-top-width:@px32;
+	}
+	&.top span{
+		min-width: @px30;
+		margin-top:-@px30;
+	}
+	&.left,&.left span{
+		left:0;
+	}
+	&.left{
+		border-right-width:@px56;
+		border-right-color:transparent;
+	}
+	&.right,&.right span{
+		right:0;
+		text-align: right;
+	}
+	&.right{
+		border-left-width:@px56;
+		border-left-color:transparent;
+	}
+	&.bottom,&.bottom span{
+		bottom:0;
+	}
+	&.bottom{
+		border-bottom-width:@px32;
+	}
+	&.bottom span{
+		margin-bottom:-@px30;
+	}
+}
+.sticker.sticker-icon{
+	&.top{
+        border-top-width: @px28;
+    }
+    &.top span {
+        margin-top: -@px26;
+    }
+    &.left{
+        border-right-width: @px28;
+    }
+    &.right{
+        border-left-width: @px28;
+    }
+    &.bottom{
+        border-bottom-width: @px28;
+    }
+}
+.tagline{
+	position:absolute;
+	width: @px100;
+	height: @px20;
+	text-align: center;
+	display: -webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+	-webkit-transform-origin:center;
+
+	color:@tip-color;
+	background-color:@tip-bg;
+	&.top{
+		top: @px13;
+		&.left{
+			left: -@px20;
+			-webkit-transform:rotate(-42deg);
+		}
+		&.right{
+			right: -@px20;
+			-webkit-transform:rotate(42deg);
+		}
+	}
+	&.bottom{
+		bottom:@px15;
+		&.left{
+			left: -@px24;
+			-webkit-transform:rotate(42deg);
+		}
+		&.right{
+			right: -@px24;
+			-webkit-transform:rotate(-42deg);
+		}
+	}
+}
+/*--------------------badge.less(start)----------------------*/

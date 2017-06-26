@@ -1,0 +1,45 @@
+/*-----------------------------checkbox.less(start)-----------------------------*/
+.input-checkbox,.input-radio{
+	height: @px22;
+	width: @px22;
+	line-height: @px22;
+	vertical-align: middle;
+	outline: none;
+	border-radius: 0;
+	border: none;
+	background-color: transparent;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	background-size:auto 100%;
+
+	font-family: "iconfont";
+	font-size: @px22;
+
+	color:@placeholder;
+
+	&:checked,&.active{
+		color:@success-bg;
+	}
+	&[disabled]{
+		color:@disable-bg;
+	}
+}
+/*checkbox*/
+.input-checkbox:before{
+	content: "\e927";
+}
+.input-checkbox:checked:before{
+	content: "\e92a";
+}
+/*radio*/
+.input-radio:before{
+	content: "\e9a9";
+}
+.input-radio:checked:before{
+	content: "\e9ce";
+}
+/*label*/
+label .input-checkbox+span,label .input-radio+span{
+	margin:0 @px4;
+}
+/*-----------------------------checkbox.less(end)-----------------------------*/

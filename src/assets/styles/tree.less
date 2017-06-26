@@ -1,0 +1,123 @@
+/*----------------tree.less(start)--------------*/
+.tree-box{
+	background-color:white;
+}
+.tree{
+	box-sizing:border-box;
+}
+.tree ul{
+	display:none;
+	padding-left:@px10;
+}
+/*一行*/
+.tree-line{
+	display: -webkit-box;
+	position:relative;
+	min-width: @px200;
+}
+.tree-line:active{
+	background-color:@bar-bg;
+}
+.tree-line.extand+ul{
+	display:block;
+}
+/*一行中的元素*/
+.tree-icon{
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+	padding: 0 @px12;
+	color:@placeholder;
+}
+.tree-icon+.tree-icon{
+	padding-left: 0;
+}
+.tree-photo{
+	display: -webkit-box;
+	-webkit-box-pack:center;
+	-webkit-box-align:center;
+    width:@px42;
+    height:@px42;
+    border-radius:100%;
+    background-size: cover;
+    background-position: center;
+    background-color:@random2-bg;
+    color:white;
+    pointer-events: none;
+}
+.tree-title{
+	display: -webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-flex:1;
+	height: @px50;
+}
+.tree-title,.tree-title~.tree-icon{
+	border-style:solid;
+	border-width:0 0 @px1 0;
+	border-color:@border;
+}
+.tree-btnadd{
+	color: @success-bg;
+	font-size: @px24;
+}
+/* .tree-line.active,.tree-line.active+ul .tree-line{
+	color: @primary-bg;
+}
+.tree-line.active .tree-photo,.tree-line.active+ul .tree-photo{
+	background-color: @primary-bg;
+} */
+.tree-line.active .tree-btnadd:before,.tree-line.active+ul .tree-btnadd:before{
+	display:none;
+}
+/*左侧小箭头*/
+.tree-icon-arrow{
+	display: block;
+	width: @px16;
+	height: @px16;
+	background-image:url(images/arrow.png);
+	background-size:100% auto;
+	background-position:center 34%;
+	pointer-events: none;
+}
+.tree-line.extand .tree-icon-arrow{
+	background-position: center 66%;
+}
+/*===========树bar===========*/
+.tree-bar{
+	display: none;
+	position: fixed;
+    top:@px44;
+    left:0;
+    width: 100%;
+    z-index: 1;
+	overflow-x: auto;
+    white-space: nowrap;
+    padding: @px5 0;
+    background-color:@border;
+}
+.tree-bar.active{
+	display: block;
+}
+.tree-bar.active + .tree-box{
+    padding-top: @px41;
+}
+.tree-bar-button{
+    padding: @px4 @px8;
+    margin:0 0 0 @px8;
+    display: inline-block;
+    font-size: @px13;
+    border-radius: @px4;
+    background-color:white;
+}
+.tree-bar-button:last-child{
+    margin:0 @px8;
+}
+/*删除图标*/
+.tree-btndel{
+	font-size:@px20;
+	vertical-align:middle;
+	margin-left:@px4;
+
+	color:@tip-bg;
+}
+/*----------------tree.less(end)--------------*/

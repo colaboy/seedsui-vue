@@ -1,0 +1,162 @@
+/*-----------------------------weather.less(start)-----------------------------*/
+.weather-box{
+	position:relative;
+	height:@px60;
+	box-sizing:border-box;
+	overflow:hidden;
+	
+	color:white;
+	//background-image: -webkit-gradient(linear, left top, left bottom, from(#37acf1), to(#7accfe));
+	transition:height 0.5s linear;
+}
+.weather-box small{
+	color:white;
+}
+.weather-topinfo{
+	height:@px40;
+	line-height:@px40;
+	padding:0 @px10;
+	box-sizing:border-box;
+	-webkit-transform:translateY(-@px100);
+	opacity:0;
+	
+	transition:all 0.5s linear;
+}
+.weather-topinfo [class*="icon-"]{
+	font-size: @px20;
+}
+.weather-current-city{
+	display:inline-block;
+	height:@px20;
+	line-height:@px20;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:left center;
+}
+.weather-current-date{
+	float:right;
+}
+.weather-current-temperature,.weather-today-right [class^="weather-icon-"]{
+	height:@px40;margin:@px10 0;text-align:center;
+}
+.sndinfo{
+	-webkit-transform:translateY(100%);
+	opacity:0;
+	
+	transition:all 0.5s linear;
+}
+/*当前温度*/
+.weather-current-temperature{
+	font-size:@px32;
+	height:@px40;
+	margin:@px10 0;
+	text-align:left;
+	text-indent:@px8;
+}
+.weather-today{
+	height:@px200;
+	position:relative;
+}
+.weather-today-left{
+	position:absolute;
+	top:-@px40;
+	left:@px5;
+	text-align:center;
+	
+	transition:all 0.5s linear;
+}
+.weather-today-right{
+	position:absolute;
+	top:-@px40;
+	right:@px5;
+	text-align:center;
+	
+	transition:all 0.5s linear;
+}
+
+/*其它天气*/
+ul.weather-otherday{
+	position: absolute;
+	width: 100%;
+	bottom:@px10;
+	font-size:@px10;
+	-webkit-transform:translateY(@px300);
+	opacity:0;
+	transition:all 0.5s linear;
+}
+ul.weather-otherday li{
+	display: inline-block;
+	text-align: center;
+	width: 25%;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	float:left;
+}
+.weather-collapse{
+	position:absolute;
+	top:@px10;
+	left:@px90;
+	opacity:1;
+	
+	transition:all 0.5s linear;
+}
+.weather-collapse .weather-current-city{
+	background-image:none;padding-left:0;
+}
+.weather-collapse .weather-name{
+	margin-left:@px5;
+}
+/*展开状态*/
+.weather-box.expand{
+	height:@px250;
+}
+.weather-box.expand .weather-topinfo{
+	-webkit-transform:translateY(0);
+	opacity:1;
+}
+.weather-box.expand .weather-current-temperature{
+	text-align: center;
+}
+.weather-box.expand ul.weather-otherday{
+	-webkit-transform:translateY(0);
+	opacity:1;
+}
+.weather-box.expand .sndinfo{
+	-webkit-transform:translateY(0);
+	opacity:1;
+}
+.weather-box.expand .weather-today-left{
+	top:0;
+	left:@px80;
+}
+.weather-box.expand .weather-today-right{
+	top:0;
+	right:@px80;
+}
+.weather-box.expand .weather-collapse{
+	top:@px300;
+	opacity:0;
+}
+
+/*天气图标*/
+#weather-current-icon{
+	height: @px40;
+	font-size: @px40;
+	margin: @px10 0;
+}
+.weather-box [class*="icon-"]{
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center center;
+}
+.weather-otherday [class*="icon-"]{
+	width:@px24;
+	height:@px24;
+	font-size: @px24;
+	line-height: @px24;
+	text-align: center;
+	display:inline-block;
+}
+/*-----------------------------weather.less(end)-----------------------------*/
+
