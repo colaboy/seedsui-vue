@@ -30,15 +30,15 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .star{
   width: 36px;
   height: 36px;
   display: inline-block;
   background-size: cover;
-  background-image: url("../assets/star.png");
+  background-image: url("../assets/images/star.png");
   &.active{
-    background-image: url("../assets/star-active.png");
+    background-image: url("../assets/images/star-active.png");
   }
 }
 </style>

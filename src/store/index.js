@@ -9,7 +9,10 @@ const store = new Vuex.Store({
   strict: process.env.NODE_ENV !== 'production',
   state: {
     count: 1,
-    isWeixin: false
+    isWeixin: false,
+    isAndroid: false,
+    isBadAndroid: false,
+    isIos: false
   },
   actions,
   mutations

@@ -44,7 +44,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   .alert{
     width: 600px;
   }

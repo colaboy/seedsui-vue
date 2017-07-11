@@ -3,7 +3,13 @@
     <p class="color-sub" style="margin-top:1em;padding-left:0.5em">图片上传({{imgs.length}}/{{max}})</p>
     <ul class="grid app-grid-photo" data-col="3">
       <li v-for="(img,index) in imgs">
-        <a :index="index" :key="index" class="grid-icon" :style="{backgroundImage:'url('+img+')'}">
+        <!-- <a :index="index" :key="index" class="grid-icon" :style="{backgroundImage:'url('+img+')'}">
+          <span class="close" @click="deleteImg(index)"><i class="icon icon-close">X</i></span>
+        </a> -->
+        <a :index="index" :key="index" class="grid-icon">
+          <div style="width:100%;height:100%;overflow:hidden;">
+            <img :src="img" style="width:100%;" />
+          </div>
           <span class="close" @click="deleteImg(index)"><i class="icon icon-close">X</i></span>
         </a>
       </li>
@@ -23,10 +29,14 @@ export default {
     title: String,
     required: String,
     max: Number,
-    album: Number
+    sourcetype: {
+      type: Array,
+      default: ['camera']
+    }
   },
   data () {
     return {
+      isClicked: false,
       imgs: [],
       serverIds: [],
       truth: '',
@@ -35,8 +45,15 @@ export default {
   },
   methods: {
     loadImg () {
-      let self = this
-      let sourceType = self.album ? ['album', 'camera'] : ['camera']
+      var self = this
+      if (self.isClicked) {
+        /* eslint-disable */
+        alert('微信正在检测环境，请稍等...')
+        /* eslint-enable */
+        return
+      }
+      self.isClicked = true
+      var sourceType = self.sourcetype
       let leftPic = self.max - self.imgs.length
       /* eslint-disable */
       wx.chooseImage({
@@ -44,9 +61,37 @@ export default {
         sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
         sourceType: sourceType, // 可以指定来源是相册还是相机，默认二者都有
         success: function (res) {
-          self.imgs = res.localIds.concat(self.imgs) 
+          self.$emit('onChooseSuccess', res)
+          /*if(window.__wxjs_is_wkwebview){
+            wx.getLocalImgData({
+                localId: res.localIds[0],
+                success: function (res) {
+                    var localData = res.localData;
+                    localData = localData.replace('jgp', 'jpeg');
+                    self.imgs = self.imgs.push(localData);
+                },
+                fail:function(res){
+                    alert(res.errMsg);
+                }
+            })
+          }else{
+            self.imgs = res.localIds.concat(self.imgs)
+          }*/
+          self.imgs = res.localIds.concat(self.imgs)
           // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
           self.upload()
+        },
+        fail: function (res) {
+          self.$emit('onChooseFail', res)
+          /* eslint-disable */
+          // alert(JSON.stringify(res))
+          /* eslint-enable */
+        },
+        cancel: function () {
+          self.$emit('onChooseCancel')
+        },
+        complete: function () {
+          self.isClicked = false
         }
       })
       /* eslint-enable */
@@ -96,6 +141,9 @@ export default {
     }
   },
   mounted () {
+    /* eslint-disable */
+    // alert(this.sourcetype)
+    /* eslint-enable */
     this.$on('inspireUploadReset', () => {
       this.imgs = []
     })

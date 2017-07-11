@@ -1,49 +1,46 @@
 <template>
 <div>
   <header>
-    <div class="titlebar">
-      <h1 class="titlebar-title">SeedsUI</h1>
-      <a class="titlebar-button" href="javascript:showAbout()"><i class="icon icon-rdoinfo"></i></a>
-    </div>
+    <Titlebar title="SeedsUI" back="true" titleCss="padding-left:12px;">
+      <a slot="right" class="titlebar-button" href="javascript:showAbout()">
+        <i class="icon icon-rdoinfo"></i>
+      </a>
+    </Titlebar>
   </header>
   <article>
     <ul class="list">
       <li class="statusbar underline">
-        <p class="statusbar-title">文字图标</p>
+        <p class="statusbar-title">基础组件</p>
       </li>
       <li>
-        <router-link class="list-li underline" to="iconfont">
+        <router-link class="list-li underline" to="iconfontDemo">
           <p class="list-container">文字图标</p> <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">导航控件</p>
+      <li>
+        <router-link class="list-li underline" to="loadingDemo">
+          <p class="list-container">loading</p> <i class="list-icon icon-arrowright"></i>
+        </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="titlebar">
+        <router-link class="list-li underline" to="titlebarDemo">
           <p class="list-container">TitleBar</p> <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="tabbar">
+        <router-link class="list-li underline" to="tabbarDemo">
           <p class="list-container">TabBar</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">按钮</p>
-      </li>
       <li>
-        <router-link class="list-li underline" to="button">
+        <router-link class="list-li underline" to="buttonDemo">
           <p class="list-container">Button</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">徽章</p>
-      </li>
       <li>
-        <router-link class="list-li underline" to="badge">
+        <router-link class="list-li underline" to="badgeDemo">
           <p class="list-container">Badge</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
@@ -52,19 +49,19 @@
         <p class="statusbar-title">分组</p>
       </li>
       <li>
-        <router-link class="list-li underline" to="group-block">
+        <router-link class="list-li underline" to="group-blockDemo">
           <p class="list-container">块级分组</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="group-card">
+        <router-link class="list-li underline" to="group-cardDemo">
           <p class="list-container">卡片分组</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="group-row">
+        <router-link class="list-li underline" to="group-rowDemo">
           <p class="list-container">行分组</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
@@ -73,7 +70,7 @@
         <p class="statusbar-title">表格</p>
       </li>
       <li>
-        <router-link class="list-li underline" to="table">
+        <router-link class="list-li underline" to="tableDemo">
           <p class="list-container">Table</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
@@ -82,13 +79,13 @@
         <p class="statusbar-title">栅格</p>
       </li>
       <li>
-        <router-link class="list-li underline" to="grid">
+        <router-link class="list-li underline" to="gridDemo">
           <p class="list-container">九宫格</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="grid-metro">
+        <router-link class="list-li underline" to="grid-metroDemo">
           <p class="list-container">块级栅格</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
@@ -97,7 +94,7 @@
         <p class="statusbar-title">列表</p>
       </li>
       <li>
-        <router-link class="list-li underline" to="list">
+        <router-link class="list-li underline" to="listDemo">
           <p class="list-container">列表</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
@@ -106,31 +103,31 @@
         <p class="statusbar-title">基础组件</p>
       </li>
       <li>
-        <router-link class="list-li underline" to="animate">
+        <router-link class="list-li underline" to="animateDemo">
           <p class="list-container">动画</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="bg">
+        <router-link class="list-li underline" to="bgDemo">
           <p class="list-container">背景</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="layout">
+        <router-link class="list-li underline" to="layoutDemo">
           <p class="list-container">布局</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="shape">
+        <router-link class="list-li underline" to="shapeDemo">
           <p class="list-container">形状</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="code">
+        <router-link class="list-li underline" to="codeDemo">
           <p class="list-container">代码展现</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
@@ -139,19 +136,19 @@
         <p class="statusbar-title">错误页面</p>
       </li>
       <li>
-        <router-link class="list-li underline" to="404">
+        <router-link class="list-li underline" to="404Demo">
           <p class="list-container">404</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="500">
+        <router-link class="list-li underline" to="500Demo">
           <p class="list-container">500</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="nowifi">
+        <router-link class="list-li underline" to="nowifiDemo">
           <p class="list-container">无网络</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>

@@ -1,13 +1,13 @@
 <template>
-  <div :class="{ 'mask':true,'toast2-mask':true,'active':show,'toast2-cover':cover }">
-    <div :class="{ 'toast2':true,'active':show }">
-      <div class="toast2-wrapper">{{text}}</div>
+  <div :class="{ 'mask':true,'toast-mask':true,'active':show,'toast-cover':cover }">
+    <div :class="{ 'toast':true,'active':show }">
+      <div class="toast-wrapper">{{text}}</div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'Toast2',
+  name: 'Toast',
   props: {
     text: {
       type: String,
@@ -24,15 +24,15 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   @import "../assets/styles/variables.less";
-  .toast2-cover{
+  .toast-cover{
     pointer-events:none;
   }
-  .toast2-mask{
+  .toast-mask{
     background-color: transparent;
   }
-  .toast2{
+  .toast{
     position:fixed;
     width:100%;
     top:50%;
@@ -53,7 +53,7 @@ export default {
       opacity: 1;
     }
   }
-  .toast2-wrapper{
+  .toast-wrapper{
     min-width: 200px;
     min-height: 120px;
 
@@ -71,7 +71,7 @@ export default {
     color:white;
     background-color:@toast-bg;
   }
-  .toast2-icon{
+  .toast-icon{
     background-size:cover;
     width:@px16;
     height:@px16;
@@ -79,7 +79,7 @@ export default {
     display:inline-block;
     vertical-align:middle;
   }
-  .toast2-font{
+  .toast-font{
     display:line-block;
     height: @px18;
     line-height: @px16;

@@ -19,9 +19,14 @@ import WxConfig from './wechat/WxConfig.js'
 export default {
   name: 'app',
   mounted () {
-    // 微信配置
+    // 微信与安卓配置
     this.$store.dispatch('setIsWeixin')
+    this.$store.dispatch('setIsAndroid')
+    this.$store.dispatch('setIsBadAndroid')
+    this.$store.dispatch('setIsIos')
     console.log('是否为微信环境' + this.$store.state.isWeixin)
+    console.log('是否为ios环境' + this.$store.state.isIos)
+    console.log('是否为badAndriod环境' + this.$store.state.isBadAndroid)
     if (this.$store.state.isWeixin) {
       /* eslint-disable */
       WxConfig()
@@ -65,7 +70,6 @@ export default {
   @import "./assets/styles/timeline.less";
   @import "./assets/styles/filter.less";
   @import "./assets/styles/page.less";
-  @import "./assets/styles/section.less";
   @import "./assets/styles/star.less";
   @import "./assets/styles/clock.less";
   @import "./assets/styles/timepart.less";
