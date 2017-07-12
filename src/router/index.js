@@ -5,6 +5,9 @@ import IconfontDemo from '@/pages/IconfontDemo'
 import LoadingDemo from '@/pages/LoadingDemo'
 import TitlebarDemo from '@/pages/TitlebarDemo'
 import TabBarDemo from '@/pages/TabBarDemo'
+import ButtonDemo from '@/pages/ButtonDemo'
+import MarkDemo from '@/pages/MarkDemo'
+import BadgeDemo from '@/pages/BadgeDemo'
 
 Vue.use(Router)
 
@@ -38,6 +41,24 @@ export default new Router({
       path: '/tabBarDemo',
       name: 'tabBarDemo',
       component: TabBarDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/buttonDemo',
+      name: 'buttonDemo',
+      component: ButtonDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/markDemo',
+      name: 'markDemo',
+      component: MarkDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/badgeDemo',
+      name: 'badgeDemo',
+      component: BadgeDemo,
       meta: {keepAlive: true}
     }
   ]

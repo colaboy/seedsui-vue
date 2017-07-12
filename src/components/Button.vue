@@ -1,22 +1,15 @@
 <template>
   <a :class="'button '+buttonClass" :style="buttonCss" @click="onClickHandler">
-      <i v-if="showIcon" :class="iconClass"></i>
+      <i v-if="icon" :class="'icon '+icon"></i>
       <span>{{text}}</span>
-      <span v-if="Boolean(showTip)" :class="tipClass">{{tipText}}</span>
+      <span v-if="tipText" class="tip">{{tipText}}</span>
+      <span v-if="badgeText" class="badge">{{badgeText}}</span>
   </a>
 </template>
 <script>
 export default {
   name: 'Button',
   props: {
-    text: {
-      type: String,
-      default: '按钮'
-    },
-    tipText: {
-      type: String,
-      default: '0'
-    },
     buttonClass: {
       type: String,
       default: 'text-center'
@@ -25,17 +18,19 @@ export default {
       type: String,
       default: 'padding:0 8px;'
     },
-    showTip: {
-      default: false
-    },
-    tipClass: {
+    text: {
       type: String,
-      default: 'tip'
+      default: '按钮'
     },
-    showIcon: {
-      default: false
+    tipText: {
+      type: String,
+      default: ''
     },
-    iconClass: {
+    badgeText: {
+      type: String,
+      default: ''
+    },
+    icon: {
       type: String,
       default: ''
     }

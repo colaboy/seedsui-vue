@@ -1,7 +1,7 @@
 <template>
 <div>
   <header>
-    <Titlebar title="SeedsUI" back="true" titleCss="padding-left:12px;">
+    <Titlebar title="SeedsUI" back="true">
       <a slot="right" class="titlebar-button" href="javascript:showAbout()">
         <i class="icon icon-rdoinfo"></i>
       </a>
@@ -14,12 +14,12 @@
       </li>
       <li>
         <router-link class="list-li underline" to="iconfontDemo">
-          <p class="list-container">文字图标</p> <i class="list-icon icon-arrowright"></i>
+          <p class="list-container">Iconfont</p> <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
         <router-link class="list-li underline" to="loadingDemo">
-          <p class="list-container">loading</p> <i class="list-icon icon-arrowright"></i>
+          <p class="list-container">Loading</p> <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
@@ -36,6 +36,12 @@
       <li>
         <router-link class="list-li underline" to="buttonDemo">
           <p class="list-container">Button</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="list-li underline" to="markDemo">
+          <p class="list-container">Mark</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
@@ -169,8 +175,8 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+  @import "../../assets/styles/variables.less";
   .titlebar-title{
     padding-left: 12px;
   }
