@@ -14,7 +14,7 @@
 <script>
 import Fastclick from 'Fastclick'
 // 微信配置
-import WxConfig from './wechat/WxConfig.js'
+import Weixin from './assets/platform/weixin/Weixin.js'
 
 export default {
   name: 'app',
@@ -29,7 +29,7 @@ export default {
     console.log('是否为badAndriod环境' + this.$store.state.isBadAndroid)
     if (this.$store.state.isWeixin) {
       /* eslint-disable */
-      WxConfig()
+      Weixin.config()
       /* eslint-enable */
     }
     // 点击配置

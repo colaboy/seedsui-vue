@@ -29,10 +29,6 @@ export default {
       type: String,
       default: '默认标题'
     },
-    titleStyle: {
-      type: String,
-      default: ''
-    },
     titleClass: {
       type: String,
       default: ''
