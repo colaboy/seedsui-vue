@@ -29,4 +29,3 @@ var Device=(function(){
 	    isOnline:window.navigator.online
    }
 })();
-export default Device

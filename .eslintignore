@@ -1,5 +1,4 @@
 build/*.js
 config/*.js
 server/*.js
-src/wechat/*.js
 src/assets/scripts/*.js
