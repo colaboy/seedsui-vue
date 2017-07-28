@@ -1,0 +1,6 @@
+{
+  "name": "TabbarDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TabbarDemo.vue"
+}

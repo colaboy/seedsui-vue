@@ -1,6 +1,6 @@
 <template>
   <div class="group">
-  	<Sliver v-if="title" :text="title"></Sliver>
+  	<Caption v-if="title" :text="title"></Caption>
     <slot></slot>
   </div>
 </template>

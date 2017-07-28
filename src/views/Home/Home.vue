@@ -9,8 +9,8 @@
   </header>
   <article>
     <ul class="list">
-      <li class="statusbar underline">
-        <p class="statusbar-title">基础组件</p>
+      <li class="sliver underline">
+        <p class="sliver-title">基础组件</p>
       </li>
       <li>
         <router-link class="list-li underline" to="iconfontDemo">
@@ -51,8 +51,8 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">分组</p>
+      <li class="sliver underline">
+        <p class="sliver-title">分组</p>
       </li>
       <li>
         <router-link class="list-li underline" to="group-blockDemo">
@@ -72,8 +72,8 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">表格</p>
+      <li class="sliver underline">
+        <p class="sliver-title">表格</p>
       </li>
       <li>
         <router-link class="list-li underline" to="tableDemo">
@@ -81,8 +81,8 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">栅格</p>
+      <li class="sliver underline">
+        <p class="sliver-title">栅格</p>
       </li>
       <li>
         <router-link class="list-li underline" to="gridDemo">
@@ -96,8 +96,8 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">列表</p>
+      <li class="sliver underline">
+        <p class="sliver-title">列表</p>
       </li>
       <li>
         <router-link class="list-li underline" to="listDemo">
@@ -105,8 +105,8 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">基础组件</p>
+      <li class="sliver underline">
+        <p class="sliver-title">基础组件</p>
       </li>
       <li>
         <router-link class="list-li underline" to="animateDemo">
@@ -138,8 +138,8 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="statusbar underline">
-        <p class="statusbar-title">错误页面</p>
+      <li class="sliver underline">
+        <p class="sliver-title">错误页面</p>
       </li>
       <li>
         <router-link class="list-li underline" to="404Demo">

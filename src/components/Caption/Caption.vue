@@ -1,12 +1,12 @@
 <template>
-  <div v-if="underline" class="sliver underline">
+  <div v-if="underline" class="caption underline">
       <span v-if="peg" class="peg"></span>
-      <p class="sliver-title">{{text}}</p>
+      <p class="caption-title">{{text}}</p>
   </div>
 </template>
 <script>
 export default {
-  name: 'Sliver',
+  name: 'Caption',
   props: {
     text: {
       type: String,

@@ -1,0 +1,6 @@
+{
+  "name": "LoadingFading",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LoadingFading.vue"
+}

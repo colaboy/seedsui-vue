@@ -1,0 +1,6 @@
+{
+  "name": "Close",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Close.vue"
+}

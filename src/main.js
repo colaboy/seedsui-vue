@@ -10,25 +10,25 @@ sync(store, router)
 // 关闭生产模式下给出的提示
 Vue.config.productionTip = false
 // 配置全局组件
-import Alert from '@/components/Alert.vue'
-import Badge from '@/components/Badge.vue'
-import Button from '@/components/Button.vue'
-import Close from '@/components/Close.vue'
-import Confirm from '@/components/Confirm.vue'
-import Dot from '@/components/Dot.vue'
-import Group from '@/components/Group.vue'
-import LoadingFading from '@/components/LoadingFading.vue'
-import LoadingSpinning from '@/components/LoadingSpinning.vue'
-import Mark from '@/components/Mark.vue'
-import Peg from '@/components/Peg.vue'
-import Star from '@/components/Star.vue'
-import Sticker from '@/components/Sticker.vue'
-import Tabbar from '@/components/Tabbar.vue'
-import Tagline from '@/components/Tagline.vue'
-import Tip from '@/components/Tip.vue'
-import Titlebar from '@/components/Titlebar.vue'
-import Toast from '@/components/Toast.vue'
-import Sliver from '@/components/Sliver.vue'
+import Alert from '@/components/Alert'
+import Badge from '@/components/Badge'
+import Button from '@/components/Button'
+import Close from '@/components/Close'
+import Confirm from '@/components/Confirm'
+import Dot from '@/components/Dot'
+import Group from '@/components/Group'
+import LoadingFading from '@/components/LoadingFading'
+import LoadingSpinning from '@/components/LoadingSpinning'
+import Mark from '@/components/Mark'
+import Peg from '@/components/Peg'
+import Star from '@/components/Star'
+import Sticker from '@/components/Sticker'
+import Tabbar from '@/components/Tabbar'
+import Tagline from '@/components/Tagline'
+import Tip from '@/components/Tip'
+import Titlebar from '@/components/Titlebar'
+import Toast from '@/components/Toast'
+import Caption from '@/components/Caption'
 
 Vue.component('Alert', Alert)
 Vue.component('Badge', Badge)
@@ -48,7 +48,7 @@ Vue.component('Tagline', Tagline)
 Vue.component('Tip', Tip)
 Vue.component('Titlebar', Titlebar)
 Vue.component('Toast', Toast)
-Vue.component('Sliver', Sliver)
+Vue.component('Caption', Caption)
 
 /* eslint-disable no-new */
 new Vue({

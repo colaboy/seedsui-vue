@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/Home'
-import IconfontDemo from '@/pages/IconfontDemo'
-import LoadingDemo from '@/pages/LoadingDemo'
-import TitlebarDemo from '@/pages/TitlebarDemo'
-import TabBarDemo from '@/pages/TabBarDemo'
-import ButtonDemo from '@/pages/ButtonDemo'
-import MarkDemo from '@/pages/MarkDemo'
-import BadgeDemo from '@/pages/BadgeDemo'
+import Home from '@/views/Home'
+import IconfontDemo from '@/views/IconfontDemo'
+import LoadingDemo from '@/views/LoadingDemo'
+import TitlebarDemo from '@/views/TitlebarDemo'
+import TabBarDemo from '@/views/TabBarDemo'
+import ButtonDemo from '@/views/ButtonDemo'
+import MarkDemo from '@/views/MarkDemo'
+import BadgeDemo from '@/views/BadgeDemo'
 
 Vue.use(Router)
 
