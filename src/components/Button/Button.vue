@@ -1,5 +1,5 @@
 <template>
-  <a :class="'button '+buttonClass" :style="buttonCss" @click="onClickHandler">
+  <a :class="'button '+type" :style="css" href="javascript:;" @click.stop.prevent="click">
       <i v-if="icon" :class="'icon '+icon"></i>
       <span>{{text}}</span>
       <span v-if="tipText" class="tip">{{tipText}}</span>
@@ -10,11 +10,11 @@
 export default {
   name: 'Button',
   props: {
-    buttonClass: {
+    type: {
       type: String,
-      default: 'text-center'
+      default: ''
     },
-    buttonCss: {
+    css: {
       type: String,
       default: 'padding:0 8px;'
     },
@@ -33,16 +33,17 @@ export default {
     icon: {
       type: String,
       default: ''
-    }
+    },
+    click: {
+      type: Function
+    },
+    params: Object
   },
   data () {
     return {
     }
   },
   methods: {
-    onClickHandler (e) {
-      this.$emit('onClick', this)
-    }
   }
 }
 </script>

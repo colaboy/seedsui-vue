@@ -1,89 +1,25 @@
 <template>
 <div>
   <header>
-    <Titlebar title="Titlebar" back="true"></Titlebar>
+    <Titlebar title="Titlebar" />
   </header>
   <article>
     <div class="description">
         titlebar
     </div>
-    <Titlebar title="左中右对齐，默认layout属性为lcr，若修改为空则左对齐">
-      <div slot="left">
-        <a class="titlebar-button" href="javascript:history.go(-1)">
-            <i class="icon icon-arrowleft"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-close"></i>
-        </a>
-      </div>
-      <div slot="right">
-        <a class="titlebar-button">
-            <i class="icon icon-rdoadd"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-search"></i>
-        </a>
-      </div>
-    </Titlebar>
+    <Titlebar title="左右图标" :lBtn="[{icon:'icon-arrowleft',click:onClickBack}]" :rBtn="[{icon:'icon-hook',click:onClickSubmit}]"/>
     <br/>
-    <Titlebar title="左对齐" layout="">
-      <div slot="left">
-        <a class="titlebar-button" href="javascript:history.go(-1)">
-            <i class="icon icon-arrowleft"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-close"></i>
-        </a>
-      </div>
-      <div slot="right">
-        <a class="titlebar-button">
-            <i class="icon icon-rdoadd"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-search"></i>
-        </a>
-      </div>
-    </Titlebar>
+    <Titlebar title="左对文字" :lBtn="[{icon:'icon-arrowleft',text:'返回',click:onClickBack}]" :rBtn="[{icon:'icon-search',text:'搜索',click:onClickSubmit}]"/>
+    <br/>
+    <Titlebar title="多图标" :lBtn="[{icon:'icon-arrowleft',click:onClickBack}]" :rBtn="[{icon:'icon-search',click:onClickBtn1},{icon:'icon-hook',click:onClickBtn2}]"/>
     <div class="description">
         titlebar reverse
     </div>
-    <Titlebar titlebarClass="reverse" title="左中右对齐">
-      <div slot="left">
-        <a class="titlebar-button" href="javascript:history.go(-1)">
-            <i class="icon icon-arrowleft"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-close"></i>
-        </a>
-      </div>
-      <div slot="right">
-        <a class="titlebar-button">
-            <i class="icon icon-rdoadd"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-search"></i>
-        </a>
-      </div>
-    </Titlebar>
+    <Titlebar theme="reverse" title="左右图标" :lBtn="[{icon:'icon-arrowleft',click:onClickBack}]" :rBtn="[{icon:'icon-hook',click:onClickSubmit}]"/>
     <br/>
-    <Titlebar titlebarClass="reverse" title="左对齐" layout="">
-      <div slot="left">
-        <a class="titlebar-button" href="javascript:history.go(-1)">
-            <i class="icon icon-arrowleft"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-close"></i>
-        </a>
-      </div>
-      <div slot="right">
-        <a class="titlebar-button">
-            <i class="icon icon-rdoadd"></i>
-        </a>
-        <a class="titlebar-button">
-            <i class="icon icon-search"></i>
-        </a>
-      </div>
-    </Titlebar>
+    <Titlebar theme="reverse" title="左对文字" :lBtn="[{icon:'icon-arrowleft',text:'返回',click:onClickBack}]" :rBtn="[{icon:'icon-search',text:'搜索',click:onClickSubmit}]"/>
+    <br/>
+    <Titlebar theme="reverse" title="多图标" :lBtn="[{icon:'icon-arrowleft',click:onClickBack}]" :rBtn="[{icon:'icon-search',click:onClickBtn1},{icon:'icon-hook',click:onClickBtn2}]"/>
   </article>
 </div>
 </template>
@@ -91,8 +27,23 @@
 <script>
 export default {
   name: 'TitlebarDemo',
+  methods: {
+    onClickBack () {
+      console.log('返回')
+    },
+    onClickSubmit () {
+      console.log('确定')
+    },
+    onClickBtn1 () {
+      console.log('1')
+    },
+    onClickBtn2 () {
+      console.log('2')
+    }
+  },
   data () {
     return {
+      msg: 'test'
     }
   }
 }

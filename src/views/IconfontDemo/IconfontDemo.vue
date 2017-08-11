@@ -1,11 +1,7 @@
 <template>
 <div>
   <header>
-    <Titlebar title="文字图标">
-      <a slot="left" class="titlebar-button" href="javascript:history.go(-1)">
-          <i class="icon icon-arrowleft"></i>
-      </a>
-    </Titlebar>
+    <Titlebar title="文字图标" />
   </header>
   <article>
     <ul class="grid grid-bordered" data-col="3" id="grid">

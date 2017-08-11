@@ -1,7 +1,7 @@
 <template>
 <div>
   <header>
-    <Titlebar title="Tabbar" back="true"></Titlebar>
+    <Titlebar title="Tabbar" />
   </header>
   <article>
     <div class="description">tabbar-line</div>

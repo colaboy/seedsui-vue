@@ -8,6 +8,11 @@ import TabBarDemo from '@/views/TabBarDemo'
 import ButtonDemo from '@/views/ButtonDemo'
 import MarkDemo from '@/views/MarkDemo'
 import BadgeDemo from '@/views/BadgeDemo'
+import GroupDemo from '@/views/GroupDemo'
+import CardDemo from '@/views/CardDemo'
+import StarDemo from '@/views/StarDemo'
+import PopupDemo from '@/views/PopupDemo'
+import PickerDemo from '@/views/PickerDemo'
 
 Vue.use(Router)
 
@@ -60,6 +65,42 @@ export default new Router({
       name: 'badgeDemo',
       component: BadgeDemo,
       meta: {keepAlive: true}
+    },
+    {
+      path: '/groupDemo',
+      name: 'groupDemo',
+      component: GroupDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/cardDemo',
+      name: 'cardDemo',
+      component: CardDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/starDemo',
+      name: 'starDemo',
+      component: StarDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/popupDemo',
+      name: 'popupDemo',
+      component: PopupDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/pickerDemo',
+      name: 'pickerDemo',
+      component: PickerDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '*',
+      redirect: to => {
+        return '/'
+      }
     }
   ]
 })

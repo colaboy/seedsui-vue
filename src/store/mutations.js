@@ -1,14 +1,11 @@
 export default {
-  setIsWeixin (state, val) {
-    state.isWeixin = val
+  setPlatform (state, val) {
+    state.platform = val
   },
-  setIsAndroid (state, val) {
-    state.isAndroid = val
+  setOs (state, val) {
+    state.os = val
   },
-  setIsBadAndroid (state, val) {
-    state.isBadAndroid = val
-  },
-  setIsIos (state, val) {
-    state.isIos = val
+  setOsVersion (state, val) {
+    state.osVersion = val
   }
 }

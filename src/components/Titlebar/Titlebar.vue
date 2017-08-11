@@ -1,15 +1,17 @@
 <template>
-  <div :class="'titlebar '+titlebarClass">
-    <div :class="{'titlebar-left':layout==='lcr'}">
-      <slot name="left">
-        <a v-if="isShowBack" class="titlebar-button" href="javascript:history.go(-1)">
-            <i class="icon icon-arrowleft"></i>
-        </a>
-      </slot>
+  <div :class="'titlebar' + (theme==='reverse'?' reverse':'')">
+    <div class="titlebar-left">
+      <a v-for="(item, index) in lBtn" :key="index" @click.stop.prevent="item.click" class="titlebar-button">
+        <i v-if="item.icon" :class="'icon '+item.icon"></i>
+        <span v-if="item.text">{{item.text}}</span>
+      </a>
     </div>
-    <h1 :class="'titlebar-title nowrap '+titleClass+' '+titleCenter" :style="titleCss">{{title}}</h1>
-    <div :class="{'titlebar-right':layout==='lcr'}">
-      <slot name="right"></slot>
+    <h1 :class="'titlebar-title nowrap text-center'">{{title}}</h1>
+    <div class="titlebar-right">
+      <a v-for="(item, index) in rBtn" :key="index" @click.stop.prevent="item.click" class="titlebar-button">
+        <i v-if="item.icon" :class="'icon '+item.icon"></i>
+        <span v-if="item.text">{{item.text}}</span>
+      </a>
     </div>
   </div>
 </template>
@@ -17,11 +19,7 @@
 export default {
   name: 'Titlebar',
   props: {
-    layout: {
-      type: String,
-      default: 'lcr'
-    },
-    titlebarClass: {
+    theme: {
       type: String,
       default: ''
     },
@@ -29,32 +27,21 @@ export default {
       type: String,
       default: '默认标题'
     },
-    titleClass: {
-      type: String,
-      default: ''
+    lBtn: {
+      type: Array,
+      default: function () {
+        return [{
+          icon: 'icon-arrowleft',
+          text: '',
+          click: function () { history.go(-1) }
+        }]
+      }
     },
-    titleCss: {
-      type: String,
-      default: ''
-    },
-    back: {
-      default: true
-    }
-  },
-  data () {
-    return {
-      isWeixin: this.$store.state.isWeixin,
-      isAndroid: this.$store.state.isIos
-    }
-  },
-  methods: {
-  },
-  computed: {
-    titleCenter: function () {
-      return this.layout === 'lcr' ? 'text-center' : ''
-    },
-    isShowBack: function () {
-      return Boolean(this.back) && !this.isIos && !this.isWeixin
+    rBtn: {
+      type: Array,
+      default: function () {
+        return []
+      }
     }
   }
 }

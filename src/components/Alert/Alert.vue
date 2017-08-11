@@ -1,9 +1,10 @@
 <template>
-  <div :class="{ 'mask':true,'active':show }">
-    <div :class="{ 'alert':true,'active':show }">
+  <div :class="'mask'+(show?' active':'')">
+    <div :class="'alert'+(show?' active':'')">
       <div class="alert-content">{{text}}</div>
       <div class="alert-handler">
-        <a @click="onClickHandler">确定</a>
+        <a v-if="clickCancel" @click="clickCancel">取消</a>
+        <a @click="clickOk">确定</a>
       </div>
     </div>
   </div>
@@ -20,33 +21,26 @@ export default {
       type: Boolean,
       default: false
     },
-    onClickOk: {
+    clickOk: {
       type: Function
-    }
-  },
-  data () {
-    return {
-      isShow: this.show
-    }
-  },
-  methods: {
-    onClickHandler (e) {
-      // this.$emit('onClickOk', this)
-      this.onClickOk(this)
+    },
+    clickCancel: {
+      type: Function
     }
   }
 }
 </script>
 <style lang="less" scoped>
+  @import "../../assets/styles/variables.less";
   .alert{
-    width: 600px;
+    width: @300px;
   }
   .alert-content{
     display: -webkit-box;
     -webkit-box-pack: center;
     -webkit-box-align: center;
-    min-height: 214px;
-    font-size: 32px;
+    min-height: @100px;
+    font-size: @16px;
   }
   .alert-content.active{
     .alert-content

@@ -10,10 +10,10 @@
 <script>
 export default {
   name: 'Star',
-  props: ['defaultStar'],
+  props: ['default'],
   data () {
     return {
-      num: this.defaultStar
+      num: this.default
     }
   },
   methods: {
@@ -22,7 +22,7 @@ export default {
       var num = target.getAttribute('data-num')
       if (num) {
         this.num = num
-        this.$emit('callback', num)
+        this.$emit('onChange', num)
       }
     }
   },
@@ -31,26 +31,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.star{
-  font-family: 'iconfont' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
 
-  width: 36px;
-  height: 36px;
-  font-size: 36px;
-  display: inline-block;
-  background-size: cover;
-  &:before{
-    content: "\E94D";
-  }
-  &.active{
-    content: "\E94E";
-  }
-}
 </style>

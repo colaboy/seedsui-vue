@@ -1,14 +1,32 @@
 <template>
-  <span>{{text}}</span>
+  <span v-if="show" :class="'mark-'+type" :style="css" @click="onClick">{{text}}</span>
 </template>
 <script>
 export default {
   name: 'Mark',
   props: {
+    type: {
+      type: String,
+      default: 'info'
+    },
+    show: {
+      type: Boolean,
+      default: true
+    },
+    css: {
+      type: String,
+      default: 'padding:0 8px;'
+    },
     text: {
       type: String,
-      default: '按钮'
+      default: '标签'
+    },
+    onClick: {
+      type: Function,
+      default: function () {}
     }
+  },
+  methods: {
   }
 }
 </script>

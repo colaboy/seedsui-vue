@@ -51,33 +51,43 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li class="sliver underline">
-        <p class="sliver-title">分组</p>
-      </li>
       <li>
-        <router-link class="list-li underline" to="group-blockDemo">
-          <p class="list-container">块级分组</p>
+        <router-link class="list-li underline" to="groupDemo">
+          <p class="list-container">Group</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
       <li>
-        <router-link class="list-li underline" to="group-cardDemo">
-          <p class="list-container">卡片分组</p>
+        <router-link class="list-li underline" to="cardDemo">
+          <p class="list-container">Card</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
-      <li>
-        <router-link class="list-li underline" to="group-rowDemo">
+      <!-- <router-link class="list-li underline" to="group-rowDemo">
           <p class="list-container">行分组</p>
           <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li class="sliver underline">
-        <p class="sliver-title">表格</p>
-      </li>
+        </router-link> -->
       <li>
         <router-link class="list-li underline" to="tableDemo">
           <p class="list-container">Table</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="list-li underline" to="starDemo">
+          <p class="list-container">Star</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="list-li underline" to="popupDemo">
+          <p class="list-container">Popup</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="list-li underline" to="pickerDemo">
+          <p class="list-container">Picker</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
@@ -99,38 +109,8 @@
       <li class="sliver underline">
         <p class="sliver-title">列表</p>
       </li>
-      <li>
-        <router-link class="list-li underline" to="listDemo">
-          <p class="list-container">列表</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
       <li class="sliver underline">
         <p class="sliver-title">基础组件</p>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="animateDemo">
-          <p class="list-container">动画</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="bgDemo">
-          <p class="list-container">背景</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="layoutDemo">
-          <p class="list-container">布局</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="shapeDemo">
-          <p class="list-container">形状</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
       </li>
       <li>
         <router-link class="list-li underline" to="codeDemo">

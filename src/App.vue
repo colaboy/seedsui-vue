@@ -14,20 +14,16 @@
 <script>
 import Fastclick from 'Fastclick'
 // 微信配置
-import Weixin from './assets/platform/weixin/Weixin.js'
+import Weixin from './platform/weixin.js'
 
 export default {
   name: 'app',
   mounted () {
     // 微信与安卓配置
-    this.$store.dispatch('setIsWeixin')
-    this.$store.dispatch('setIsAndroid')
-    this.$store.dispatch('setIsBadAndroid')
-    this.$store.dispatch('setIsIos')
-    console.log('是否为微信环境' + this.$store.state.isWeixin)
-    console.log('是否为ios环境' + this.$store.state.isIos)
-    console.log('是否为badAndriod环境' + this.$store.state.isBadAndroid)
-    if (this.$store.state.isWeixin) {
+    this.$store.dispatch('setPlatform')
+    this.$store.dispatch('setOs')
+    this.$store.dispatch('setOsVersion')
+    if (this.$store.state.platform === 'weixin') {
       /* eslint-disable */
       Weixin.config()
       /* eslint-enable */
@@ -43,7 +39,7 @@ export default {
 </script>
 
 <style lang="less">
-  /*Base*/
+  /* Base */
   @import "./assets/styles/variables.less";
   @import "./assets/styles/appearance.less";
   @import "./assets/styles/layout.less";
@@ -52,6 +48,7 @@ export default {
   @import "./assets/styles/titlebar.less";
   @import "./assets/styles/tabbar.less";
   @import "./assets/styles/button.less";
+  @import "./assets/styles/mark.less";
   @import "./assets/styles/grid.less";
   @import "./assets/styles/badge.less";
 
@@ -64,7 +61,7 @@ export default {
   @import "./assets/styles/mask.less";
   @import "./assets/styles/icon.less";
 
-  /*Control*/
+  /* Control */
   @import "./assets/styles/iconfont.less";
   @import "./assets/styles/list.less";
   @import "./assets/styles/timeline.less";
@@ -85,6 +82,8 @@ export default {
   @import "./assets/styles/gauge.less";
   @import "./assets/styles/doughnut.less";
   @import "./assets/styles/chat.less";
+  @import "./assets/styles/popover.less";
+  @import "./assets/styles/sharebox.less";
   @import "./assets/styles/dialog.less";
   @import "./assets/styles/alert.less";
   @import "./assets/styles/actionsheet.less";
@@ -102,8 +101,9 @@ export default {
   @import "./assets/styles/calendar.less";
   @import "./assets/styles/listpull.less";
   @import "./assets/styles/menuwrap.less";
+  @import "./assets/styles/animate.less";
 
-  /*Tool*/
+  /* Tool */
   @import "./assets/styles/box.less";
   @import "./assets/styles/global.less";
   @import "./assets/styles/common.less";

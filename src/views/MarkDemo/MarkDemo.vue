@@ -6,21 +6,21 @@
   <article>
       <Group title="标签">
           <div style="padding: 10px 12px;">
-              <Mark class="mark-info" text="info"></Mark>
-              <Mark class="mark-success" text="success"></Mark>
-              <Mark class="mark-cancel" text="cancel"></Mark>
-              <Mark class="mark-warn">warn</Mark>
-              <Mark class="mark-disable">disable</Mark>
+              <Mark type="info" text="info"></Mark>
+              <Mark type="success" text="success"></Mark>
+              <Mark type="cancel" text="cancel"></Mark>
+              <Mark type="warn">warn</Mark>
+              <Mark type="disable">disable</Mark>
           </div>
       </Group>
 
       <Group title="框形标签">
           <div style="padding: 10px 12px;">
-              <Mark class="mark-info outline">info</Mark>
-              <Mark class="mark-success outline">success</Mark>
-              <Mark class="mark-cancel outline">cancel</Mark>
-              <Mark class="mark-warn outline">warn</Mark>
-              <Mark class="mark-disable outline">disable</Mark>
+              <Mark type="info outline">info</Mark>
+              <Mark type="success outline">success</Mark>
+              <Mark type="cancel outline">cancel</Mark>
+              <Mark type="warn outline">warn</Mark>
+              <Mark type="disable outline">disable</Mark>
           </div>
       </Group>
   </article>

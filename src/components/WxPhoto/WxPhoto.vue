@@ -22,14 +22,18 @@
   </div>
 </template>
 <script>
-import Weixin from './../assets/platform/weixin/Weixin.js'
+import Weixin from './../platform/weixin.js'
 export default {
   name: 'WxPhoto',
   props: {
     max: Number,
     sourcetype: {
       type: Array,
-      default: ['camera']
+      default: ['album', 'camera']
+    },
+    sizeType: {
+      type: Array,
+      default: ['original', 'compressed']
     }
   },
   data () {
@@ -43,6 +47,7 @@ export default {
     this.wxImage = new Weixin.Image({
       max: this.max,
       sourceType: this.sourcetype,
+      sizeType: this.sizeType,
       onChooseSuccess: this.onChooseSuccess,
       onChooseFail: this.onChooseFail,
       onUploadsSuccess: this.onUploadsSuccess,
