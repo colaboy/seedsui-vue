@@ -1,8 +1,13 @@
 <template>
 <div>
+  <Alert text="提示框" :show="showAlert" :clickOk="onClickAlertOk"/>
+  <Alert text="对话框" :show="showConfirm" :clickOk="onClickConfirmOk" :clickCancel="onClickConfirmCancel"/>
+  <Toast text="提示框" :show="showToast" />
+  <Prompt text="提示框" :show="showPrompt" />
+
   <Dialog ref="refPopover" position="top-right" animation="zoom" css="overflow:visible; top: 54px; right: 6px;">
     <Popover :list="[
-    {icon:'icon-qrcode',text:'扫码签到'},
+    {icon:'icon-qrcode',text:'扫码签到',click:onClickDecode},
     {icon:'icon-chats',text:'会议群聊'},
     {icon:'icon-rdominus',text:'取消会议'},
     {icon:'icon-rdook',text:'结束会议'},
@@ -12,9 +17,11 @@
 
   <ShareBox ref="refSharebox" />
 
-  <Alert text="提示框" :show="showAlert" :clickOk="onClickAlertOk"/>
-  <Alert text="提示框" :show="showConfirm" :clickOk="onClickConfirmOk" :clickCancel="onClickConfirmCancel"/>
-  <Toast text="提示框" :show="showToast" />
+  <Actionsheet ref="refActionsheet" :show="showActionsheet" :list="[
+    {text:'菜单一'},
+    {text:'菜单二'},
+    {text:'自定义退出',click:onClickCustomExit}
+  ]"/>
 
   <Dialog ref="refDialogLt" position="left" animation="slideRight">
     <div style="display:block;background-color: white;width: 200px;height: 100px;">left-top</div>
@@ -80,9 +87,9 @@
     		<p class="color-primary" css="padding: 0 0 6px 0;">系统弹出框</p>
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnAlert" text="alert" />
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnConfirm" text="confirm" />
-        <!-- <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnActionsheet" text="actionsheet" /> -->
+        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnActionsheet" text="actionsheet" />
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnToast" text="toast" />
-        <!-- <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnPrompt" text="prompt" /> -->
+        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnPrompt" text="prompt" />
       </Card>
 
       <Card css="padding:10px 12px;">
@@ -132,12 +139,20 @@ export default {
     return {
       showAlert: false,
       showConfirm: false,
-      showToast: false
+      showActionsheet: false,
+      showToast: false,
+      showPrompt: false
     }
   },
   methods: {
     onClickBtnMenu () {
       this.$refs.refPopover.instance.show()
+    },
+    onClickDecode () {
+      console.log('扫码')
+    },
+    onClickCustomExit () {
+      console.log('退出')
     },
     onClickBtnShare () {
       this.$refs.refSharebox.instance.show()
@@ -162,6 +177,15 @@ export default {
       setTimeout(() => {
         this.showToast = false
       }, 1000)
+    },
+    onClickBtnPrompt () {
+      this.showPrompt = true
+      setTimeout(() => {
+        this.showPrompt = false
+      }, 1000)
+    },
+    onClickBtnActionsheet () {
+      this.$refs.refActionsheet.instance.show()
     },
     onClickBtnLeftTop () {
       this.$refs.refDialogLt.instance.show()

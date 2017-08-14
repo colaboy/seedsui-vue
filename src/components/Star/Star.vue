@@ -1,5 +1,5 @@
 <template>
-  <div @click="onClickStar">
+  <div @click.stop.prevent="onClickStar">
     <div :class="{ 'star':true,'active':num >= '1' }" data-num="1"></div>
     <div :class="{ 'star':true,'active':num >= '2' }" data-num="2"></div>
     <div :class="{ 'star':true,'active':num >= '3' }" data-num="3"></div>

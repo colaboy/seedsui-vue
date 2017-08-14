@@ -10,7 +10,11 @@ sync(store, router)
 // 关闭生产模式下给出的提示
 Vue.config.productionTip = false
 // 配置全局组件
+import '@/utils/dateutil.js'
+import '@/utils/object.js'
+
 import Alert from '@/components/Alert'
+import Actionsheet from '@/components/Actionsheet'
 import Badge from '@/components/Badge'
 import Button from '@/components/Button'
 import Caption from '@/components/Caption'
@@ -30,14 +34,16 @@ import Tagline from '@/components/Tagline'
 import Tip from '@/components/Tip'
 import Titlebar from '@/components/Titlebar'
 import Toast from '@/components/Toast'
+import Prompt from '@/components/Prompt'
 import Popover from '@/components/Popover'
 import Picker from '@/components/Picker'
-import DatePicker from '@/components/Picker/DatePicker.vue'
+import InputDate from '@/components/Picker/InputDate.vue'
+import InputCity from '@/components/Picker/InputCity.vue'
 import Grid from '@/components/Grid'
 import ShareBox from '@/components/ShareBox'
-import InputDate from '@/components/InputDate'
 
 Vue.component('Alert', Alert)
+Vue.component('Actionsheet', Actionsheet)
 Vue.component('Badge', Badge)
 Vue.component('Button', Button)
 Vue.component('Caption', Caption)
@@ -57,12 +63,13 @@ Vue.component('Tagline', Tagline)
 Vue.component('Tip', Tip)
 Vue.component('Titlebar', Titlebar)
 Vue.component('Toast', Toast)
+Vue.component('Prompt', Prompt)
 Vue.component('Popover', Popover)
 Vue.component('Picker', Picker)
-Vue.component('DatePicker', DatePicker)
+Vue.component('InputDate', InputDate)
+Vue.component('InputCity', InputCity)
 Vue.component('Grid', Grid)
 Vue.component('ShareBox', ShareBox)
-Vue.component('InputDate', InputDate)
 
 /* eslint-disable no-new */
 new Vue({

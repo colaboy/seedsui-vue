@@ -26,23 +26,24 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.popover li:nth-of-type(1) .icon {
-  color: #32a6f8;
-}
+  @import "../../assets/styles/variables.less";
+  .popover li:nth-of-type(1) .icon {
+    color: #32a6f8;
+  }
 
-.popover li:nth-of-type(2) .icon {
-  color: #19cbc1;
-}
+  .popover li:nth-of-type(2) .icon {
+    color: #19cbc1;
+  }
 
-.popover li:nth-of-type(3) .icon {
-  color: #fe721e;
-}
+  .popover li:nth-of-type(3) .icon {
+    color: #fe721e;
+  }
 
-.popover li:nth-of-type(4) .icon {
-  color: #a46ef6;
-}
+  .popover li:nth-of-type(4) .icon {
+    color: #a46ef6;
+  }
 
-.popover li:nth-of-type(5) .icon {
-  color: #ff5656;
-}
+  .popover li:nth-of-type(5) .icon {
+    color: #ff5656;
+  }
 </style>

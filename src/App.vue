@@ -52,6 +52,7 @@ export default {
   @import "./assets/styles/grid.less";
   @import "./assets/styles/badge.less";
 
+  @import "./assets/styles/row.less";
   @import "./assets/styles/inputbox.less";
   @import "./assets/styles/numbox.less";
   @import "./assets/styles/checkbox.less";

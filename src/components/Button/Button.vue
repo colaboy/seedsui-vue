@@ -11,7 +11,7 @@ export default {
   name: 'Button',
   props: {
     type: {
-      type: String,
+      type: String, // primary|submit|cancel|info|success|warn|disabled
       default: ''
     },
     css: {

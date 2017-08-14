@@ -5,6 +5,7 @@
   </header>
   <article>
     <Star :default="2" @onChange="onChangeStar"/>
+    <span>{{star}}</span>
   </article>
 </div>
 </template>
