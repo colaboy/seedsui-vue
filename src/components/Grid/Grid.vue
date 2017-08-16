@@ -1,14 +1,21 @@
 <template>
-  <ul :class="'grid'+(type==='thumbnail'?' app-grid-thumbnail':'')" :data-col="col">
+  <ul :class="'grid '+gridClass+(bordered?' grid-bordered':'')" :data-col="col">
     <li v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
-      <a class="grid-icon size50" :style="'background-color:'+(bgColors[index]?bgColors[index]:'#20aeff')+';color:'+(colors[index]?colors[index]:'white')">
-        <img v-if="item.img" :src="item.img">
-        <i v-if="item.icon" :class="'icon '+item.icon"></i>
-        <span v-if="item.tip" class="tip" style="position:absolute;top:-4px;right:-4px;">{{item.tip}}</span>
-        <span v-if="item.badge" class="badge" style="position:absolute;top:-4px;right:-4px;">{{item.badge}}</span>
-        <span v-if="item.close" class="close" @click.stop.prevent="item.clickClose"><i class="icon icon-close"></i></span>
+      <a class="grid-icon" :style="getIconStyle(index)">
+        <img v-if="type==='album' && item.img" :src="item.img">
+        <i v-if="(type==='square' || type==='pure') && item.icon" :class="'icon '+item.icon"></i>
+        <span v-if="item.tip" class="tip">{{item.tip}}</span>
+        <span v-if="item.badge" class="badge">{{item.badge}}</span>
+        <span v-if="item.close" class="close" @click.stop.prevent="item.clickClose">
+          <i class="icon icon-close"></i>
+        </span>
       </a>
       <label class="grid-label" v-if="item.text">{{item.text}}</label>
+    </li>
+    <li v-if="this.type === 'album' && this.add === true">
+      <a class="grid-icon grid-icon-add">
+        <i class="icon icon-plus size50"></i>
+      </a>
     </li>
   </ul>
 </template>
@@ -16,15 +23,20 @@
 export default {
   name: 'Grid',
   props: {
-    type: '', // thumbnail
+    type: {
+      type: String, // square | pure | album
+      default: 'square'
+    },
+    bordered: {
+      type: Boolean,
+      default: false
+    },
+    add: {
+      type: Boolean,
+      default: true
+    },
     col: '3',
     colors: {
-      type: Array,
-      default: function () {
-        return ['white']
-      }
-    },
-    bgColors: {
       type: Array,
       default: function () {
         return ['#4485fb', '#eda200', '#38ba35', '#41ce29', '#e55f5f', '#eecf3d']
@@ -46,6 +58,35 @@ export default {
         }]
       }
     }
+  },
+  methods: {
+    getIconStyle (index) {
+      if (this.type === 'square') {
+        return 'background-color:' + (this.colors[index] ? this.colors[index] : this.colors[0]) + ';color:white;'
+      } else if (this.type === 'pure') {
+        return 'color:' + (this.colors[index] ? this.colors[index] : this.colors[0]) + ';'
+      }
+    }
+  },
+  data () {
+    return {
+    }
+  },
+  computed: {
+    gridClass () {
+      if (this.type === 'album') {
+        return 'grid-album'
+      } else if (this.type === 'pure') {
+        return 'grid-pure'
+      } else {
+        return 'grid-square'
+      }
+    }
+  },
+  mounted () {
   }
 }
 </script>
+<style lang="less" scoped>
+  @import "../../assets/styles/variables.less";
+</style>

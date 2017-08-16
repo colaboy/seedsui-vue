@@ -66,16 +66,22 @@
       <!-- <router-link class="list-li underline" to="group-rowDemo">
           <p class="list-container">行分组</p>
           <i class="list-icon icon-arrowright"></i>
-        </router-link> -->
+        </router-link>
       <li>
         <router-link class="list-li underline" to="tableDemo">
           <p class="list-container">Table</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
-      </li>
+      </li> -->
       <li>
         <router-link class="list-li underline" to="starDemo">
           <p class="list-container">Star</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="list-li underline" to="gridDemo">
+          <p class="list-container">Grid</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
@@ -88,6 +94,12 @@
       <li>
         <router-link class="list-li underline" to="pickerDemo">
           <p class="list-container">Picker</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="list-li underline" to="formDemo">
+          <p class="list-container">Form</p>
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>

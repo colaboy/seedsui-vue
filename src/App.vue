@@ -14,7 +14,7 @@
 <script>
 import Fastclick from 'Fastclick'
 // 微信配置
-import Weixin from './platform/weixin.js'
+import Weixin from './bridge/weixin.js'
 
 export default {
   name: 'app',

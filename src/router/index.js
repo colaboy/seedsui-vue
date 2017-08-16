@@ -11,8 +11,10 @@ import BadgeDemo from '@/views/BadgeDemo'
 import GroupDemo from '@/views/GroupDemo'
 import CardDemo from '@/views/CardDemo'
 import StarDemo from '@/views/StarDemo'
+import GridDemo from '@/views/GridDemo'
 import PopupDemo from '@/views/PopupDemo'
 import PickerDemo from '@/views/PickerDemo'
+import FormDemo from '@/views/FormDemo'
 
 Vue.use(Router)
 
@@ -85,6 +87,12 @@ export default new Router({
       meta: {keepAlive: true}
     },
     {
+      path: '/gridDemo',
+      name: 'gridDemo',
+      component: GridDemo,
+      meta: {keepAlive: true}
+    },
+    {
       path: '/popupDemo',
       name: 'popupDemo',
       component: PopupDemo,
@@ -94,6 +102,12 @@ export default new Router({
       path: '/pickerDemo',
       name: 'pickerDemo',
       component: PickerDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/formDemo',
+      name: 'formDemo',
+      component: FormDemo,
       meta: {keepAlive: true}
     },
     {
