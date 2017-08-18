@@ -4,7 +4,7 @@
     <Titlebar title="star"/>
   </header>
   <article>
-    <Star :default="2" @onChange="onChangeStar"/>
+    <Star :default="2" :change="onChangeStar"/>
     <span>{{star}}</span>
   </article>
 </div>

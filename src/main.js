@@ -41,6 +41,11 @@ import InputDate from '@/components/Picker/InputDate.vue'
 import InputCity from '@/components/Picker/InputCity.vue'
 import Grid from '@/components/Grid'
 import ShareBox from '@/components/ShareBox'
+import Switch from '@/components/Switch'
+import Turn from '@/components/Turn'
+import NumBox from '@/components/NumBox'
+import Carrousel from '@/components/Carrousel'
+import ImgLazy from '@/components/ImgLazy'
 
 Vue.component('Alert', Alert)
 Vue.component('Actionsheet', Actionsheet)
@@ -70,6 +75,11 @@ Vue.component('InputDate', InputDate)
 Vue.component('InputCity', InputCity)
 Vue.component('Grid', Grid)
 Vue.component('ShareBox', ShareBox)
+Vue.component('Switch1', Switch)
+Vue.component('Turn', Turn)
+Vue.component('NumBox', NumBox)
+Vue.component('Carrousel', Carrousel)
+Vue.component('ImgLazy', ImgLazy)
 
 /* eslint-disable no-new */
 new Vue({

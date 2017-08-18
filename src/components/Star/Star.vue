@@ -10,7 +10,11 @@
 <script>
 export default {
   name: 'Star',
-  props: ['default'],
+  props: {
+    change: {
+      type: Function
+    }
+  },
   data () {
     return {
       num: this.default
@@ -22,7 +26,7 @@ export default {
       var num = target.getAttribute('data-num')
       if (num) {
         this.num = num
-        this.$emit('onChange', num)
+        if (this.change) this.change(num)
       }
     }
   },

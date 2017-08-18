@@ -9,7 +9,7 @@
     </div>
     <Titlebar title="左右图标" :lBtn="[{icon:'icon-arrowleft',click:onClickBack}]" :rBtn="[{icon:'icon-hook',click:onClickSubmit}]"/>
     <br/>
-    <Titlebar title="左对文字" :lBtn="[{icon:'icon-arrowleft',text:'返回',click:onClickBack}]" :rBtn="[{icon:'icon-search',text:'搜索',click:onClickSubmit}]"/>
+    <Titlebar title="左右文字" :lBtn="[{icon:'icon-arrowleft',text:'返回',click:onClickBack}]" :rBtn="[{icon:'icon-search',text:'搜索',click:onClickSubmit}]"/>
     <br/>
     <Titlebar title="多图标" :lBtn="[{icon:'icon-arrowleft',click:onClickBack}]" :rBtn="[{icon:'icon-search',click:onClickBtn1},{icon:'icon-hook',click:onClickBtn2}]"/>
     <div class="description">

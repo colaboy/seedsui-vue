@@ -4,7 +4,12 @@
     <Titlebar title="form" back="true"></Titlebar>
   </header>
   <article>
-      form表单
+      <Switch1 :change="onSwitchChange1"/>
+      <Switch1 :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange2"/>
+      <Switch1 theme="reverse" :change="onSwitchChange3"/>
+      <Switch1 theme="reverse" :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange4"/>
+      <Turn :change="onTurnChange"/>
+      <NumBox :change="onNumBoxChange"/>
   </article>
 </div>
 </template>
@@ -17,6 +22,24 @@ export default {
     }
   },
   methods: {
+    onSwitchChange1 (value) {
+      console.log(value)
+    },
+    onSwitchChange2 (value) {
+      console.log(value)
+    },
+    onSwitchChange3 (value) {
+      console.log(value)
+    },
+    onSwitchChange4 (value) {
+      console.log(value)
+    },
+    onTurnChange (value) {
+      console.log(value)
+    },
+    onNumBoxChange (value) {
+      console.log(value)
+    }
   }
 }
 </script>

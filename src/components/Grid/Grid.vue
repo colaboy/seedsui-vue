@@ -1,5 +1,5 @@
 <template>
-  <ul :class="'grid '+gridClass+(bordered?' grid-bordered':'')" :data-col="col">
+  <ul :class="'grid '+gridClass+(bordered?' grid-bordered':'')" :data-col="col" :style="css">
     <li v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
       <a class="grid-icon" :style="getIconStyle(index)">
         <img v-if="type==='album' && item.img" :src="item.img">
@@ -23,6 +23,10 @@
 export default {
   name: 'Grid',
   props: {
+    css: {
+      type: String,
+      default: ''
+    },
     type: {
       type: String, // square | pure | album
       default: 'square'
@@ -52,8 +56,6 @@ export default {
           tip: '',
           badge: '',
           close: false,
-          bgColor: '#20aeff',
-          color: 'white',
           clickClose: function () { }
         }]
       }

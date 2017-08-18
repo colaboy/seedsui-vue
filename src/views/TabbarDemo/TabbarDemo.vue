@@ -4,31 +4,31 @@
     <Titlebar title="Tabbar" />
   </header>
   <article>
-    <div class="description">tabbar-line</div>
-    <Tabbar :data="lineData" activeStatus="0"></Tabbar>
+    <div class="description">line</div>
+    <Tabbar :list="list" :active="0"></Tabbar>
     <br/>
-    <div class="description">tabbar-line reverse</div>
-    <Tabbar :data="lineData" tabbarClass="reverse" activeStatus="0"></Tabbar>
+    <div class="description">line reverse</div>
+    <Tabbar :list="list" theme="reverse" activeStatus="0"></Tabbar>
     <br/>
-    <div class="description">tabbar-rect</div>
-    <Tabbar :data="rectData" type="rect" activeStatus="0"></Tabbar>
+    <div class="description">rect</div>
+    <Tabbar :list="list" type="rect" activeStatus="0"></Tabbar>
     <br/>
-    <div class="description">tabbar-rect reverse</div>
+    <div class="description">rect reverse</div>
     <div class="bg-primary" style="padding:8px 0">
-      <Tabbar :data="rectData" tabbarClass="reverse" type="rect" activeStatus="0"></Tabbar>
+      <Tabbar :list="list" theme="reverse" type="rect" activeStatus="0"></Tabbar>
     </div>
     <br/>
-    <div class="description">tabbar-lump</div>
-    <Tabbar :data="lineData" type="lump" activeStatus="0"></Tabbar>
+    <div class="description">lump</div>
+    <Tabbar :list="list" type="lump" activeStatus="0"></Tabbar>
     <br/>
-    <div class="description">tabbar-lump reverse</div>
-    <Tabbar :data="lineData" tabbarClass="reverse" type="lump" activeStatus="0"></Tabbar>
+    <div class="description">lump reverse</div>
+    <Tabbar :list="list" theme="reverse" type="lump" activeStatus="0"></Tabbar>
     <br/>
-    <div class="description">tabbar-footer</div>
-    <Tabbar :data="footData" type="footer" activeStatus="0"></Tabbar>
+    <div class="description">footer</div>
+    <Tabbar :list="list" type="footer" activeStatus="0"></Tabbar>
     <br/>
-    <div class="description">tabbar-footer reverse</div>
-    <Tabbar :data="footData" tabbarClass="reverse" type="footer" activeStatus="0"></Tabbar>
+    <div class="description">footer reverse</div>
+    <Tabbar :list="list" theme="reverse" type="footer" activeStatus="0"></Tabbar>
     <br/>
   </article>
 </div>
@@ -39,75 +39,38 @@ export default {
   name: 'TabbarDemo',
   data () {
     return {
-      lineData: [
-        {
-          text: '全部',
-          status: '5'
-        },
-        {
-          text: '待确认',
-          status: '0',
-          colorClass: 'bg-blue'
-        },
-        {
-          text: '待发货',
-          status: '1',
-          colorClass: 'bg-green'
-        },
-        {
-          text: '已取消',
-          status: '2',
-          colorClass: 'bg-grey'
-        },
-        {
-          text: '已完成',
-          status: '3',
-          colorClass: 'bg-green'
-        },
-        {
-          text: '待签收',
-          status: '6',
-          colorClass: 'bg-green'
-        }
-      ],
-      rectData: [
-        {
-          text: '机构',
-          status: '0'
-        },
-        {
-          text: '组织',
-          status: '1',
-          colorClass: 'bg-blue'
-        }
-      ],
-      footData: [
+      list: [
         {
           text: '首页',
-          status: '0',
-          icon: 'icon-home'
+          icon: 'icon-home',
+          click: this.onClickTabbar
         },
         {
           text: '消息',
-          status: '1',
-          icon: 'icon-chat'
+          icon: 'icon-chat',
+          click: this.onClickTabbar
         },
         {
           text: '通讯录',
-          status: '2',
-          icon: 'icon-contact'
+          icon: 'icon-contact',
+          click: this.onClickTabbar
         },
         {
           text: '工作台',
-          status: '3',
-          icon: 'icon-grid'
+          icon: 'icon-grid',
+          click: this.onClickTabbar
         },
         {
           text: '更多',
-          status: '4',
-          icon: 'icon-rdomore'
+          icon: 'icon-rdomore',
+          click: this.onClickTabbar
         }
       ]
+    }
+  },
+  methods: {
+    onClickTabbar (item, index) {
+      console.log(item.text)
     }
   }
 }

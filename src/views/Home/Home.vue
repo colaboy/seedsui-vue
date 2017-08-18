@@ -103,6 +103,18 @@
           <i class="list-icon icon-arrowright"></i>
         </router-link>
       </li>
+      <li>
+        <router-link class="list-li underline" to="carrouselDemo">
+          <p class="list-container">Carrousel</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
+        <router-link class="list-li underline" to="imglazyDemo">
+          <p class="list-container">imglazyDemo</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
       <li class="sliver underline">
         <p class="sliver-title">栅格</p>
       </li>

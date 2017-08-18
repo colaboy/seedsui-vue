@@ -91,7 +91,7 @@ export default {
   @import "./assets/styles/toast.less";
   @import "./assets/styles/prompt.less";
   @import "./assets/styles/emoji.less";
-  @import "./assets/styles/slider.less";
+  @import "./assets/styles/carrousel.less";
   @import "./assets/styles/richinput.less";
   @import "./assets/styles/scrollpicker.less";
   @import "./assets/styles/summary.less";
