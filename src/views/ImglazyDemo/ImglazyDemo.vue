@@ -5,7 +5,7 @@
   </header>
   <article>
     <img :src="imgs.online.url" class="lazyimg" />
-    <ImgLazy ref="imgLazy">
+    <ImgLazy ref="refImgLazy">
       <img data-load-src="abc.jpg" :data-error-src="imgs.default.url" :src="imgs.default.url" class="lazyimg" />
       <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
       <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
@@ -43,7 +43,7 @@ export default {
     onClickAdd () {
       console.log('新增')
       // 图片预加载刷新
-      this.$refs.imgLazy.instance.update()
+      this.$refs.refImgLazy.instance.update()
     }
   }
 }

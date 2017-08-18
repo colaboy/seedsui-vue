@@ -2,7 +2,7 @@
   <div>
     <p class="color-sub" style="margin-top:1em;padding-left:0.5em">图片上传({{imgs.length}}/{{max}})</p>
     <ul class="grid app-grid-photo" data-col="3">
-      <li v-for="(img,index) in imgs">
+      <li v-for="(img,index) in imgs" :key="index">
         <!-- <a :index="index" :key="index" class="grid-icon" :style="{backgroundImage:'url('+img+')'}">
           <span class="close" @click="deleteImg(index)"><i class="icon icon-close">X</i></span>
         </a> -->
@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-import Weixin from './../platform/weixin.js'
+import Weixin from './../bridge/weixin.js'
 export default {
   name: 'WxPhoto',
   props: {
