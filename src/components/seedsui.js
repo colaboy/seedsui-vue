@@ -33,6 +33,8 @@ import Turn from '@/components/Turn'
 import NumBox from '@/components/NumBox'
 import Carrousel from '@/components/Carrousel'
 import ImgLazy from '@/components/ImgLazy'
+import InputPre from '@/components/InputPre'
+import InputSearch from '@/components/InputSearch'
 
 var seedsui = {
   Alert,
@@ -67,7 +69,9 @@ var seedsui = {
   Turn,
   NumBox,
   Carrousel,
-  ImgLazy
+  ImgLazy,
+  InputPre,
+  InputSearch
 }
 
 const install = function (Vue) {

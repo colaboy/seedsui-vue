@@ -1,5 +1,5 @@
 <template>
-  <div class="group">
+  <div class="group" :style="css">
   	<Caption v-if="title" :text="title"></Caption>
     <slot></slot>
   </div>
@@ -8,6 +8,9 @@
 export default {
   name: 'Group',
   props: {
+    css: {
+      type: String
+    },
     title: {
       type: String,
       default: ''

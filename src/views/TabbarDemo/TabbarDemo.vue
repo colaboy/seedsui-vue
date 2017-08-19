@@ -8,27 +8,27 @@
     <Tabbar :list="tabbar" :active="0"></Tabbar>
     <br/>
     <div class="description">line reverse</div>
-    <Tabbar :list="tabbar" theme="reverse" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" theme="reverse" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">rect</div>
-    <Tabbar :list="tabbar" type="rect" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" type="rect" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">rect reverse</div>
     <div class="bg-primary" style="padding:8px 0">
-      <Tabbar :list="tabbar" theme="reverse" type="rect" activeStatus="0"></Tabbar>
+      <Tabbar :list="tabbar" theme="reverse" type="rect" :activeIndex="0"></Tabbar>
     </div>
     <br/>
     <div class="description">lump</div>
-    <Tabbar :list="tabbar" type="lump" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" type="lump" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">lump reverse</div>
-    <Tabbar :list="tabbar" theme="reverse" type="lump" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" theme="reverse" type="lump" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">footer</div>
-    <Tabbar :list="tabbar" type="footer" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" type="footer" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">footer reverse</div>
-    <Tabbar :list="tabbar" theme="reverse" type="footer" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" theme="reverse" type="footer" :activeIndex="0"></Tabbar>
     <br/>
   </article>
 </div>

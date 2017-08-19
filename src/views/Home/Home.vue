@@ -110,6 +110,12 @@
         </router-link>
       </li>
       <li>
+        <router-link class="list-li underline" to="carrouselPageDemo">
+          <p class="list-container">CarrouselPage</p>
+          <i class="list-icon icon-arrowright"></i>
+        </router-link>
+      </li>
+      <li>
         <router-link class="list-li underline" to="imglazyDemo">
           <p class="list-container">imglazyDemo</p>
           <i class="list-icon icon-arrowright"></i>

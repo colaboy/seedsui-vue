@@ -9,8 +9,7 @@ export default {
   name: 'ImgLazy',
   props: {
     css: {
-      type: String,
-      default: 'padding:0 8px;'
+      type: String
     },
     className: {
       type: String

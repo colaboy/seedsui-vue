@@ -4,7 +4,7 @@
     <Titlebar title="carrousel" />
   </header>
   <article>
-    <Carrousel :list="list" :pagination="true" :autoplay="3000"/>
+    <Carrousel ref="refCarrousel" :list="list" :pagination="true" :loop="true"/>
     <Carrousel :list="list" :pagination="true" :slidesPerView="3" :loop="true"/>
   </article>
 </div>
@@ -44,6 +44,8 @@ export default {
     onClickChartpie (e) {
       console.log('数据分析')
     }
+  },
+  mounted () {
   }
 }
 </script>

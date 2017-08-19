@@ -1,8 +1,15 @@
 <template>
-  <div class="carrousel-container">
-    <div class="carrousel-wrapper">
+  <div class="carrousel-container" :style="css">
+    <!-- 轮播页 -->
+    <div v-if="page" class="carrousel-wrapper">
+      <div class="carrousel-slide" v-for="(item, index) in page" :key="index">
+        <slot :name="'carrousel-'+item"></slot>
+      </div>
+    </div>
+    <!-- 轮播图 -->
+    <div v-else class="carrousel-wrapper">
       <div class="carrousel-slide" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
-        <img v-if="item.img" class="slide-banner" :src="imgs.default.url" />
+        <img v-if="item.img" class="slide-banner" :src="imgs.default.url" :data-load-src="item.img"/>
         <div class="slide-title" v-if="item.text">
           <i :class="'icon slide-title-icon'+(item.icon?' '+item.icon:'')"></i>
           <span class="nowrap slide-title-font" style="margin-right: 20px;">
@@ -20,6 +27,13 @@ import Carrousel from './carrousel.js'
 export default {
   name: 'Carrousel',
   props: {
+    css: {
+      type: String
+    },
+    page: {
+      type: Number,
+      default: 0
+    },
     pagination: {
       type: Boolean,
       default: true
@@ -47,7 +61,7 @@ export default {
         }]
       }
     },
-    onSlideChangeEnd: {
+    change: {
       type: Function
     }
   },
@@ -60,6 +74,15 @@ export default {
     }
   },
   methods: {
+    onSlideChangeEnd (e) {
+      if (this.change) this.change(e)
+    }
+  },
+  computed: {
+    imglazy () {
+      if (this.page) return null
+      return '[data-load-src]'
+    }
   },
   mounted () {
     if (this.instance) return
@@ -67,11 +90,12 @@ export default {
       this.instance = new Carrousel(this.$el, {
         pagination: '.carrousel-pagination',
         autoplay: this.autoplay,
+        imglazy: this.imglazy,
         slidesPerView: this.slidesPerView,
         loop: this.loop,
         onSlideChangeEnd: this.onSlideChangeEnd
       })
-    }, 500)
+    }, 100)
   }
 }
 </script>

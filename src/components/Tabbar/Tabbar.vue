@@ -32,14 +32,13 @@ export default {
         }]
       }
     },
-    active: {
+    activeIndex: {
       type: Number,
       default: 0
     }
   },
   data () {
     return {
-      activeIndex: this.active
     }
   },
   watch: {
@@ -48,7 +47,6 @@ export default {
   },
   methods: {
     onClick (item, i, callback) {
-      this.activeIndex = i
       callback(item, i)
     }
   },

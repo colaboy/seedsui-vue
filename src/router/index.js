@@ -16,6 +16,7 @@ import PopupDemo from '@/views/PopupDemo'
 import PickerDemo from '@/views/PickerDemo'
 import FormDemo from '@/views/FormDemo'
 import CarrouselDemo from '@/views/CarrouselDemo'
+import CarrouselPageDemo from '@/views/CarrouselPageDemo'
 import ImglazyDemo from '@/views/ImglazyDemo'
 
 Vue.use(Router)
@@ -116,6 +117,12 @@ export default new Router({
       path: '/carrouselDemo',
       name: 'carrouselDemo',
       component: CarrouselDemo,
+      meta: {keepAlive: true}
+    },
+    {
+      path: '/carrouselPageDemo',
+      name: 'carrouselPageDemo',
+      component: CarrouselPageDemo,
       meta: {keepAlive: true}
     },
     {

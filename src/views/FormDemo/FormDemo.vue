@@ -10,6 +10,8 @@
       <Switch1 theme="reverse" :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange4"/>
       <Turn :change="onTurnChange"/>
       <NumBox :change="onNumBoxChange"/>
+      <InputPre :change="onPreChange"/>
+      <InputSearch :change="onSearchChange" :submit="onSearchSubmit"/>
   </article>
 </div>
 </template>
@@ -38,6 +40,15 @@ export default {
       console.log(value)
     },
     onNumBoxChange (value) {
+      console.log(value)
+    },
+    onPreChange (value) {
+      console.log(value)
+    },
+    onSearchChange (value) {
+      console.log(value)
+    },
+    onSearchSubmit (value) {
       console.log(value)
     }
   }
