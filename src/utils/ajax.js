@@ -1,44 +1,72 @@
-import utils from './index.js'
+// Ajax
+var ajax = {
+  xhr: function (config) {
+    var xhr = new window.XMLHttpRequest()
+    var url = config.url
+    var data = config.data || {}
+    var success = config.success
+    var error = config.error
+    var params = Object.params(data)
+    var type = config.type || 'GET'
+    var contentType = config.contentType
+    var extra = config.extra
 
-var xhr = (config) => {
-  let xhr = new window.XMLHttpRequest()
-  let url = config.url
-  let data = config.data || {}
-  let success = config.success
-  let error = config.error
-  let params = utils.buildParams(data)
-  let type = config.type || 'GET'
-  let contentType = config.contentType
-  let extra = config.extra
-
-  xhr.onreadystatechange = () => {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        let res = JSON.parse(xhr.responseText)
-        success(res, extra)
-      } else {
-        error && error()
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var res = JSON.parse(xhr.responseText)
+          success(res, extra)
+        } else {
+          error && error()
+        }
       }
     }
-  }
 
-  if (type === 'POST') {
-    xhr.open(type, url, true)
-    xhr.setRequestHeader('Content-type', contentType || 'application/json')
-    if (contentType === 'application/x-www-form-urlencoded; charset=UTF-8') {
-      xhr.send(params)
+    if (type === 'POST') {
+      xhr.open(type, url, true)
+      xhr.setRequestHeader('Content-type', contentType || 'application/json')
+      if (contentType === 'application/x-www-form-urlencoded; charset=UTF-8') {
+        xhr.send(params)
+      } else {
+        xhr.send(JSON.stringify(data))
+      }
     } else {
-      xhr.send(JSON.stringify(data))
+      if (url.indexOf('?') === -1) {
+        url += '?' + params
+      } else {
+        url += '&' + params
+      }
+      xhr.open(type, url, true)
+      xhr.send(null)
     }
-  } else {
-    if (url.indexOf('?') === -1) {
-      url += '?' + params
-    } else {
-      url += '&' + params
-    }
-    xhr.open(type, url, true)
-    xhr.send(null)
+  },
+  fetchData: function (url, req, type, contentType) {
+    // 显示loading
+    // ob.$emit('ajaxLoading', true)
+    var reqData = req || {}
+    return new Promise(function (resolve, reject) {
+      ajax.xhr({
+        url: url,
+        data: reqData,
+        type: type,
+        contentType: contentType,
+        success: function (data) {
+          if (data.code === '1') {
+            resolve(data)
+          } else {
+            reject(data)
+          }
+          // 关闭loading
+          // ob.$emit('ajaxLoading', false)
+        },
+        error: function (err) {
+          reject(err)
+          // 关闭loading
+          // ob.$emit('ajaxLoading', false)
+        }
+      })
+    })
   }
 }
 
-export default { xhr }
+export default ajax

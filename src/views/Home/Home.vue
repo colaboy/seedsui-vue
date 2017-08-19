@@ -116,21 +116,6 @@
         </router-link>
       </li>
       <li class="sliver underline">
-        <p class="sliver-title">栅格</p>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="gridDemo">
-          <p class="list-container">九宫格</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="grid-metroDemo">
-          <p class="list-container">块级栅格</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li class="sliver underline">
         <p class="sliver-title">列表</p>
       </li>
       <li class="sliver underline">

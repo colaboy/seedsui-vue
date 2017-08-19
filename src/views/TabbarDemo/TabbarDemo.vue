@@ -5,30 +5,30 @@
   </header>
   <article>
     <div class="description">line</div>
-    <Tabbar :list="list" :active="0"></Tabbar>
+    <Tabbar :list="tabbar" :active="0"></Tabbar>
     <br/>
     <div class="description">line reverse</div>
-    <Tabbar :list="list" theme="reverse" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" theme="reverse" activeStatus="0"></Tabbar>
     <br/>
     <div class="description">rect</div>
-    <Tabbar :list="list" type="rect" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" type="rect" activeStatus="0"></Tabbar>
     <br/>
     <div class="description">rect reverse</div>
     <div class="bg-primary" style="padding:8px 0">
-      <Tabbar :list="list" theme="reverse" type="rect" activeStatus="0"></Tabbar>
+      <Tabbar :list="tabbar" theme="reverse" type="rect" activeStatus="0"></Tabbar>
     </div>
     <br/>
     <div class="description">lump</div>
-    <Tabbar :list="list" type="lump" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" type="lump" activeStatus="0"></Tabbar>
     <br/>
     <div class="description">lump reverse</div>
-    <Tabbar :list="list" theme="reverse" type="lump" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" theme="reverse" type="lump" activeStatus="0"></Tabbar>
     <br/>
     <div class="description">footer</div>
-    <Tabbar :list="list" type="footer" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" type="footer" activeStatus="0"></Tabbar>
     <br/>
     <div class="description">footer reverse</div>
-    <Tabbar :list="list" theme="reverse" type="footer" activeStatus="0"></Tabbar>
+    <Tabbar :list="tabbar" theme="reverse" type="footer" activeStatus="0"></Tabbar>
     <br/>
   </article>
 </div>
@@ -39,7 +39,7 @@ export default {
   name: 'TabbarDemo',
   data () {
     return {
-      list: [
+      tabbar: [
         {
           text: '首页',
           icon: 'icon-home',
