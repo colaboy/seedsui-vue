@@ -22,6 +22,9 @@ import ImglazyDemo from '@/views/ImglazyDemo'
 Vue.use(Router)
 
 export default new Router({
+  scrollBehavior (to, from, savedPosition) {
+    return savedPosition || { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',

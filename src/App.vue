@@ -15,14 +15,16 @@
 import Fastclick from 'Fastclick'
 // 微信配置
 import Weixin from './bridge/weixin.js'
+import Device from '@/utils/device.js'
 
 export default {
   name: 'app',
   mounted () {
     // 微信与安卓配置
-    this.$store.dispatch('setPlatform')
-    this.$store.dispatch('setOs')
-    this.$store.dispatch('setOsVersion')
+    this.$store.dispatch('setPlatform', Device.platform)
+    this.$store.dispatch('setOs', Device.os)
+    this.$store.dispatch('setOsVersion', Device.osVersion)
+    console.log(this.$store.state.os)
     if (this.$store.state.platform === 'weixin') {
       /* eslint-disable */
       Weixin.config()

@@ -4,7 +4,7 @@
       <div class="alert-content">{{text}}</div>
       <div class="alert-handler">
         <a v-if="clickCancel" @click="clickCancel">取消</a>
-        <a @click="clickOk">确定</a>
+        <a @click="clickSubmit">确定</a>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@ export default {
       type: Boolean,
       default: false
     },
-    clickOk: {
+    clickSubmit: {
       type: Function
     },
     clickCancel: {

@@ -18,6 +18,12 @@
       <Tabbar :list="tabbar" theme="reverse" type="rect" :activeIndex="0"></Tabbar>
     </div>
     <br/>
+    <div class="description">dropdown</div>
+    <Tabbar :list="tabbar" type="dropdown" :activeIndex="0"></Tabbar>
+    <br/>
+    <div class="description">dropdown reverse</div>
+    <Tabbar :list="tabbar" theme="reverse" type="dropdown" :activeIndex="0"></Tabbar>
+    <br/>
     <div class="description">lump</div>
     <Tabbar :list="tabbar" type="lump" :activeIndex="0"></Tabbar>
     <br/>

@@ -166,6 +166,20 @@ export default {
     return {
       msg: 'Welcome to SeedsUI'
     }
+  },
+  created () {
+    let self = this
+    self.axios.get(this.urls.rewardsList).then(response => {
+      let result = response.data
+      if (result.code === '1') {
+        self.list = result.data.tasks
+      } else {
+        console.log(result.message)
+      }
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 }
 </script>

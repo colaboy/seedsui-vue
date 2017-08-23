@@ -7,6 +7,18 @@ import store from './store'
 import router from './router'
 import { sync } from 'vuex-router-sync'
 sync(store, router)
+
+import axios from 'axios'
+Vue.prototype.axios = axios
+const env = process.env.NODE_ENV
+if (env === 'development') {
+  // 开启debug模式
+  Vue.config.debug = true
+  // 开启跨域
+  // axios.defaults.withCredentials = true
+}
+import urls from '@/utils/urls'
+Vue.prototype.urls = urls
 // 关闭生产模式下给出的提示
 Vue.config.productionTip = false
 // 配置全局组件

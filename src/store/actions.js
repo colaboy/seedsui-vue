@@ -1,12 +1,12 @@
-import Device from '@/utils/device.js'
+
 export default {
-  setPlatform (context) {
-    context.commit('setPlatform', Device.platform)
+  setPlatform (context, value) {
+    context.commit('setPlatform', value)
   },
-  setOs (context) {
-    context.commit('setOs', Device.os)
+  setOs (context, value) {
+    context.commit('setOs', value)
   },
-  setOsVersion (context) {
-    context.commit('setOsVersion', Device.osVersion)
+  setOsVersion (context, value) {
+    context.commit('setOsVersion', value)
   }
 }

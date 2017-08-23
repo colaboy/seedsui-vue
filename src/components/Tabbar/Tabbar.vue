@@ -1,5 +1,5 @@
 <template>
-  <ul :class="'tabbar '+theme+' '+tabbarClass" :style="tabbarCss+css">
+  <ul :class="'tabbar tabbar-'+type+' '+theme" :style="tabbarCss+css">
     <li v-for="(item, index) in list" :class="'tab'+(activeIndex===index?' active':'')" :key="index" @click.stop.prevent="onClick(item,index,item.click)">
       <i v-if="item.icon" :class="'icon '+item.icon"></i>
       <label class="tab-label">{{item.text}}</label>
@@ -18,7 +18,7 @@ export default {
       type: String,
       default: ''
     },
-    type: { // line | rect | lump | footer
+    type: { // line | rect | lump | dropdown | footer
       type: String,
       default: 'line'
     },
@@ -69,26 +69,6 @@ export default {
         }
       }
       return css
-    },
-    tabbarClass () {
-      var classes = ''
-      switch (this.type) {
-        case 'line' :
-          classes = 'tabbar-line animated'
-          break
-        case 'rect' :
-          classes = 'tabbar-rect'
-          break
-        case 'lump' :
-          classes = 'tabbar-lump'
-          break
-        case 'footer' :
-          classes = 'tabbar-footer'
-          break
-        default :
-          classes = 'tabbar-line animated'
-      }
-      return classes
     }
   }
 }

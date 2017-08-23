@@ -1,5 +1,5 @@
 <template>
-  <a :class="'button '+type" :style="css" href="javascript:;" @click.stop.prevent="click">
+  <a :class="'button '+type+(block?' block':'')" :style="(block?'-webkit-box-flex:1;':'')+(radius?'border-radius:'+radius+'px;':'')+css" href="javascript:;" @click.stop.prevent="click">
       <i v-if="icon" :class="'icon '+icon"></i>
       <span>{{text}}</span>
       <span v-if="tipText" class="tip">{{tipText}}</span>
@@ -10,13 +10,21 @@
 export default {
   name: 'Button',
   props: {
+    radius: {
+      type: Number,
+      default: 0
+    },
+    block: {
+      type: Boolean,
+      default: false
+    },
     type: {
       type: String, // primary|submit|cancel|info|success|warn|disabled
       default: ''
     },
     css: {
       type: String,
-      default: 'padding:0 8px;'
+      default: ''
     },
     text: {
       type: String,

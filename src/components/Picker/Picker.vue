@@ -27,10 +27,10 @@ export default {
       type: Boolean,
       default: false
     },
-    onClickOk: {
+    clickSubmit: {
       type: Function
     },
-    onClickCancel: {
+    clickCancel: {
       type: Function
     }
   },
@@ -43,7 +43,7 @@ export default {
     this.instance = new Picker({
       mask: this.$el,
       onClickDone: (e) => {
-        this.onClickOk(e)
+        this.clickSubmit(e)
       }
     })
   },
