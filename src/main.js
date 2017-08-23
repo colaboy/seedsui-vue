@@ -22,7 +22,7 @@ Vue.prototype.urls = urls
 // 关闭生产模式下给出的提示
 Vue.config.productionTip = false
 // 配置全局组件
-import seedsui from '@/components/seedsui'
+import seedsui from '@/components/seedsui/seedsui'
 Vue.use(seedsui)
 /* eslint-disable no-new */
 new Vue({

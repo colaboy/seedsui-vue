@@ -73,7 +73,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../assets/styles/variables.less";
+  @import "../../assets/seedsui/styles/variables.less";
   .peg-content{
       text-align:center;padding: 10px 12px;
   }

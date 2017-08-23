@@ -168,11 +168,10 @@ export default {
     }
   },
   created () {
-    let self = this
-    self.axios.get(this.urls.rewardsList).then(response => {
+    this.axios.get(this.urls.rewardsList).then(response => {
       let result = response.data
       if (result.code === '1') {
-        self.list = result.data.tasks
+        this.list = result.data.tasks
       } else {
         console.log(result.message)
       }
@@ -185,7 +184,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  @import "../../assets/styles/variables.less";
+  @import "../../assets/seedsui/styles/variables.less";
   .titlebar-title{
     padding-left: 12px;
   }

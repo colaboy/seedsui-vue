@@ -42,7 +42,7 @@ export default {
 
 <style lang="less">
   /* SeedsUI */
-  @import "./assets/seedsui.less";
+  @import "./assets/seedsui/seedsui.less";
 
   .fade-enter-active,
   .fade-leave-active{

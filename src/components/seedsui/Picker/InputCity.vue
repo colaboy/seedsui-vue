@@ -76,5 +76,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../assets/styles/variables.less";
+  @import "../../../assets/seedsui/styles/variables.less";
 </style>
