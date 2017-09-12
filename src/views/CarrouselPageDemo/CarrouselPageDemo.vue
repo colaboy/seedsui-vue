@@ -1,6 +1,6 @@
 <template>
 <div class="page">
-  <header>
+  <header class="header">
     <Titlebar title="库存管理" back="true"></Titlebar>
     <Tabbar :list="tabbar" :activeIndex="tabbarActive"></Tabbar>
   </header>

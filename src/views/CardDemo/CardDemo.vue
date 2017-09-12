@@ -1,6 +1,6 @@
 <template>
-<div>
-  <header>
+<div class="page">
+  <header class="header">
     <Titlebar title="card"/>
   </header>
   <article>

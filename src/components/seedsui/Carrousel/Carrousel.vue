@@ -3,7 +3,7 @@
     <!-- 轮播页 -->
     <div v-if="page" class="carrousel-wrapper">
       <div class="carrousel-slide" v-for="(item, index) in page" :key="index">
-        <slot :name="'carrousel-'+item"></slot>
+        <slot :name="'carrousel-'+item" style="background-color:red;"></slot>
       </div>
     </div>
     <!-- 轮播图 -->
@@ -35,8 +35,8 @@ export default {
       default: 0
     },
     pagination: {
-      type: Boolean,
-      default: true
+      type: String,
+      default: '.carrousel-pagination'
     },
     loop: {
       type: Boolean,
@@ -78,19 +78,12 @@ export default {
       if (this.change) this.change(e)
     }
   },
-  computed: {
-    imglazy () {
-      if (this.page) return null
-      return '[data-load-src]'
-    }
-  },
   mounted () {
     if (this.instance) return
     setTimeout(() => {
       this.instance = new Carrousel(this.$el, {
-        pagination: '.carrousel-pagination',
+        pagination: this.pagination,
         autoplay: this.autoplay,
-        imglazy: this.imglazy,
         slidesPerView: this.slidesPerView,
         loop: this.loop,
         onSlideChangeEnd: this.onSlideChangeEnd

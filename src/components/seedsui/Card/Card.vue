@@ -1,5 +1,5 @@
 <template>
-  <div class="card bordered" :style="css">
+  <div class="card bordered" :style="(radius?'border-radius:'+radius+'px;':'')+css">
     <slot></slot>
   </div>
 </template>
@@ -7,9 +7,13 @@
 export default {
   name: 'Card',
   props: {
+    radius: {
+      type: Number,
+      default: 8
+    },
     css: {
       type: String,
-      default: 'padding:0 8px;'
+      default: ''
     }
   },
   data () {

@@ -1,8 +1,26 @@
+<style lang="less" scoped>
+  @import "../../../assets/seedsui/styles/variables.less";
+  .tabbar {
+    background-color: #FAFAFA
+  }
+  .triangle-up {
+		position: relative;
+    width:0; 
+    height:0; 
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    border-top:5px solid @bar-color;
+  }
+  .tab.active .triangle-up {
+    border-top:5px solid @bar-color-active;
+  }
+</style>
 <template>
-  <ul :class="'tabbar tabbar-'+type+' '+theme" :style="tabbarCss+css">
+  <ul :class="'tabbar tabbar-'+type+' animated'+(theme?' '+theme:'')+(type==='line'?' tabbar-line-width'+linewidth:'')+(disabled?' disabled':'')" :data-col="list.length" :style="tabbarCss+css">
     <li v-for="(item, index) in list" :class="'tab'+(activeIndex===index?' active':'')" :key="index" @click.stop.prevent="onClick(item,index,item.click)">
-      <i v-if="item.icon" :class="'icon '+item.icon"></i>
+      <i v-if="item.icon && type!=='dropdown'" :class="'icon '+item.icon"></i>
       <label class="tab-label">{{item.text}}</label>
+      <i v-if="item.icon && type==='dropdown'" :class="'icon size12 '+item.icon"></i>
     </li>
   </ul>
 </template>
@@ -10,11 +28,19 @@
 export default {
   name: 'Tabbar',
   props: {
+    linewidth: {
+      type: String,
+      default: '60'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     css: {
       type: String,
       default: ''
     },
-    theme: {
+    theme: { // reverse
       type: String,
       default: ''
     },

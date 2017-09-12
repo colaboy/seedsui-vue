@@ -1,161 +1,173 @@
 <template>
 <div>
-  <header>
-    <Titlebar title="SeedsUI" back="true">
-      <a slot="right" class="titlebar-button" href="javascript:showAbout()">
-        <i class="icon icon-rdoinfo"></i>
-      </a>
-    </Titlebar>
-  </header>
-  <article>
-    <ul class="list">
-      <li class="sliver underline">
-        <p class="sliver-title">基础组件</p>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="iconfontDemo">
-          <p class="list-container">Iconfont</p> <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="loadingDemo">
-          <p class="list-container">Loading</p> <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="titlebarDemo">
-          <p class="list-container">TitleBar</p> <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="tabbarDemo">
-          <p class="list-container">TabBar</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="buttonDemo">
-          <p class="list-container">Button</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="markDemo">
-          <p class="list-container">Mark</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="badgeDemo">
-          <p class="list-container">Badge</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="groupDemo">
-          <p class="list-container">Group</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="cardDemo">
-          <p class="list-container">Card</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <!-- <router-link class="list-li underline" to="group-rowDemo">
-          <p class="list-container">行分组</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      <li>
-        <router-link class="list-li underline" to="tableDemo">
-          <p class="list-container">Table</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li> -->
-      <li>
-        <router-link class="list-li underline" to="starDemo">
-          <p class="list-container">Star</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="gridDemo">
-          <p class="list-container">Grid</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="popupDemo">
-          <p class="list-container">Popup</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="pickerDemo">
-          <p class="list-container">Picker</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="formDemo">
-          <p class="list-container">Form</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="carrouselDemo">
-          <p class="list-container">Carrousel</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="carrouselPageDemo">
-          <p class="list-container">CarrouselPage</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="imglazyDemo">
-          <p class="list-container">imglazyDemo</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li class="sliver underline">
-        <p class="sliver-title">列表</p>
-      </li>
-      <li class="sliver underline">
-        <p class="sliver-title">基础组件</p>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="codeDemo">
-          <p class="list-container">代码展现</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li class="sliver underline">
-        <p class="sliver-title">错误页面</p>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="404Demo">
-          <p class="list-container">404</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="500Demo">
-          <p class="list-container">500</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-      <li>
-        <router-link class="list-li underline" to="nowifiDemo">
-          <p class="list-container">无网络</p>
-          <i class="list-icon icon-arrowright"></i>
-        </router-link>
-      </li>
-    </ul>
-  </article>
+  <div class="page">
+    <header class="header">
+      <Titlebar title="SeedsUI" back="true">
+        <a slot="right" class="titlebar-button" href="javascript:showAbout()">
+          <i class="icon icon-rdoinfo"></i>
+        </a>
+      </Titlebar>
+    </header>
+    <article>
+      <ul class="list">
+        <li class="sliver underline">
+          <p class="sliver-title">布局 Layout</p>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'FlexDemo'}">
+            <p class="list-container">Flex布局</p> <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'SpaceDemo'}">
+            <p class="list-container">Space间距</p> <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+
+        <li class="sliver underline">
+          <p class="sliver-title">导航 Navigation</p>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'titlebarDemo'}">
+            <p class="list-container">TitleBar</p> <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'tabbarDemo'}">
+            <p class="list-container">TabBar</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+
+        <li class="sliver underline">
+          <p class="sliver-title">数据录入 Data Entry</p>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'buttonDemo'}">
+            <p class="list-container">Button</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'pickerDemo'}">
+            <p class="list-container">Picker</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'formDemo'}">
+            <p class="list-container">Form</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'starDemo'}">
+            <p class="list-container">Star</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+
+        <li class="sliver underline">
+          <p class="sliver-title">数据展示 Data Display</p>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'iconfontDemo'}">
+            <p class="list-container">Iconfont</p> <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'markDemo'}">
+            <p class="list-container">Mark</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'badgeDemo'}">
+            <p class="list-container">Badge</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'groupDemo'}">
+            <p class="list-container">Group</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'cardDemo'}">
+            <p class="list-container">Card</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'gridDemo'}">
+            <p class="list-container">Grid</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'carrouselDemo'}">
+            <p class="list-container">Carrousel</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'carrouselPageDemo'}">
+            <p class="list-container">CarrouselPage</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'imglazyDemo'}">
+            <p class="list-container">imglazyDemo</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <!-- <router-link class="list-li underline" :to="{name: 'group-rowDemo'}">
+            <p class="list-container">行分组</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'tableDemo'}">
+            <p class="list-container">Table</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li> -->
+
+        <li class="sliver underline">
+          <p class="sliver-title">操作反馈 Feedback</p>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'popupDemo'}">
+            <p class="list-container">Popup</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'loadingDemo'}">
+            <p class="list-container">Loading</p> <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+
+        <li class="sliver underline">
+          <p class="sliver-title">手势 Gesture</p>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'DragRefreshDemo'}">
+            <p class="list-container">Dragrefresh下拉刷新</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'PullListDemo'}">
+            <p class="list-container">Pulllist列表拉动</p>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+      </ul>
+    </article>
+  </div>
+  <router-view></router-view>
 </div>
 </template>
 
@@ -168,7 +180,7 @@ export default {
     }
   },
   created () {
-    this.axios.get(this.urls.rewardsList).then(response => {
+    /* this.axios.get(this.urls.urlxx).then(response => {
       let result = response.data
       if (result.code === '1') {
         this.list = result.data.tasks
@@ -178,7 +190,7 @@ export default {
     })
     .catch(err => {
       console.log(err)
-    })
+    }) */
   }
 }
 </script>

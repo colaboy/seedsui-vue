@@ -1,0 +1,6 @@
+{
+  "name": "Sliver",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Sliver.vue"
+}

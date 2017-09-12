@@ -1,5 +1,5 @@
 <template>
-  <input :class="className" :style="css" type="text" style="width:100%" class="input-text" readOnly="true" :value="value" v-model="currentValue" :placeholder="placeholder" @click="onClickPicker"/>
+  <input :class="className" :style="css" type="text" readOnly="true" :value="value" :placeholder="placeholder" @click="onClickPicker"/>
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
     },
     className: {
       type: String,
-      default: ''
+      default: 'input-text'
     },
     css: {
       type: String,
@@ -34,8 +34,7 @@ export default {
   },
   data () {
     return {
-      instance: null,
-      currentValue: this.value
+      instance: null
     }
   },
   mounted () {
@@ -43,7 +42,7 @@ export default {
   },
   methods: {
     initInstance () {
-      var defaultValue = this.currentValue
+      var defaultValue = this.value
       var defaultProvince = ''
       var defaultCity = ''
       var defaultArea = ''
@@ -62,7 +61,6 @@ export default {
         defaultCity: defaultCity,
         defaultArea: defaultArea,
         onClickDone: (e) => {
-          this.currentValue = e.activeText
           if (this.change) this.change(e.activeText)
           e.hide()
         }

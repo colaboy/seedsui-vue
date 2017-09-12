@@ -1,8 +1,8 @@
 <template>
-<div>
-  <Alert text="提示框" :show="showAlert" :clickOk="onClickAlertOk"/>
-  <Alert text="对话框" :show="showConfirm" :clickOk="onClickConfirmOk" :clickCancel="onClickConfirmCancel"/>
-  <Toast text="提示框" :show="showToast" />
+<div class="page">
+  <Alert text="提示框" :show="showAlert" :clickSubmit="onAlertSubmit"/>
+  <Alert text="对话框" :show="showConfirm" :clickSubmit="onConfirmSubmit" :clickCancel="onConfirmCancel"/>
+  <!-- <Toast :text="toastText" :show="toastShow" /> -->
   <Prompt text="提示框" :show="showPrompt" />
 
   <Dialog ref="refPopover" position="top-right" animation="zoom" css="overflow:visible; top: 54px; right: 6px;">
@@ -79,7 +79,7 @@
     <div style="display:block;background-color: white;width: 200px;height:100px;">middle</div>
   </Dialog>
   
-  <header>
+  <header class="header">
     <Titlebar title="popup" :rBtn="[{icon:'icon-share',click:this.onClickBtnShare},{icon:'icon-menudot',click:this.onClickBtnMenu}]"/>
   </header>
   <article>
@@ -88,7 +88,7 @@
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnAlert" text="alert" />
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnConfirm" text="confirm" />
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnActionsheet" text="actionsheet" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnToast" text="toast" />
+        <Button css="padding:0 8px;margin:2px 0;" :click="toast('提示框')" text="toast" />
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnPrompt" text="prompt" />
       </Card>
 
@@ -140,7 +140,8 @@ export default {
       showAlert: false,
       showConfirm: false,
       showActionsheet: false,
-      showToast: false,
+      toastShow: false,
+      toastText: '',
       showPrompt: false
     }
   },
@@ -160,22 +161,23 @@ export default {
     onClickBtnAlert () {
       this.showAlert = true
     },
-    onClickAlertOk () {
+    onAlertSubmit () {
       this.showAlert = false
     },
     onClickBtnConfirm () {
       this.showConfirm = true
     },
-    onClickConfirmOk () {
+    onConfirmSubmit () {
       this.showConfirm = false
     },
-    onClickConfirmCancel () {
+    onConfirmCancel () {
       this.showConfirm = false
     },
-    onClickBtnToast () {
-      this.showToast = true
+    toast (text) {
+      this.toastText = text
+      this.toastShow = true
       setTimeout(() => {
-        this.showToast = false
+        this.toastShow = false
       }, 1000)
     },
     onClickBtnPrompt () {

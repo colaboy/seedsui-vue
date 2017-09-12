@@ -1,5 +1,5 @@
 <template>
-  <span v-if="show" :class="'mark-'+type" :style="css" @click="onClick">{{text}}</span>
+  <span v-if="show" :class="'mark-'+type" :style="css" @click="click">{{text}}</span>
 </template>
 <script>
 export default {
@@ -21,7 +21,7 @@ export default {
       type: String,
       default: '标签'
     },
-    onClick: {
+    click: {
       type: Function,
       default: function () {}
     }

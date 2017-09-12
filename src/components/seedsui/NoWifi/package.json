@@ -1,6 +1,6 @@
 {
-  "name": "Tree",
+  "name": "NoWifi",
   "version": "0.0.0",
   "private": true,
-  "main": "./Tree.vue"
+  "main": "./NoWifi.vue"
 }

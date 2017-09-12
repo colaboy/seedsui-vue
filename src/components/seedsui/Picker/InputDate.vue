@@ -1,5 +1,5 @@
 <template>
-  <input :class="className" :style="css" type="text" style="width:100%" class="input-text" readOnly="true" :value="value" v-model="currentValue" :placeholder="placeholder" @click="onClickPicker"/>
+  <input :class="className" :style="css" type="text" style="width:100%" readOnly="true" :value="value" :placeholder="placeholder" @click="onClickPicker"/>
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
     },
     className: {
       type: String,
-      default: ''
+      default: 'input-text'
     },
     css: {
       type: String,
@@ -37,7 +37,6 @@ export default {
   data () {
     return {
       instance: null,
-      currentValue: this.value,
       defaultYear: '',
       defaultMonth: '',
       defaultDay: '',
@@ -144,7 +143,6 @@ export default {
         defaultHour: defaultHour,
         defaultMinute: defaultMinute,
         onClickDone: (e) => {
-          this.currentValue = e.activeText
           if (this.change) this.change(e.activeText)
           e.hide()
         }

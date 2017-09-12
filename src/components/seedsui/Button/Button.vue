@@ -1,5 +1,5 @@
 <template>
-  <a :class="'button '+type+(block?' block':'')" :style="(block?'-webkit-box-flex:1;':'')+(radius?'border-radius:'+radius+'px;':'')+css" href="javascript:;" @click.stop.prevent="click">
+  <a :class="'button'+(type?' '+type:'')+(block?' block':'')" :style="(block?'-webkit-box-flex:1;':'')+(radius?'border-radius:'+radius+'px;':'')+css" href="javascript:;" @click.stop.prevent="click">
       <i v-if="icon" :class="'icon '+icon"></i>
       <span>{{text}}</span>
       <span v-if="tipText" class="tip">{{tipText}}</span>
@@ -43,13 +43,16 @@ export default {
       default: ''
     },
     click: {
-      type: Function
+      type: Function,
+      default: function () {}
     },
     params: Object
   },
   data () {
     return {
     }
+  },
+  mounted () {
   },
   methods: {
   }

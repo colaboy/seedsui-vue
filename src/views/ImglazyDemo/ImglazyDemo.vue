@@ -1,29 +1,25 @@
 <template>
-<div>
-  <header>
+<div class="page">
+  <header class="header">
     <Titlebar title="imglazy" :rBtn="[{text:'新增图片',click:onClickAdd}]"/>
   </header>
-  <article>
-    <img :src="imgs.online.url" class="lazyimg" />
-    <ImgLazy ref="refImgLazy">
-      <img data-load-src="abc.jpg" :data-error-src="imgs.default.url" :src="imgs.default.url" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
-      <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
-      <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
-      <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
-      <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
-      <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
-    </ImgLazy>
-  </article>
+  <ImgLazy ref="refImgLazy" className="container">
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <img :data-load-src="imgs.online.url" :data-error-src="imgs.default.url" src="" class="lazyimg" />
+    <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
+    <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
+    <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
+    <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
+    <div style="height: 210px;" :data-load-src="imgs.online.url" data-error-src="" class="lazyimg"></div>
+  </ImgLazy>
 </div>
 </template>
 
@@ -33,11 +29,15 @@ export default {
   name: 'ImglazyDemo',
   data () {
     return {
+      overflowContainer: null,
       imgs: {
         default: {url: defaultUrl},
         online: {url: 'http://pic.qjimage.com/bjisub001/high/bji0130_0089.jpg'}
       }
     }
+  },
+  mounted () {
+    this.overflowContainer = this.$el.querySelector('article')
   },
   methods: {
     onClickAdd () {

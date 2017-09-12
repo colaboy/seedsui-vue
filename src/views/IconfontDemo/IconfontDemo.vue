@@ -1,6 +1,6 @@
 <template>
-<div>
-  <header>
+<div class="page">
+  <header class="header">
     <Titlebar title="文字图标" />
   </header>
   <article>

@@ -1,6 +1,6 @@
 <template>
-<div>
-  <header>
+<div class="page">
+  <header class="header">
     <Titlebar title="form" back="true"></Titlebar>
   </header>
   <article>

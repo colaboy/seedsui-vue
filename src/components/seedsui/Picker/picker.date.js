@@ -7,9 +7,9 @@ var DatePicker = function (params) {
   params.onClickDone = undefined
   params.onScrollEnd = undefined
   var nowDate = new Date()
-  /* ----------------
-    Model
-    ---------------- */
+  /* ----------------------
+  params
+  ---------------------- */
   var defaults = {
     viewType: 'date', // 'date','month','time','datetime'
     isSimpleYear: false,
@@ -65,7 +65,9 @@ var DatePicker = function (params) {
     }
   }
   var s = new Picker(params)
-
+  /* ----------------------
+  Model
+  ---------------------- */
   function trim (str) {
     return str.replace(/(^\s*)|(\s*$)/g, '')
   }
@@ -230,9 +232,9 @@ var DatePicker = function (params) {
     }
   }
 
-  /* ----------------
+  /* ----------------------
   Method
-  ---------------- */
+  ---------------------- */
   function getActiveText (activeData) {
     var activeKeys = activeData.map(function (n, i, a) {
       return n['key']
@@ -258,10 +260,9 @@ var DatePicker = function (params) {
       if (activeKeys[1]) s.setDefaultMinute(activeKeys[1])
     }
   }
-  /* ----------------
+  /* ----------------------
   Init
-  ---------------- */
-
+  ---------------------- */
   // 添加数据
   function addMonthSlot () {
     s.addSlot(s.years, s.params.defaultYear, s.params.yearClass)

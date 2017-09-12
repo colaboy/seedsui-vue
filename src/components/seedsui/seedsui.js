@@ -1,5 +1,6 @@
 import '@/utils/dateutil.js'
 import '@/utils/object.js'
+import '@/utils/string.js'
 import Alert from './Alert'
 import Actionsheet from './Actionsheet'
 import Badge from './Badge'
@@ -35,6 +36,12 @@ import Carrousel from './Carrousel'
 import ImgLazy from './ImgLazy'
 import InputPre from './InputPre'
 import InputSearch from './InputSearch'
+import DropdownBox from './DropdownBox'
+import Dragrefresh from './Dragrefresh'
+import Sliver from './Sliver'
+import Mask1 from './Mask'
+import NoData from './NoData'
+import NoWifi from './NoWifi'
 
 var seedsui = {
   Alert,
@@ -71,7 +78,13 @@ var seedsui = {
   Carrousel,
   ImgLazy,
   InputPre,
-  InputSearch
+  InputSearch,
+  DropdownBox,
+  Dragrefresh,
+  Sliver,
+  Mask1,
+  NoData,
+  NoWifi
 }
 
 const install = function (Vue) {
