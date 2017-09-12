@@ -82,7 +82,7 @@
   <header class="header">
     <Titlebar title="popup" :rBtn="[{icon:'icon-share',click:this.onClickBtnShare},{icon:'icon-menudot',click:this.onClickBtnMenu}]"/>
   </header>
-  <article>
+  <article class="container">
       <Card css="padding:10px 12px;">
     		<p class="color-primary" css="padding: 0 0 6px 0;">系统弹出框</p>
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnAlert" text="alert" />

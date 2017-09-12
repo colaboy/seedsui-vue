@@ -8,7 +8,7 @@
         </a>
       </Titlebar>
     </header>
-    <article>
+    <article class="container">
       <ul class="list">
         <li class="sliver underline">
           <p class="sliver-title">布局 Layout</p>
@@ -180,16 +180,15 @@ export default {
     }
   },
   created () {
-    /* this.axios.get(this.urls.urlxx).then(response => {
-      let result = response.data
+    /* this.$http.getHomeData.then(response => {
+      let result = response
       if (result.code === '1') {
-        this.list = result.data.tasks
       } else {
-        console.log(result.message)
+        console.log('获取数据失败')
       }
     })
     .catch(err => {
-      console.log(err)
+      console.log('获取数据失败' + err)
     }) */
   }
 }

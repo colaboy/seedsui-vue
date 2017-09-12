@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="badge" back="true"></Titlebar>
   </header>
-  <article>
+  <article class="container">
       <Group title="badge">
           <div class="peg-content">
               <Badge text="badge"></Badge>

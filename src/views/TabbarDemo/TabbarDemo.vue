@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="Tabbar" />
   </header>
-  <article>
+  <article class="container">
     <div class="description">line</div>
     <Tabbar :list="tabbar" :active="0"></Tabbar>
     <br/>

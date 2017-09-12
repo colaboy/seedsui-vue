@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="star"/>
   </header>
-  <article>
+  <article class="container">
     <Star :default="2" :change="onChangeStar"/>
     <span>{{star}}</span>
   </article>

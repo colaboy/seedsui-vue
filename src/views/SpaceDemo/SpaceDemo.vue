@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="mark" back="true"></Titlebar>
   </header>
-  <article>
+  <article class="container">
       <Group title="标签">
           <div style="padding: 10px 12px;">
               <Mark type="info" text="info"></Mark>

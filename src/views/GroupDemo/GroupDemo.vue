@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="group"/>
   </header>
-  <article>
+  <article class="container">
       <Group title="带标题">
         <ul class="list">
           <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>

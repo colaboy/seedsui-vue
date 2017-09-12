@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="loading" back="true"></Titlebar>
   </header>
-  <article>
+  <article class="container">
     <Button text="显示spinning遮罩" buttonClass="block primary" buttonCss="margin:12px 10px;" :click="onClickSpinHandler"></Button>
     <Button text="显示fading遮罩" buttonClass="block submit" buttonCss="margin:12px 10px;" :click="onClickFadHandler"></Button>
   </article>

@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="form" back="true"></Titlebar>
   </header>
-  <article>
+  <article class="container">
       <Switch1 :change="onSwitchChange1"/>
       <Switch1 :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange2"/>
       <Switch1 theme="reverse" :change="onSwitchChange3"/>

@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="carrousel" />
   </header>
-  <article>
+  <article class="container">
     <Carrousel ref="refCarrousel" :list="list" :pagination="true" :loop="true"/>
     <Carrousel :list="list" :pagination="true" :slidesPerView="3" :loop="true"/>
   </article>

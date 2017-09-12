@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="picker" />
   </header>
-  <article>
+  <article class="container">
     <Group css="padding: 0 12px;">
       <div class="inputbox underline">
         <InputDate type="datetime" placeholder="请选择日期时间" :change="datetimeChange"/>

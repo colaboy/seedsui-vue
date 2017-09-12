@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="button" back="true"></Titlebar>
   </header>
-  <article>
+  <article class="container">
       <Group title="普通按钮">
           <div style="line-height: 50px;padding: 4px 12px 8px 12px;">
               <Button text="默认" tipText="1"></Button>

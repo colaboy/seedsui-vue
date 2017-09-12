@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="card"/>
   </header>
-  <article>
+  <article class="container">
 
   <Card>
     <p style="padding:8px;">内容内容</p>

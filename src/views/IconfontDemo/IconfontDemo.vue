@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="文字图标" />
   </header>
-  <article>
+  <article class="container">
     <Grid :list="list" type="pure" :bordered="true" :colors="['#333']"/>
   </article>
 </div>

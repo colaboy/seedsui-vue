@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="grid" back="true"></Titlebar>
   </header>
-  <article>
+  <article class="container">
     <Group title="square">
       <Grid :list="list"/>
     </Group>

@@ -3,7 +3,7 @@
   <header class="header">
     <Titlebar title="Titlebar" />
   </header>
-  <article>
+  <article class="container">
     <div class="description">
         titlebar
     </div>
