@@ -48,22 +48,10 @@ export default {
   mounted () {
     this.instance = new DragPull({
       overflowContainer: this.$el,
-      topContainer: this.topRefresh ? !0 : false,
-      bottomContainer: this.bottomRefresh ? !0 : false,
-      onTopRefresh: (e) => {
-        // 头部刷新,加载第一页
-        if (this.topRefresh) this.topRefresh(e)
-      },
-      onTopComplete: (e) => {
-        if (this.topComplete) this.topComplete(e)
-      },
-      onBottomRefresh: (e) => {
-        // 底部刷新,加载下一页
-        if (this.bottomRefresh) this.bottomRefresh(e)
-      },
-      onBottomComplete: (e) => {
-        if (this.bottomComplete) this.bottomComplete(e)
-      },
+      onTopRefresh: this.topRefresh ? this.topRefresh : null, // 头部刷新,加载第一页
+      onTopComplete: this.topComplete ? this.topComplete : null, // 头部完成
+      onBottomRefresh: this.bottomRefresh ? this.bottomRefresh : null, // 底部刷新,加载下一页
+      onBottomComplete: this.bottomComplete ? this.bottomComplete : null, // 底部完成
       onNoData: (e) => {
         console.log('无更多数据了')
       }

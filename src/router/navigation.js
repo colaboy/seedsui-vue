@@ -1,5 +1,5 @@
 import TitlebarDemo from '@/views/TitlebarDemo'
-import TabBarDemo from '@/views/TabBarDemo'
+import TabbarDemo from '@/views/TabbarDemo'
 
 export default [
   {
@@ -9,9 +9,9 @@ export default [
     meta: {keepAlive: true}
   },
   {
-    path: 'tabBarDemo',
-    name: 'tabBarDemo',
-    component: TabBarDemo,
+    path: 'tabbarDemo',
+    name: 'tabbarDemo',
+    component: TabbarDemo,
     meta: {keepAlive: true}
   }
 ]

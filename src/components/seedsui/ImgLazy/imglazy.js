@@ -134,7 +134,6 @@ var ImgLazy = function (container, params) {
     if (s.params.onScroll) s.params.onScroll(e)
     // 计算scrollEnd事件
     s.scrollTop = s.overflowContainer.scrollTop
-    console.log('滚动' + s.scrollTop)
     // var _self = this
     // var _args = arguments
     if (timer) {
@@ -152,7 +151,7 @@ var ImgLazy = function (container, params) {
     }, millisec)
   }
   s.onScrollEnd = function (e) {
-    console.log('停止滚动')
+    // console.log('停止滚动')
     for (var i = 0; i < s.imgs.length; i++) {
       var flag = s.isInScreen(s.imgs[i])
       if (flag && s.cacheImgs[i].src === '') {
