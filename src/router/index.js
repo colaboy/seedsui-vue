@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Home from '@/views/Home'
 
-import Layout from './layout.js'
-import Navigation from './navigation.js'
-import DataEntry from './dataentry.js'
-import DataDisplay from './datadisplay.js'
-import Feedback from './feedback.js'
-import Gesture from './gesture.js'
+import RouterLayout from './router-layout.js'
+import RouterNavigation from './router-navigation.js'
+import RouterDataEntry from './router-dataentry.js'
+import RouterDataDisplay from './router-datadisplay.js'
+import RouterFeedback from './router-feedback.js'
+import RouterGesture from './router-gesture.js'
 Vue.use(Router)
 
 export default new Router({
@@ -22,12 +23,12 @@ export default new Router({
       component: Home,
       meta: {keepAlive: true},
       children: [
-        ...Layout,
-        ...Navigation,
-        ...DataEntry,
-        ...DataDisplay,
-        ...Feedback,
-        ...Gesture
+        ...RouterLayout,
+        ...RouterNavigation,
+        ...RouterDataEntry,
+        ...RouterDataDisplay,
+        ...RouterFeedback,
+        ...RouterGesture
       ]
     }
   ]

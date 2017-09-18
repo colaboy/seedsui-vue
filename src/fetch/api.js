@@ -7,10 +7,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8'
 const env = process.env.NODE_ENV
 
 if (env === 'development') {
-  axios.defaults.baseURL = 'http://172.31.7.63:8080'
-  // axios.defaults.baseURL = 'http://172.31.3.75:8080'
-  // axios.defaults.baseURL = 'http://localhost:9999/proxy/html/'
-  // axios.defaults.headers.common['x-token'] = 'eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1MDUxOTQ2NzYsInN1YiI6IntcImNsaWVudFR5cGVcIjpcImNsaWVudF9zdGFuZGFyXCIsXCJjcmVhdGVUaW1lXCI6MTUwNTE5NDY3NjU3MyxcImxvZ2luVHlwZVwiOlwiU09VUkNFX1RZUEVfQ0xJRU5UXCIsXCJyZWFsUmVmcmVzaFRva2VuRXhwaXJlTWludXRlXCI6MTQ0MDAsXCJyZWFsVG9rZW5FeHBpcmVNaW51dGVcIjoyODgwLFwicmVmcmVzaFRva2VuRXhwaXJlSG91cnNcIjoyNDAsXCJ0b2tlbkV4cGlyZUhvdXJzXCI6NDgsXCJ1aWRcIjoxMDAxNX0iLCJpc3MiOiIxMDAxNV9fQ0xJRU5UIiwiZXhwIjoxNTA1MzY3NDc2fQ.uUZM2zPQfHB6RpbRB6DxYolG19yavdHZ4HFz822IGr4'
+  axios.defaults.baseURL = 'http://接口ip:8080'
   axios.defaults.withCredentials = true
 }
 
@@ -26,29 +23,6 @@ axios.interceptors.response.use(response => {
   return Promise.resolve(error.response)
 })
 
-// 返回状态判断
-/* axios.interceptors.response.use((res) => {
-  if (!res.data.success) {
-    return Promise.reject(res)
-  }
-  return res
-}, (error) => {
-  return Promise.reject(error)
-}) */
-/* const parseParam = function (url, param, key) {
-  var paramStr = ''
-  if (param) {
-    if (param instanceof String || param instanceof Number || param instanceof Boolean) {
-      paramStr += '&' + key + '=' + encodeURIComponent(param)
-    } else {
-      param.forEach(i => {
-        var k = key == null ? i : key + (param instanceof Array ? '[' + i + ']' : '.' + i)
-        paramStr += '&' + parseParam(this, k)
-      })
-    }
-  }
-  return url + (url.indexOf('?') === -1 ? '?' : '') + paramStr.substr(1)
-} */
 const buildGetUrl = function (url, params) {
   var result = Object.params(params)
   if (result) return url + '?' + result
