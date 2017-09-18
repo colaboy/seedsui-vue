@@ -27,13 +27,12 @@
 <template>
   <div class="app-full" v-if="show" :style="css">
     <div class="app-full-content" @click.stop.prevent="click">
-      <img :src="imgs.nodata" />
+      <i class="icon wq-icon-no-data" style="width:120px;height:120px;font-size:120px;"></i>
       <p>{{text}}</p>
     </div>
   </div>
 </template>
 <script>
-  import imgNodata from '@/assets/images/nodata.png'
   export default {
     name: 'NoData',
     components: {
@@ -56,9 +55,6 @@
     },
     data () {
       return {
-        imgs: {
-          nodata: imgNodata
-        }
       }
     },
     created () {

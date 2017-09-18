@@ -18,6 +18,7 @@
 <script>
 
 import DragPull from './dragrefresh.pull.js'
+import ImgLazy from './../ImgLazy/imglazy.js'
 export default {
   name: 'Dragrefresh',
   props: {
@@ -42,7 +43,8 @@ export default {
   },
   data () {
     return {
-      instance: null
+      instance: null,
+      lazyInstance: null
     }
   },
   mounted () {
@@ -56,6 +58,7 @@ export default {
         console.log('无更多数据了')
       }
     })
+    this.lazyInstance = new ImgLazy(this.$el)
   },
   methods: {
   }

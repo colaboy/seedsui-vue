@@ -47,8 +47,8 @@ export default {
       type: Array,
       default: function () {
         return [{
-          icon: 'icon-arrowleft',
-          text: '',
+          icon: 'wq-icon-back size20',
+          text: '返回',
           click: function () { history.go(-1) }
         }]
       }

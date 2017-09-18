@@ -1,5 +1,6 @@
 import '@/utils/dateutil.js'
 import '@/utils/object.js'
+import '@/utils/math.js'
 import '@/utils/string.js'
 import Alert from './Alert'
 import Actionsheet from './Actionsheet'
