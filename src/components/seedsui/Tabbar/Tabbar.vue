@@ -1,19 +1,5 @@
 <style lang="less" scoped>
   @import "../../../assets/seedsui/styles/variables.less";
-  .tabbar {
-    background-color: #FAFAFA
-  }
-  .triangle-up {
-		position: relative;
-    width:0; 
-    height:0; 
-    border-left:4px solid transparent;
-    border-right:4px solid transparent;
-    border-top:5px solid @bar-color;
-  }
-  .tab.active .triangle-up {
-    border-top:5px solid @bar-color-active;
-  }
 </style>
 <template>
   <ul :class="'tabbar tabbar-'+type+' animated'+(theme?' '+theme:'')+(type==='line'?' tabbar-line-width'+linewidth:'')+(disabled?' disabled':'')" :data-col="list.length" :style="tabbarCss+css">

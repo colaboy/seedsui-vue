@@ -3,14 +3,14 @@ import PullListDemo from '@/views/PullListDemo'
 
 export default [
   {
-    path: 'DragRefreshDemo',
-    name: 'DragRefreshDemo',
+    path: 'dragRefreshDemo',
+    name: 'dragRefreshDemo',
     component: DragRefreshDemo,
     meta: {keepAlive: true}
   },
   {
-    path: 'PullListDemo',
-    name: 'PullListDemo',
+    path: 'pullListDemo',
+    name: 'pullListDemo',
     component: PullListDemo,
     meta: {keepAlive: true}
   }

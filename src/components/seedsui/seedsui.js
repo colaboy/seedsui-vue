@@ -12,8 +12,8 @@ import Close from './Close'
 import Dialog from './Dialog'
 import Dot from './Dot'
 import Group from './Group'
-import LoadingFading from './LoadingFading'
-import LoadingSpinning from './LoadingSpinning'
+import LoadingFloating from './LoadingFloating'
+import LoadingFilling from './LoadingFilling'
 import Mark from './Mark'
 import Peg from './Peg'
 import Star from './Star'
@@ -55,8 +55,8 @@ var seedsui = {
   Dialog,
   Dot,
   Group,
-  LoadingFading,
-  LoadingSpinning,
+  LoadingFloating,
+  LoadingFilling,
   Mark,
   Peg,
   Star,

@@ -38,7 +38,10 @@ export default {
       default: ''
     },
     args: {
-      type: Array
+      type: Array,
+      default: () => {
+        return []
+      }
     }
   },
   data () {
@@ -49,20 +52,15 @@ export default {
     }
   },
   created () {
-    if (this.min && this.truthValue <= this.min) {
-      this.truthValue = this.min
-      this.minusDisabled = true
-    }
-    if (this.max && this.truthValue >= this.max) {
-      this.truthValue = this.max
-      this.minusDisabled = true
-    }
+    this.disableNum()
   },
   methods: {
-    disabled () {
-      if (this.truthValue <= this.min) {
+    disableNum () {
+      if (this.truthValue === '' || this.truthValue <= this.min) {
+        this.truthValue = this.min
         this.minusDisabled = true
-      } else if (this.truthValue >= this.max) {
+      } else if (this.max && this.truthValue >= this.max) {
+        this.truthValue = this.max
         this.plusDisabled = true
       } else {
         this.minusDisabled = false
@@ -70,19 +68,18 @@ export default {
       }
     },
     validator () {
-      if (this.truthValue === '') this.truthValue = this.min
-      this.disabled()
+      this.disableNum()
       if (this.change) this.change(this.truthValue, ...this.args)
     },
     onClickMinus (e) {
-      this.truthValue--
+      this.truthValue = Math.Calc.subtract(this.truthValue, 1)
       this.validator()
     },
     onClickPlus (e) {
       if (this.truthValue < 0) {
         this.truthValue = 0
       }
-      this.truthValue++
+      this.truthValue = Math.Calc.add(this.truthValue, 1)
       this.validator()
     },
     onInput (e) {
@@ -134,12 +131,12 @@ export default {
     }
   },
   mounted () {
-    this.disabled()
+    this.disableNum()
   },
   watch: {
     value: function (val, oldval) {
       this.truthValue = val
-      this.disabled()
+      this.disableNum()
     }
   }
 }

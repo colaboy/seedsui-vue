@@ -4,8 +4,8 @@
     <Titlebar title="carrousel" />
   </header>
   <article class="container">
-    <Carrousel ref="refCarrousel" :list="list" :pagination="true" :loop="true"/>
-    <Carrousel :list="list" :pagination="true" :slidesPerView="3" :loop="true"/>
+    <Carrousel ref="refCarrousel" :list="list" :pagination="true" css="height: 250px;" :loop="true"/>
+    <Carrousel :list="list" :pagination="true" :slidesPerView="3" css="height: 80px;" :loop="true"/>
   </article>
 </div>
 </template>
@@ -49,6 +49,9 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "../../assets/seedsui/styles/variables.less";
+  .carrousel-slide{
+    overflow: hidden;
+  }
 </style>

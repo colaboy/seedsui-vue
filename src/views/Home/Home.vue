@@ -153,14 +153,14 @@
           <p class="sliver-title">手势 Gesture</p>
         </li>
         <li>
-          <router-link class="list-li underline" :to="{name: 'DragRefreshDemo'}">
+          <router-link class="list-li underline" :to="{name: 'dragRefreshDemo'}">
             <p class="list-container">Dragrefresh下拉刷新</p>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
-          <router-link class="list-li underline" :to="{name: 'PullListDemo'}">
-            <p class="list-container">Pulllist列表拉动</p>
+          <router-link class="list-li underline" :to="{name: 'pullListDemo'}">
+            <p class="list-container">PullList列表拉动</p>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>

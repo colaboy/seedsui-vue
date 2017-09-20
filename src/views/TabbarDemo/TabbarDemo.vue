@@ -19,10 +19,10 @@
     </div>
     <br/>
     <div class="description">dropdown</div>
-    <Tabbar :list="tabbar" type="dropdown" :activeIndex="0"></Tabbar>
+    <Tabbar :list="dropdownTabbar" type="dropdown" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">dropdown reverse</div>
-    <Tabbar :list="tabbar" theme="reverse" type="dropdown" :activeIndex="0"></Tabbar>
+    <Tabbar :list="dropdownTabbar" theme="reverse" type="dropdown" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">lump</div>
     <Tabbar :list="tabbar" type="lump" :activeIndex="0"></Tabbar>
@@ -31,10 +31,10 @@
     <Tabbar :list="tabbar" theme="reverse" type="lump" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">footer</div>
-    <Tabbar :list="tabbar" type="footer" :activeIndex="0"></Tabbar>
+    <Tabbar :list="footerTabbar" type="footer" :activeIndex="0"></Tabbar>
     <br/>
     <div class="description">footer reverse</div>
-    <Tabbar :list="tabbar" theme="reverse" type="footer" :activeIndex="0"></Tabbar>
+    <Tabbar :list="footerTabbar" theme="reverse" type="footer" :activeIndex="0"></Tabbar>
     <br/>
   </article>
 </div>
@@ -46,6 +46,45 @@ export default {
   data () {
     return {
       tabbar: [
+        {
+          text: '首页',
+          click: this.onClickTabbar
+        },
+        {
+          text: '消息',
+          click: this.onClickTabbar
+        },
+        {
+          text: '通讯录',
+          click: this.onClickTabbar
+        },
+        {
+          text: '工作台',
+          click: this.onClickTabbar
+        },
+        {
+          text: '更多',
+          click: this.onClickTabbar
+        }
+      ],
+      dropdownTabbar: [
+        {
+          icon: 'shape-triangle-up',
+          text: '分类',
+          click: this.onClickDropDown
+        },
+        {
+          icon: 'shape-triangle-up',
+          text: '品牌',
+          click: this.onClickDropDown
+        },
+        {
+          icon: 'shape-triangle-up',
+          text: '全部商品',
+          click: this.onClickDropDown
+        }
+      ],
+      footerTabbar: [
         {
           text: '首页',
           icon: 'icon-home',

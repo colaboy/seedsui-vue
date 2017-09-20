@@ -143,6 +143,7 @@ export default {
         defaultHour: defaultHour,
         defaultMinute: defaultMinute,
         onClickDone: (e) => {
+          console.log(1)
           if (this.change) this.change(e.activeText)
           e.hide()
         }

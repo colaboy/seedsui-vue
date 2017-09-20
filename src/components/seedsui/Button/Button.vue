@@ -1,7 +1,8 @@
 <template>
-  <a :class="'button'+(type?' '+type:'')+(block?' block':'')" :style="(block?'-webkit-box-flex:1;':'')+(radius?'border-radius:'+radius+'px;':'')+css" href="javascript:;" @click.stop.prevent="click">
+  <a :class="'button'+(type?' '+type:'')+(block?' block':'')" :style="(block?'-webkit-box-flex:1;':'')+(radius?'border-radius:'+radius+'px;':'')+css" href="javascript:;" @click.stop.prevent="onClick">
       <i v-if="icon" :class="'icon '+icon"></i>
       <span>{{text}}</span>
+      <i v-if="ricon" :class="'icon '+ricon"></i>
       <span v-if="tipText" class="tip">{{tipText}}</span>
       <span v-if="badgeText" class="badge">{{badgeText}}</span>
   </a>
@@ -42,11 +43,20 @@ export default {
       type: String,
       default: ''
     },
+    ricon: {
+      type: String,
+      default: ''
+    },
     click: {
       type: Function,
       default: function () {}
     },
-    params: Object
+    args: {
+      type: Array,
+      default: () => {
+        return []
+      }
+    }
   },
   data () {
     return {
@@ -55,6 +65,9 @@ export default {
   mounted () {
   },
   methods: {
+    onClick (e) {
+      if (this.click) this.click(e, ...this.args)
+    }
   }
 }
 </script>

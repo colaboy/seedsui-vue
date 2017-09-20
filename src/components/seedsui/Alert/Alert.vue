@@ -35,17 +35,4 @@ export default {
 </script>
 <style lang="less" scoped>
   @import "../../../assets/seedsui/styles/variables.less";
-  .alert{
-    width: @300px;
-  }
-  .alert-content{
-    display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    min-height: @100px;
-    font-size: @16px;
-  }
-  .alert-content.active{
-    .alert-content
-  }
 </style>

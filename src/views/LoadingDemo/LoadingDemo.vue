@@ -4,11 +4,11 @@
     <Titlebar title="loading" back="true"></Titlebar>
   </header>
   <article class="container">
-    <Button text="显示spinning遮罩" buttonClass="block primary" buttonCss="margin:12px 10px;" :click="onClickSpinHandler"></Button>
-    <Button text="显示fading遮罩" buttonClass="block submit" buttonCss="margin:12px 10px;" :click="onClickFadHandler"></Button>
+    <Button text="填料环filling ring" type="block" css="margin:12px 10px;" :click="onClickFilling"></Button>
+    <Button text="流光floating ray" type="block" css="margin:12px 10px;" :click="onClickFloating"></Button>
   </article>
-  <LoadingFading :show="fadShow"></LoadingFading>
-  <LoadingSpinning :show="spinShow"></LoadingSpinning>
+  <LoadingFilling :show="fillingShow" css="top:44px;"></LoadingFilling>
+  <LoadingFloating :show="floatingShow" css="top:44px;"></LoadingFloating>
 </div>
 </template>
 
@@ -17,18 +17,18 @@ export default {
   name: 'Loading',
   data () {
     return {
-      fadShow: false,
-      spinShow: false
+      fillingShow: false,
+      floatingShow: false
     }
   },
   methods: {
-    onClickFadHandler (e) {
-      this.fadShow = true
-      setTimeout(() => { this.fadShow = false }, 2000)
+    onClickFloating (e) {
+      this.fillingShow = true
+      setTimeout(() => { this.fillingShow = false }, 2000)
     },
-    onClickSpinHandler (e) {
-      this.spinShow = true
-      setTimeout(() => { this.spinShow = false }, 2000)
+    onClickFilling (e) {
+      this.floatingShow = true
+      setTimeout(() => { this.floatingShow = false }, 2000)
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'mask':true,'prompt-mask':true,'active':show,'prompt-cover':cover }">
+  <div :class="{ 'mask':true,'prompt-mask':true,'active':show,'prompt-propagation':!mask }">
     <div :class="{ 'prompt':true,'active':show }">
       <div class="prompt-wrapper">{{text}}</div>
     </div>
@@ -13,9 +13,9 @@ export default {
       type: String,
       default: ''
     },
-    cover: {
+    mask: {
       type: Boolean,
-      default: false
+      default: true
     },
     show: {
       type: Boolean,

@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import Fastclick from 'Fastclick'
 // 微信配置
 import Weixin from './bridge/weixin.js'
 import Device from '@/utils/device.js'
@@ -47,12 +46,6 @@ export default {
       /* eslint-disable */
       Weixin.config()
       /* eslint-enable */
-    }
-    // 点击配置
-    if ('addEventListener' in document) {
-      document.addEventListener('DOMContentLoaded', function () {
-        Fastclick.attach(document.body)
-      }, false)
     }
   }
 }

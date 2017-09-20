@@ -2,8 +2,8 @@
 <div class="page">
   <Alert text="提示框" :show="showAlert" :clickSubmit="onAlertSubmit"/>
   <Alert text="对话框" :show="showConfirm" :clickSubmit="onConfirmSubmit" :clickCancel="onConfirmCancel"/>
-  <!-- <Toast :text="toastText" :show="toastShow" /> -->
-  <Prompt text="提示框" :show="showPrompt" />
+  <Toast :mask="true" :text="toastText" :show="toastShow" />
+  <Prompt :mask="true" :text="promptText" :show="promptShow" />
 
   <Dialog ref="refPopover" position="top-right" animation="zoom" css="overflow:visible; top: 54px; right: 6px;">
     <Popover :list="[
@@ -88,8 +88,8 @@
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnAlert" text="alert" />
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnConfirm" text="confirm" />
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnActionsheet" text="actionsheet" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="toast('提示框')" text="toast" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnPrompt" text="prompt" />
+        <Button css="padding:0 8px;margin:2px 0;" :click="onClickToast" :args="['提示框']" text="toast" />
+        <Button css="padding:0 8px;margin:2px 0;" :click="onClickPrompt" :args="['提示框']" text="prompt" />
       </Card>
 
       <Card css="padding:10px 12px;">
@@ -142,7 +142,8 @@ export default {
       showActionsheet: false,
       toastShow: false,
       toastText: '',
-      showPrompt: false
+      promptShow: false,
+      promptText: ''
     }
   },
   methods: {
@@ -173,6 +174,9 @@ export default {
     onConfirmCancel () {
       this.showConfirm = false
     },
+    onClickToast (e, text) {
+      this.toast(text)
+    },
     toast (text) {
       this.toastText = text
       this.toastShow = true
@@ -180,10 +184,14 @@ export default {
         this.toastShow = false
       }, 1000)
     },
-    onClickBtnPrompt () {
-      this.showPrompt = true
+    onClickPrompt (e, text) {
+      this.prompt(text)
+    },
+    prompt (text) {
+      this.promptText = text
+      this.promptShow = true
       setTimeout(() => {
-        this.showPrompt = false
+        this.promptShow = false
       }, 1000)
     },
     onClickBtnActionsheet () {

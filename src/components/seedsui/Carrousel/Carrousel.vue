@@ -35,8 +35,8 @@ export default {
       default: 0
     },
     pagination: {
-      type: String,
-      default: '.carrousel-pagination'
+      type: Boolean,
+      default: false
     },
     loop: {
       type: Boolean,
@@ -82,7 +82,7 @@ export default {
     if (this.instance) return
     setTimeout(() => {
       this.instance = new Carrousel(this.$el, {
-        pagination: this.pagination,
+        pagination: '.carrousel-pagination',
         autoplay: this.autoplay,
         slidesPerView: this.slidesPerView,
         loop: this.loop,

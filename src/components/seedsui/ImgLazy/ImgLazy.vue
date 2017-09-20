@@ -23,7 +23,9 @@ export default {
   methods: {
   },
   mounted () {
-    this.instance = new ImgLazy(this.$el)
+    this.instance = new ImgLazy({
+      overflowContainer: this.$el
+    })
   }
 }
 </script>

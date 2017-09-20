@@ -1,0 +1,6 @@
+{
+  "name": "LoadingFilling",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LoadingFilling.vue"
+}

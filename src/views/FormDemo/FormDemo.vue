@@ -9,7 +9,7 @@
       <Switch1 theme="reverse" :change="onSwitchChange3"/>
       <Switch1 theme="reverse" :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange4"/>
       <Turn :change="onTurnChange"/>
-      <NumBox :change="onNumBoxChange"/>
+      <NumBox :decimal="true" :digits="2" :value="0" :change="onNumBoxChange"/>
       <InputPre :change="onPreChange"/>
       <InputSearch :change="onSearchChange" :submit="onSearchSubmit"/>
   </article>

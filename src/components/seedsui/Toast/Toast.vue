@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'mask':true,'toast-mask':true,'active':show,'toast-propagation':propagation }">
+  <div :class="{ 'mask':true,'toast-mask':true,'active':show,'toast-propagation':!mask }">
     <div :class="{ 'toast':true,'active':show }">
       <div class="toast-wrapper">{{text}}</div>
     </div>
@@ -13,9 +13,9 @@ export default {
       type: String,
       default: ''
     },
-    propagation: {
+    mask: {
       type: Boolean,
-      default: true
+      default: false
     },
     show: {
       type: Boolean,

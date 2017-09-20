@@ -58,7 +58,9 @@ export default {
         console.log('无更多数据了')
       }
     })
-    this.lazyInstance = new ImgLazy(this.$el)
+    this.lazyInstance = new ImgLazy({
+      overflowContainer: this.$el
+    })
   },
   methods: {
   }
