@@ -2,6 +2,10 @@ import '@/utils/dateutil.js'
 import '@/utils/object.js'
 import '@/utils/math.js'
 import '@/utils/string.js'
+import Page from './Page'
+import Container from './Container'
+import Header from './Header'
+import Footer from './Footer'
 import Alert from './Alert'
 import Actionsheet from './Actionsheet'
 import Badge from './Badge'
@@ -45,6 +49,10 @@ import NoData from './NoData'
 import NoWifi from './NoWifi'
 
 var seedsui = {
+  Page,
+  Container,
+  Header,
+  Footer,
   Alert,
   Actionsheet,
   Badge,
