@@ -1,6 +1,6 @@
 <template>
 <div class="page">
-  <Alert text="提示框" :show="showAlert" :clickSubmit="onAlertSubmit"/>
+  <Alert text="提示框" :show="alertShow" :clickSubmit="onAlertSubmit"/>
   <Alert text="对话框" :show="showConfirm" :clickSubmit="onConfirmSubmit" :clickCancel="onConfirmCancel"/>
   <Toast :mask="true" :text="toastText" :show="toastShow" />
   <Prompt :mask="true" :text="promptText" :show="promptShow" />
@@ -78,9 +78,10 @@
   <Dialog ref="refDialogM" position="middle" animation="fade">
     <div style="display:block;background-color: white;width: 200px;height:100px;">middle</div>
   </Dialog>
+  <DropFilter :show="dropFilterShow" :checked="dropFilterChecked" :clickMask="onClickDropFilterMask" :click="onClickDropFilterList"/>
   
   <header class="header">
-    <Titlebar title="popup" :rBtn="[{icon:'icon-share',click:this.onClickBtnShare},{icon:'icon-menudot',click:this.onClickBtnMenu}]"/>
+    <Titlebar title="popup<i class='shape-triangle-up'></i>" :click="onClickDropFilter" :rBtn="[{icon:'icon-share',click:this.onClickBtnShare},{icon:'icon-menudot',click:this.onClickBtnMenu}]"/>
   </header>
   <article class="container">
       <Card css="padding:10px 12px;">
@@ -133,17 +134,26 @@
 </template>
 
 <script>
+import DropFilter from './DropFilter'
 export default {
   name: 'PopupDemo',
+  components: {
+    DropFilter
+  },
   data () {
     return {
-      showAlert: false,
+      alertShow: false,
       showConfirm: false,
       showActionsheet: false,
       toastShow: false,
       toastText: '',
       promptShow: false,
-      promptText: ''
+      promptText: '',
+      dropFilterShow: false,
+      dropFilterChecked: {
+        id: '0',
+        name: '全部'
+      }
     }
   },
   methods: {
@@ -160,10 +170,11 @@ export default {
       this.$refs.refSharebox.instance.show()
     },
     onClickBtnAlert () {
-      this.showAlert = true
+      this.alertShow = true
     },
     onAlertSubmit () {
-      this.showAlert = false
+      console.log('点击alert确定')
+      this.alertShow = false
     },
     onClickBtnConfirm () {
       this.showConfirm = true
@@ -247,6 +258,19 @@ export default {
     },
     onClickBtnMiddle () {
       this.$refs.refDialogM.instance.show()
+    },
+    // 点击核验
+    onClickDropFilter () {
+      this.dropFilterShow = !this.dropFilterShow
+    },
+    // 点击核验列表
+    onClickDropFilterList (item) {
+      this.dropFilterChecked = item
+      this.dropFilterShow = false
+    },
+    // 点击核验遮罩
+    onClickDropFilterMask () {
+      this.dropFilterShow = false
     }
   }
 }

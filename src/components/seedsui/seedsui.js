@@ -41,7 +41,6 @@ import Carrousel from './Carrousel'
 import ImgLazy from './ImgLazy'
 import InputPre from './InputPre'
 import InputSearch from './InputSearch'
-import DropdownBox from './DropdownBox'
 import Dragrefresh from './Dragrefresh'
 import Sliver from './Sliver'
 import Mask1 from './Mask'
@@ -88,7 +87,6 @@ var seedsui = {
   ImgLazy,
   InputPre,
   InputSearch,
-  DropdownBox,
   Dragrefresh,
   Sliver,
   Mask1,
