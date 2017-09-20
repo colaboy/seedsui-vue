@@ -180,16 +180,22 @@ export default {
     }
   },
   created () {
-    /* this.$http.getHomeData.then(response => {
-      let result = response
-      if (result.code === '1') {
-      } else {
-        console.log('获取数据失败')
-      }
-    })
-    .catch(err => {
-      console.log('获取数据失败' + err)
-    }) */
+    this.queryList()
+  },
+  methods: {
+    queryList () {
+      /* this.$http.getData().then(response => {
+        let result = response
+        console.log(result)
+        if (result.code === '1') {
+        } else {
+          console.log('获取数据失败')
+        }
+      })
+      .catch(err => {
+        console.log('获取数据失败' + err)
+      }) */
+    }
   }
 }
 </script>
