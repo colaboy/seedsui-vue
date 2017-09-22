@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <header class="header">
-    <Titlebar title="loading" back="true"></Titlebar>
+    <Titlebar title="loading"></Titlebar>
   </header>
   <article class="container">
     <Button text="填料环filling ring" type="block" css="margin:12px 10px;" :click="onClickFilling"></Button>

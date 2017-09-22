@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <header class="header">
-    <Titlebar title="badge" back="true"></Titlebar>
+    <Titlebar title="badge"></Titlebar>
   </header>
   <article class="container">
       <Group title="badge">

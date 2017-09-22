@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <header class="header">
-    <Titlebar title="库存管理" back="true"></Titlebar>
+    <Titlebar title="库存管理"></Titlebar>
     <Tabbar :list="tabbar" :activeIndex="tabbarActive"></Tabbar>
   </header>
   <article class="container" style="top:84px;">

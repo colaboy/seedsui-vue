@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <header class="header">
-    <Titlebar title="grid" back="true"></Titlebar>
+    <Titlebar title="grid"></Titlebar>
   </header>
   <article class="container">
     <Group title="square">

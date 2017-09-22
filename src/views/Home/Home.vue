@@ -2,7 +2,7 @@
 <div>
   <div class="page">
     <header class="header">
-      <Titlebar title="SeedsUI" back="true">
+      <Titlebar title="SeedsUI">
         <a slot="right" class="titlebar-button" href="javascript:showAbout()">
           <i class="icon icon-rdoinfo"></i>
         </a>

@@ -10,7 +10,6 @@ import Alert from './Alert'
 import Actionsheet from './Actionsheet'
 import Badge from './Badge'
 import Button from './Button'
-import Caption from './Caption'
 import Card from './Card'
 import Close from './Close'
 import Dialog from './Dialog'
@@ -56,7 +55,6 @@ var seedsui = {
   Actionsheet,
   Badge,
   Button,
-  Caption,
   Card,
   Close,
   Dialog,

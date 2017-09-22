@@ -2,8 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
 
+// 配置路由的开发环境和生产环境
+var router
+const env = process.env.NODE_ENV
+if (env === 'development') {
+  router = require('./router/router.dev.js').default
+} else {
+  router = require('./router/router.build.js').default
+}
+// vue在启动时生成生产提示
 Vue.config.productionTip = false
 // 配置store
 import store from './store'

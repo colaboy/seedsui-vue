@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <header class="header">
-    <Titlebar title="button" back="true"></Titlebar>
+    <Titlebar title="button"></Titlebar>
   </header>
   <article class="container">
       <Group title="普通按钮">

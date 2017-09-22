@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <header class="header">
-    <Titlebar title="form" back="true"></Titlebar>
+    <Titlebar title="form"></Titlebar>
   </header>
   <article class="container">
       <Switch1 :change="onSwitchChange1"/>

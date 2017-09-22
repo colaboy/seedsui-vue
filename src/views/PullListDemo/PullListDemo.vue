@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <header class="header">
-    <Titlebar title="mark" back="true"></Titlebar>
+    <Titlebar title="mark"></Titlebar>
   </header>
   <article class="container">
       <Group title="标签">
