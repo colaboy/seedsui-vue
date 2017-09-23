@@ -7,7 +7,7 @@
       </a>
     </div>
     <slot>
-      <h1 :class="'titlebar-title nowrap text-center'" v-html="title" @click.stop.prevent="click"></h1>
+      <h1 :class="'titlebar-title nowrap text-center'">{{title}}</h1>
     </slot>
     <div class="titlebar-right">
       <a v-for="(item, index) in rBtn" :key="index" @click.stop.prevent="item.click" :class="'titlebar-button'+(item.className?' '+item.className:'')" :style="item.css">
@@ -29,9 +29,6 @@ export default {
       type: String,
       default: '默认标题'
     },
-    click: {
-      type: Function
-    },
     lBtnClassName: {
       type: String
     },
@@ -51,8 +48,7 @@ export default {
       default: function () {
         return [{
           icon: 'icon-arrowleft size20',
-          text: '返回',
-          click: function () { history.go(-1) }
+          click: () => { this.bridge.close() }
         }]
       }
     },

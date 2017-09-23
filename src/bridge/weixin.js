@@ -1,4 +1,7 @@
 var Weixin = {
+  /* -------------------
+  初始化配置
+  ------------------- */
   config: function (fn) {
     var url = '/app/std_mendian/hbtask/getSignature.action'
     var reqUrl = window.location.href.split('#')[0]
@@ -30,6 +33,9 @@ var Weixin = {
     })
     /* eslint-enable */
   },
+  /* -------------------
+  定位
+  ------------------- */
   getLocation: function (callback) {
     /* eslint-disable */
     wx.getLocation({
@@ -44,6 +50,9 @@ var Weixin = {
     })
     /* eslint-enable */
   },
+  /* -------------------
+  图片上传
+  ------------------- */
   Image: function (params) {
     var defaults = {
       max: 5,
@@ -51,13 +60,13 @@ var Weixin = {
       sizeType: ['original', 'compressed']
       /*
       Callbacks:
-      onChooseSuccess:function(imgs,imgMap,res)
-      onChooseFail:function(imgs,imgMap,res)
-      onChooseCancel:function()
-      onUploadSuccess:function(imgs,imgMap,res)
-      onUploadFail:function(imgs,imgMap,res)
-      onUploadsSuccess:function(imgs,imgMap)
-      onDeleteSuccess:function(imgs,imgMap,key)
+      onChooseSuccess:function(imgs,imgMap,res) // 选择成功
+      onChooseFail:function(imgs,imgMap,res) // 选择失败
+      onChooseCancel:function() // 取消选择
+      onUploadSuccess:function(imgs,imgMap,res) // 单张上传成功
+      onUploadFail:function(imgs,imgMap,res) // 单张上传失败
+      onUploadsSuccess:function(imgs,imgMap) // 全部上传成功
+      onDeleteSuccess:function(imgs,imgMap,key) // 全部删除成功
       */
     }
     params = params || {}
@@ -168,6 +177,15 @@ var Weixin = {
       }
       loop(0)
     }
+  },
+  /* -------------------
+  打开关闭窗口
+  ------------------- */
+  open: function (url) {
+    location.href = url
+  },
+  close: function (url) {
+    history.go(-1)
   }
 }
 

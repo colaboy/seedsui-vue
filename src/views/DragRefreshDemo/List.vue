@@ -15,6 +15,7 @@
         <div class="app-score">{{item.total_score}}分</div>
       </li>
     </ul>
+    <NoData :show="showNodata" text="暂无数据"></NoData>
   </Dragrefresh>
 </template>
 <script>
@@ -30,6 +31,7 @@ export default {
   },
   data () {
     return {
+      showNodata: false,
       max: 0,
       current: 1,
       limit: 10,
@@ -89,6 +91,9 @@ export default {
           setTimeout(() => {
             this.$refs.refDrag.instance.setPagination(isNext, isNoData)
           }, 500)
+          // 设置暂无数据
+          if (this.list.length === 0) this.showNodata = true
+          else this.showNodata = false
         } else {
           console.log('获取数据失败')
           this.current--

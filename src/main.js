@@ -15,6 +15,9 @@ if (env === 'development') {
 Vue.config.productionTip = false
 // 配置store
 import store from './store'
+// 配置格拉
+import bridge from '@/bridge'
+Vue.prototype.bridge = bridge
 // 配置数据请求
 import axios from 'axios'
 import http from '@/fetch/api'

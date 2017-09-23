@@ -10,8 +10,10 @@
     background-color: @body-bg;
     z-index: 1;
   }
-  .app-full img{
+  .app-full .app-img-nodata{
     width:120px;
+    height:120px;
+    font-size:120px;
   }
   .app-full p{
     margin-top: 20px;
@@ -27,15 +29,17 @@
 <template>
   <div class="app-full" v-if="show" :style="css">
     <div class="app-full-content" @click.stop.prevent="click">
-      <i class="icon wq-icon-no-data" style="width:120px;height:120px;font-size:120px;"></i>
+      <Pic class="app-img-nodata"/>
       <p>{{text}}</p>
     </div>
   </div>
 </template>
 <script>
+  import Pic from './Pic'
   export default {
     name: 'NoData',
     components: {
+      Pic
     },
     props: {
       css: {
