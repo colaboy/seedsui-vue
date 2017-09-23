@@ -7,7 +7,7 @@
       </a>
     </div>
     <slot>
-      <h1 :class="'titlebar-title nowrap text-center'">{{title}}</h1>
+      <h1 :class="'titlebar-title nowrap text-center'" v-html="title" @click.stop.prevent="click"></h1>
     </slot>
     <div class="titlebar-right">
       <a v-for="(item, index) in rBtn" :key="index" @click.stop.prevent="item.click" :class="'titlebar-button'+(item.className?' '+item.className:'')" :style="item.css">
@@ -28,6 +28,9 @@ export default {
     title: {
       type: String,
       default: '默认标题'
+    },
+    click: {
+      type: Function
     },
     lBtnClassName: {
       type: String
