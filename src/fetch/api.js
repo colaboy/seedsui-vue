@@ -15,6 +15,12 @@ axios.interceptors.request.use(config => {
   // if (store.state.token) config.headers.Authorization = `token ${store.state.token}`
   return config
 }, error => {
+  if (error.response) {
+    switch (error.response.status) {
+      case 401:
+        // 401 登录超时，跳转至登录页面
+    }
+  }
   return Promise.reject(error)
 })
 // http response 拦截器
