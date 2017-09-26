@@ -4,28 +4,39 @@
     <Titlebar title="下拉刷新"></Titlebar>
   </header>
   <article class="container">
-      
+      <List :params="listParams"/>
   </article>
 </div>
 </template>
 
 <script>
+import List from './List.vue'
 export default {
   name: 'ButtonDemo',
+  components: {
+    List
+  },
   data () {
     return {
-      fadShow: false,
-      spinShow: false
+      listParams: {
+        brand_id: '-1',
+        class_id: '-1'
+      }
     }
   },
   methods: {
-    onClickFadHandler (e) {
-      this.fadShow = true
-      setTimeout(() => { this.fadShow = false }, 2000)
-    },
-    onClickSpinHandler (e) {
-      this.spinShow = true
-      setTimeout(() => { this.spinShow = false }, 2000)
+    /* --------------------
+    列表查询
+    -------------------- */
+    queryList () {
+      /* if (this.listParams.brand_id === this.dropdownBrandChecked.id && this.listParams.class_id === this.dropdownClassChecked.id) {
+        return
+      }
+      // 参数设置
+      this.listParams = {
+        brand_id: this.dropdownBrandChecked.id || '-1', // 品牌
+        class_id: this.dropdownClassChecked.id || '-1' // 商品类型
+      } */
     }
   }
 }

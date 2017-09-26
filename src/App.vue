@@ -1,14 +1,8 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <!-- <transition name="fade" mode="out-in">
-      <keep-alive>
-        <router-view v-if="$route.meta.keepAlive"></router-view>
-      </keep-alive>
+    <transition name="slide">
+      <router-view></router-view>
     </transition>
-    <transition name="fade" mode="out-in">
-      <router-view v-if="!$route.meta.keepAlive"></router-view>
-    </transition> -->
   </div>
 </template>
 
@@ -54,14 +48,29 @@ export default {
 <style lang="less">
   /* SeedsUI */
   @import "./assets/seedsui/seedsui.less";
-
-  .fade-enter-active,
-  .fade-leave-active{
-    transition: all .2s ease;
+  /* router过渡动画 */
+  .slide-enter-active {
+    animation-name: slide-in;
+    animation-duration: .3s;
   }
-
-  .fade-enter,
-  .fade-leave-active{
-    opacity: 0;
+  .slide-leave-active {
+    animation-name: slide-out;
+    animation-duration: .3s;
+  }
+  @keyframes slide-in {
+    0% {
+      transform: translate3d(100%, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes slide-out {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(100%, 0, 0);
+    }
   }
 </style>

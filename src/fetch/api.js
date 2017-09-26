@@ -60,9 +60,36 @@ export function post (url, params) {
     })
   })
 }
-
 export default {
-  // 终端检核分析
+  // 模拟接口
+  getMockData (params) {
+    // 模拟响应数据
+    var result = {}
+    result.code = '1'
+    result.data = []
+    if (params.current === 3) {
+      for (let i = 0; i < 3; i++) {
+        result.data.push({
+          name: '列表'
+        })
+      }
+    } else if (params.current < 3) {
+      for (let i = 0; i < params.limit; i++) {
+        result.data.push({
+          name: '列表'
+        })
+      }
+    } else {
+      result.data = []
+    }
+    // 模拟返回结果
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(result)
+      }, 1000)
+    })
+  },
+  // 请求真实接口
   getData (params) {
     return post('xx.do', params)
   }

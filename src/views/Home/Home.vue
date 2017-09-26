@@ -167,7 +167,9 @@
       </ul>
     </article>
   </div>
-  <router-view></router-view>
+  <transition name="slide">
+    <router-view></router-view>
+  </transition>
 </div>
 </template>
 
