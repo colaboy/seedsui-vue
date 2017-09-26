@@ -5,4 +5,5 @@ var Request = {
     return param ? decodeURI(param[1]) : param
   }
 }
+
 export default Request

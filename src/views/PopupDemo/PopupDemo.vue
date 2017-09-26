@@ -1,7 +1,7 @@
 <template>
 <div class="page">
   <Alert text="提示框" :show="alertShow" :clickSubmit="onAlertSubmit"/>
-  <Alert text="对话框" :show="showConfirm" :clickSubmit="onConfirmSubmit" :clickCancel="onConfirmCancel"/>
+  <Alert text="对话框" :show="confirmShow" :clickSubmit="onConfirmSubmit" :clickCancel="onConfirmCancel"/>
   <Toast :mask="true" :text="toastText" :show="toastShow" />
   <Prompt :mask="true" :text="promptText" :show="promptShow" />
 
@@ -143,7 +143,7 @@ export default {
   data () {
     return {
       alertShow: false,
-      showConfirm: false,
+      confirmShow: false,
       showActionsheet: false,
       toastShow: false,
       toastText: '',
@@ -177,13 +177,13 @@ export default {
       this.alertShow = false
     },
     onClickBtnConfirm () {
-      this.showConfirm = true
+      this.confirmShow = true
     },
     onConfirmSubmit () {
-      this.showConfirm = false
+      this.confirmShow = false
     },
     onConfirmCancel () {
-      this.showConfirm = false
+      this.confirmShow = false
     },
     onClickToast (e, text) {
       this.toast(text)

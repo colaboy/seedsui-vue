@@ -49,4 +49,5 @@ var Device = (function () {
     ua: ua
   }
 })()
+
 export default Device
