@@ -3,8 +3,8 @@
     <div :class="'alert'+(show?' active':'')">
       <div class="alert-content">{{text}}</div>
       <div class="alert-handler">
-        <a v-if="clickCancel" @click="clickCancel">取消</a>
-        <a @click="clickSubmit(...args)">确定</a>
+        <a v-if="clickCancel" @click="clickCancel">{{cancelText}}</a>
+        <a @click="clickSubmit(...args)">{{submitText}}</a>
       </div>
     </div>
   </div>
@@ -23,6 +23,14 @@ export default {
     show: {
       type: Boolean,
       default: false
+    },
+    submitText: {
+      type: String,
+      default: '确定'
+    },
+    cancelText: {
+      type: String,
+      default: '取消'
     },
     clickSubmit: {
       type: Function
