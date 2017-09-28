@@ -1,7 +1,7 @@
 <template>
   <div :style="css" class="numbox bordered">
     <input type="button" class="numbox-button" :disabled="minusDisabled" value="-" @click.stop.prevent="onClickMinus">
-    <input type="tel" class="numbox-input" :value="truthValue" @input.stop.prevent="onInput" @change.stop.prevent="onChange">
+    <input type="tel" class="numbox-input" :value="truthValue" @blur.stop.prevent="onBlur" @click.stop.prevent="onClick" @input.stop.prevent="onInput" @change.stop.prevent="onChange">
     <input type="button" class="numbox-button" :disabled="plusDisabled" value="+" @click.stop.prevent="onClickPlus">
   </div>
 </template>
@@ -128,6 +128,16 @@ export default {
       var value = target.value
       this.truthValue = value
       this.validator()
+    },
+    onClick (e) {
+      var target = e.target
+      var value = target.value
+      if (value === '0') this.truthValue = ''
+    },
+    onBlur (e) {
+      var target = e.target
+      var value = target.value
+      if (value === '') this.truthValue = '0'
     }
   },
   mounted () {

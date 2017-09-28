@@ -16,7 +16,7 @@
               <div class="loading-floating-blade"></div>
               <div class="loading-floating-blade"></div>
           </div>
-          <div class="al-text">{{text}}</div>
+          <div class="loading-floating-text">{{text}}</div>
       </div>
   </div>
 </template>

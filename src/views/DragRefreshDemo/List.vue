@@ -86,11 +86,17 @@ export default {
           else this.showNodata = false
         } else {
           console.log('获取数据失败')
+          setTimeout(() => {
+            this.$refs.refDrag.instance.setPagination(isNext, true)
+          }, 500)
           if (isNext) this.current--
         }
       })
       .catch(err => {
         console.log('获取数据失败' + err)
+        setTimeout(() => {
+          this.$refs.refDrag.instance.setPagination(isNext, true)
+        }, 500)
         if (isNext) this.current--
       })
     }

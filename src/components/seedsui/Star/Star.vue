@@ -35,5 +35,15 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-
+  @import "../../../assets/seedsui/styles/variables.less";
+  .star::before{
+    font-family: "iconfont";
+    content: "\e94d";
+    display: block;
+  }
+  .star.active::before{
+    font-family: "iconfont";
+    content: "\e94e";
+    display: block;
+  }
 </style>
