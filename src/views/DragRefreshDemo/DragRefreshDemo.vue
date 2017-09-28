@@ -1,12 +1,12 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="下拉刷新"></Titlebar>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
       <List :params="listParams"/>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

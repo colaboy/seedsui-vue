@@ -1,0 +1,6 @@
+{
+  "name": "calendarDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./calendarDemo.vue"
+}

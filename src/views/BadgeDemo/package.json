@@ -1,6 +1,6 @@
 {
-  "name": "BadgeDemo",
+  "name": "badgeDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./BadgeDemo.vue"
+  "main": "./badgeDemo.vue"
 }

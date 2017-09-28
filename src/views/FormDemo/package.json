@@ -1,6 +1,6 @@
 {
-  "name": "FormDemo",
+  "name": "formDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./FormDemo.vue"
+  "main": "./formDemo.vue"
 }

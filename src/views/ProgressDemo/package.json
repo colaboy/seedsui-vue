@@ -1,0 +1,6 @@
+{
+  "name": "ProgressDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ProgressDemo.vue"
+}

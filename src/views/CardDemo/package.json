@@ -1,6 +1,6 @@
 {
-  "name": "CardDemo",
+  "name": "cardDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./CardDemo.vue"
+  "main": "./cardDemo.vue"
 }

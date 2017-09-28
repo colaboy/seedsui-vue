@@ -1,6 +1,6 @@
 {
-  "name": "ButtonDemo",
+  "name": "buttonDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./ButtonDemo.vue"
+  "main": "./buttonDemo.vue"
 }

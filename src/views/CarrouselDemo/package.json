@@ -1,6 +1,6 @@
 {
-  "name": "CarrouselDemo",
+  "name": "carrouselDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./CarrouselDemo.vue"
+  "main": "./carrouselDemo.vue"
 }

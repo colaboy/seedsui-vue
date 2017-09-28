@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="form"></Titlebar>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
       <Switch1 :change="onSwitchChange1"/>
       <Switch1 :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange2"/>
       <Switch1 theme="reverse" :change="onSwitchChange3"/>
@@ -12,8 +12,8 @@
       <NumBox :decimal="true" :digits="2" :value="0" :change="onNumBoxChange"/>
       <InputPre :change="onPreChange"/>
       <InputSearch :change="onSearchChange" :submit="onSearchSubmit"/>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

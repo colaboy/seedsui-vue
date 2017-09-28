@@ -1,13 +1,13 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="carrousel" />
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <Carrousel ref="refCarrousel" :list="list" :pagination="true" css="height: 250px;" :loop="true"/>
     <Carrousel :list="list" :pagination="true" :slidesPerView="3" css="height: 80px;" :loop="true"/>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

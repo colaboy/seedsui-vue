@@ -1,18 +1,18 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="库存管理"></Titlebar>
     <Tabbar :list="tabbar" :activeIndex="tabbarActive"></Tabbar>
-  </header>
-  <article class="container" style="top:84px;">
+  </Header>
+  <Container css="top:84px;">
     <Carrousel ref="refCarrousel" pagination="" :page="2" css="height:100%" :change="onSlideChangeEnd">
       <!--第一页:start-->
       <div slot="carrousel-1" style="overflow:hidden;width:100%;height:100%;">第一页</div>
       <!--第二页:start-->
       <div slot="carrousel-2" style="overflow:hidden;width:100%;height:100%;position:relative;">第二页</div>
     </Carrousel>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

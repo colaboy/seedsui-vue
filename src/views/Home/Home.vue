@@ -1,26 +1,44 @@
 <template>
 <div>
-  <div class="page">
-    <header class="header">
+  <Page>
+    <Header>
       <Titlebar title="SeedsUI">
         <a slot="right" class="titlebar-button" href="javascript:showAbout()">
           <i class="icon icon-rdoinfo"></i>
         </a>
       </Titlebar>
-    </header>
-    <article class="container">
+    </Header>
+    <Container>
       <ul class="list">
         <li class="sliver underline">
           <p class="sliver-title">布局 Layout</p>
         </li>
         <li>
-          <router-link class="list-li underline" :to="{name: 'FlexDemo'}">
-            <p class="list-container">Flex布局</p> <i class="list-icon icon-arrowright"></i>
+          <router-link class="list-li underline" :to="{name: 'flexDemo'}">
+            <p class="list-container">Flex</p>
+            <small>布局</small>
+            <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
-          <router-link class="list-li underline" :to="{name: 'SpaceDemo'}">
-            <p class="list-container">Space间距</p> <i class="list-icon icon-arrowright"></i>
+          <router-link class="list-li underline" :to="{name: 'spaceDemo'}">
+            <p class="list-container">Space</p>
+            <small>间距</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'rowDemo'}">
+            <p class="list-container">Row</p>
+            <small>行</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'listDemo'}">
+            <p class="list-container">List</p>
+            <small>传统列表</small>
+            <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
 
@@ -29,12 +47,14 @@
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'titlebarDemo'}">
-            <p class="list-container">TitleBar</p> <i class="list-icon icon-arrowright"></i>
+            <p class="list-container">TitleBar</p>
+            <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'tabbarDemo'}">
             <p class="list-container">TabBar</p>
+            <small>页签</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
@@ -51,18 +71,21 @@
         <li>
           <router-link class="list-li underline" :to="{name: 'pickerDemo'}">
             <p class="list-container">Picker</p>
+            <small>选择器</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'formDemo'}">
             <p class="list-container">Form</p>
+            <small>表单</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'starDemo'}">
             <p class="list-container">Star</p>
+            <small>评星</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
@@ -72,7 +95,8 @@
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'iconfontDemo'}">
-            <p class="list-container">Iconfont</p> <i class="list-icon icon-arrowright"></i>
+            <p class="list-container">Iconfont</p>
+            <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
@@ -108,18 +132,56 @@
         <li>
           <router-link class="list-li underline" :to="{name: 'carrouselDemo'}">
             <p class="list-container">Carrousel</p>
+            <small>轮播图</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'carrouselPageDemo'}">
             <p class="list-container">CarrouselPage</p>
+            <small>轮播页</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'imglazyDemo'}">
-            <p class="list-container">imglazyDemo</p>
+            <p class="list-container">Imglazy</p>
+            <small>懒人加载</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'gaugeDemo'}">
+            <p class="list-container">Gauge</p>
+            <small>仪表盘</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'doughnutDemo'}">
+            <p class="list-container">Doughnut</p>
+            <small>环形图</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'clockDemo'}">
+            <p class="list-container">Clock</p>
+            <small>时钟</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'progressDemo'}">
+            <p class="list-container">Progress</p>
+            <small>进度条</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'progressDemo'}">
+            <p class="list-container">Weather</p>
+            <small>天气</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
@@ -148,25 +210,92 @@
             <p class="list-container">Loading</p> <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-
+        <li>
+          <router-link class="list-li underline" :to="{name: 'timepartDemo'}">
+            <p class="list-container">Timepart</p>
+            <small>时间段</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'calendarDemo'}">
+            <p class="list-container">Calendar</p>
+            <small>日历</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'historyDemo'}">
+            <p class="list-container">History</p>
+            <small>地址栏监听</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
         <li class="sliver underline">
           <p class="sliver-title">手势 Gesture</p>
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'dragRefreshDemo'}">
-            <p class="list-container">Dragrefresh下拉刷新</p>
+            <p class="list-container">Dragrefresh</p>
+            <small>下拉刷新</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
           <router-link class="list-li underline" :to="{name: 'pullListDemo'}">
-            <p class="list-container">PullList列表拉动</p>
+            <p class="list-container">PullList</p>
+            <small>列表拉动</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'asideDemo'}">
+            <p class="list-container">Aside</p>
+            <small>侧边栏</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'shakeDemo'}">
+            <p class="list-container">Shake</p>
+            <small>摇一摇</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'indexbarDemo'}">
+            <p class="list-container">Indexbar</p>
+            <small>通讯录索引</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li class="sliver underline">
+          <p class="sliver-title">本地能力 Native</p>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'mediaDemo'}">
+            <p class="list-container">Media</p>
+            <small>多媒体</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'mapDemo'}">
+            <p class="list-container">Map</p>
+            <small>地图</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li underline" :to="{name: 'otherDemo'}">
+            <p class="list-container">Other</p>
+            <small>定位/电话/短信/邮箱等</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
       </ul>
-    </article>
-  </div>
+    </Container>
+  </Page>
   <transition name="slide">
     <router-view></router-view>
   </transition>

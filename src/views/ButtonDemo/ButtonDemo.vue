@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="button"></Titlebar>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
       <Group title="普通按钮">
           <div style="line-height: 50px;padding: 4px 12px 8px 12px;">
               <Button text="默认" tipText="1"></Button>
@@ -45,8 +45,8 @@
               <Button type="info block" icon="icon-rdoinfo" text="信息" style="margin:8px 0;"></Button>
           </div>
       </Group>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

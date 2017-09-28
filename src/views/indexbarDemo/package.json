@@ -1,0 +1,6 @@
+{
+  "name": "indexbarDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./indexbarDemo.vue"
+}

@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="Titlebar" />
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <div class="description">
         titlebar
     </div>
@@ -20,8 +20,8 @@
     <Titlebar theme="reverse" title="左对文字" :lBtn="[{icon:'icon-arrowleft',text:'返回',click:onClickBack}]" :rBtn="[{icon:'icon-search',text:'搜索',click:onClickSubmit}]"/>
     <br/>
     <Titlebar theme="reverse" title="多图标" :lBtn="[{icon:'icon-arrowleft',click:onClickBack}]" :rBtn="[{icon:'icon-search',click:onClickBtn1},{icon:'icon-hook',click:onClickBtn2}]"/>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 {
-  "name": "GroupDemo",
+  "name": "groupDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./GroupDemo.vue"
+  "main": "./groupDemo.vue"
 }

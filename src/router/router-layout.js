@@ -1,17 +1,31 @@
-import FlexDemo from '@/views/FlexDemo'
-import SpaceDemo from '@/views/SpaceDemo'
+import flexDemo from '@/views/flexDemo'
+import spaceDemo from '@/views/spaceDemo'
+import rowDemo from '@/views/rowDemo'
+import listDemo from '@/views/listDemo'
 
 export default [
   {
-    path: 'FlexDemo',
-    name: 'FlexDemo',
-    component: FlexDemo,
+    path: 'flexDemo',
+    name: 'flexDemo',
+    component: flexDemo,
     meta: {keepAlive: true}
   },
   {
-    path: 'SpaceDemo',
-    name: 'SpaceDemo',
-    component: SpaceDemo,
+    path: 'spaceDemo',
+    name: 'spaceDemo',
+    component: spaceDemo,
+    meta: {keepAlive: true}
+  },
+  {
+    path: 'rowDemo',
+    name: 'rowDemo',
+    component: rowDemo,
+    meta: {keepAlive: true}
+  },
+  {
+    path: 'listDemo',
+    name: 'listDemo',
+    component: listDemo,
     meta: {keepAlive: true}
   }
 ]

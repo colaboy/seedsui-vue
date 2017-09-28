@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="card"/>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
 
   <Card>
     <p style="padding:8px;">内容内容</p>
@@ -23,8 +23,8 @@
     </div>
   </Card>
 
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

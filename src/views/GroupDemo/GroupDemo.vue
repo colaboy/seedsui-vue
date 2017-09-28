@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="group"/>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
       <Group title="带标题">
         <ul class="list">
           <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>
@@ -20,8 +20,8 @@
           <li style="padding:8px;"><p>内容内容</p></li>
         </ul>
       </Group>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

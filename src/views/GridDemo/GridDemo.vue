@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="grid"></Titlebar>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <Group title="square">
       <Grid :list="list"/>
     </Group>
@@ -16,8 +16,8 @@
     <Group title="pure bordered">
       <Grid type="pure" :bordered="true" :list="list"/>
     </Group>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

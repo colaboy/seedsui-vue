@@ -1,6 +1,6 @@
 {
-  "name": "TitlebarDemo",
+  "name": "titlebarDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./TitlebarDemo.vue"
+  "main": "./titlebarDemo.vue"
 }

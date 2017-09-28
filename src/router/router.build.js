@@ -9,6 +9,7 @@ import RouterDataEntry from './router-dataentry.js'
 import RouterDataDisplay from './router-datadisplay.js'
 import RouterFeedback from './router-feedback.js'
 import RouterGesture from './router-gesture.js'
+import RouterNative from './router-native.js'
 Vue.use(Router)
 
 export default new Router({
@@ -26,7 +27,8 @@ export default new Router({
         ...RouterDataEntry,
         ...RouterDataDisplay,
         ...RouterFeedback,
-        ...RouterGesture
+        ...RouterGesture,
+        ...RouterNative
       ]
     }
   ]

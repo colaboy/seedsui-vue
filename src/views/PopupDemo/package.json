@@ -1,6 +1,6 @@
 {
-  "name": "PopupDemo",
+  "name": "popupDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./PopupDemo.vue"
+  "main": "./popupDemo.vue"
 }

@@ -1,0 +1,6 @@
+{
+  "name": "mapDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./mapDemo.vue"
+}

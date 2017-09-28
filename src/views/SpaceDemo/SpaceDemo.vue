@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="mark"></Titlebar>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
       <Group title="标签">
           <div style="padding: 10px 12px;">
               <Mark type="info" text="info"></Mark>
@@ -23,8 +23,8 @@
               <Mark type="disable outline">disable</Mark>
           </div>
       </Group>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

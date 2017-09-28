@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="picker" />
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <Group css="padding: 0 12px;">
       <div class="inputbox underline">
         <InputDate type="datetime" placeholder="请选择日期时间" :value="datetimeVal" :change="datetimeChange"/>
@@ -37,8 +37,8 @@
         <i class="color-placeholder icon icon-position"></i>
       </div>
     </Group>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

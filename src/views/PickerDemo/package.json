@@ -1,6 +1,6 @@
 {
-  "name": "PickerDemo",
+  "name": "pickerDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./PickerDemo.vue"
+  "main": "./pickerDemo.vue"
 }

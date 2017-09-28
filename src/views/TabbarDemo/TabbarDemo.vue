@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="Tabbar" />
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <div class="description">line</div>
     <Tabbar :list="tabbar" :active="0"></Tabbar>
     <br/>
@@ -36,8 +36,8 @@
     <div class="description">footer reverse</div>
     <Tabbar :list="footerTabbar" theme="reverse" type="footer" :activeIndex="0"></Tabbar>
     <br/>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 {
-  "name": "DragRefreshDemo",
+  "name": "dragRefreshDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./DragRefreshDemo.vue"
+  "main": "./dragRefreshDemo.vue"
 }

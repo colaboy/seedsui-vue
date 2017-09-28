@@ -1,12 +1,12 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="文字图标" />
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <Grid :list="list" type="pure" :bordered="true" :colors="['#333']"/>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

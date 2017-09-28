@@ -1,0 +1,6 @@
+{
+  "name": "doughnutDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./doughnutDemo.vue"
+}

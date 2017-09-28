@@ -1,6 +1,6 @@
 {
-  "name": "MarkDemo",
+  "name": "markDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./MarkDemo.vue"
+  "main": "./markDemo.vue"
 }

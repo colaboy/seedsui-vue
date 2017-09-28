@@ -1,13 +1,13 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="star"/>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <Star :default="2" :change="onChangeStar"/>
     <span>{{star}}</span>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

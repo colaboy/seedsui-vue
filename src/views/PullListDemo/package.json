@@ -1,6 +1,6 @@
 {
-  "name": "PullListDemo",
+  "name": "pullListDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./PullListDemo.vue"
+  "main": "./pullListDemo.vue"
 }

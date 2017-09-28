@@ -1,6 +1,6 @@
 {
-  "name": "GridDemo",
+  "name": "gridDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./GridDemo.vue"
+  "main": "./gridDemo.vue"
 }

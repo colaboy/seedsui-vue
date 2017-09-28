@@ -1,6 +1,6 @@
 {
-  "name": "IconfontDemo",
+  "name": "iconfontDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./IconfontDemo.vue"
+  "main": "./iconfontDemo.vue"
 }

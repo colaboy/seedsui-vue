@@ -1,13 +1,13 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="imglazy" :rBtn="[{text:'新增图片',click:onClickAdd}]"/>
-  </header>
+  </Header>
   <ImgLazy ref="refImgLazy" className="container" css="text-align:center">
     <img v-for="(item,index) in imgs" :key="index" :data-load-src="item" :data-error-src="imgDefault" src="" class="lazyimg" />
     <div v-for="(item,index) in imgs" :key="index" :data-load-src="item" data-error-src="imgDefault" class="lazyimg"></div>
   </ImgLazy>
-</div>
+</Page>
 </template>
 
 <script>

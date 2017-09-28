@@ -1,5 +1,5 @@
 <template>
-<div class="page">
+<Page>
   <Alert text="提示框" :show="alertShow" :clickSubmit="onAlertSubmit"/>
   <Alert text="对话框" :show="confirmShow" :clickSubmit="onConfirmSubmit" :clickCancel="onConfirmCancel"/>
   <Toast :mask="true" :text="toastText" :show="toastShow" />
@@ -80,10 +80,10 @@
   </Dialog>
   <DropFilter :show="dropFilterShow" :checked="dropFilterChecked" :clickMask="onClickDropFilterMask" :click="onClickDropFilterList"/>
   
-  <header class="header">
+  <Header>
     <Titlebar title="popup<i class='shape-triangle-up'></i>" :click="onClickDropFilter" :rBtn="[{icon:'icon-share',click:this.onClickBtnShare},{icon:'icon-menudot',click:this.onClickBtnMenu}]"/>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
       <Card css="padding:10px 12px;">
     		<p class="color-primary" css="padding: 0 0 6px 0;">系统弹出框</p>
         <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnAlert" text="alert" />
@@ -129,8 +129,8 @@
     		<p class="color-primary" css="padding: 0 0 6px 0;">中弹出框</p>
     		<Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnMiddle" text="middle" />
     	</Card>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

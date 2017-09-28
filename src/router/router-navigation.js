@@ -1,17 +1,17 @@
-import TitlebarDemo from '@/views/TitlebarDemo'
-import TabbarDemo from '@/views/TabbarDemo'
+import titlebarDemo from '@/views/titlebarDemo'
+import tabbarDemo from '@/views/tabbarDemo'
 
 export default [
   {
     path: 'titlebarDemo',
     name: 'titlebarDemo',
-    component: TitlebarDemo,
+    component: titlebarDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'tabbarDemo',
     name: 'tabbarDemo',
-    component: TabbarDemo,
+    component: tabbarDemo,
     meta: {keepAlive: true}
   }
 ]

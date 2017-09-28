@@ -1,0 +1,6 @@
+{
+  "name": "otherDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./otherDemo.vue"
+}

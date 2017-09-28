@@ -1,9 +1,9 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="badge"></Titlebar>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
       <Group title="badge">
           <div class="peg-content">
               <Badge text="badge"></Badge>
@@ -47,8 +47,8 @@
               <Tagline><span>tagline</span></Tagline>
           </div>
       </Group>
-  </article>
-</div>
+  </Container>
+</Page>
 </template>
 
 <script>

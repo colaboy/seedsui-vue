@@ -1,15 +1,15 @@
 <template>
-<div class="page">
-  <header class="header">
+<Page>
+  <Header>
     <Titlebar title="loading"></Titlebar>
-  </header>
-  <article class="container">
+  </Header>
+  <Container>
     <Button text="填料环filling ring" type="block" css="margin:12px 10px;" :click="onClickFilling"></Button>
     <Button text="流光floating ray" type="block" css="margin:12px 10px;" :click="onClickFloating"></Button>
-  </article>
+  </Container>
   <LoadingFilling :show="fillingShow" css="top:44px;"></LoadingFilling>
   <LoadingFloating :show="floatingShow" css="top:44px;"></LoadingFloating>
-</div>
+</Page>
 </template>
 
 <script>

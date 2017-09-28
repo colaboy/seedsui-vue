@@ -1,6 +1,6 @@
 {
-  "name": "FlexDemo",
+  "name": "flexDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./FlexDemo.vue"
+  "main": "./flexDemo.vue"
 }

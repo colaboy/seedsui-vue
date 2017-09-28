@@ -1,66 +1,66 @@
-import IconfontDemo from '@/views/Home/IconfontDemo'
-import MarkDemo from '@/views/MarkDemo'
-import BadgeDemo from '@/views/BadgeDemo'
-import GroupDemo from '@/views/GroupDemo'
-import CardDemo from '@/views/CardDemo'
-import GridDemo from '@/views/GridDemo'
-import CarrouselDemo from '@/views/CarrouselDemo'
-import CarrouselPageDemo from '@/views/CarrouselPageDemo'
-import ImglazyDemo from '@/views/ImglazyDemo'
+import iconfontDemo from '@/views/Home/iconfontDemo'
+import markDemo from '@/views/markDemo'
+import badgeDemo from '@/views/badgeDemo'
+import groupDemo from '@/views/groupDemo'
+import cardDemo from '@/views/cardDemo'
+import gridDemo from '@/views/gridDemo'
+import carrouselDemo from '@/views/carrouselDemo'
+import carrouselPageDemo from '@/views/carrouselPageDemo'
+import imglazyDemo from '@/views/imglazyDemo'
 
 export default [
   {
     path: 'iconfontDemo',
     name: 'iconfontDemo',
-    component: IconfontDemo,
+    component: iconfontDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'markDemo',
     name: 'markDemo',
-    component: MarkDemo,
+    component: markDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'badgeDemo',
     name: 'badgeDemo',
-    component: BadgeDemo,
+    component: badgeDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'groupDemo',
     name: 'groupDemo',
-    component: GroupDemo,
+    component: groupDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'cardDemo',
     name: 'cardDemo',
-    component: CardDemo,
+    component: cardDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'gridDemo',
     name: 'gridDemo',
-    component: GridDemo,
+    component: gridDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'carrouselDemo',
     name: 'carrouselDemo',
-    component: CarrouselDemo,
+    component: carrouselDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'carrouselPageDemo',
     name: 'carrouselPageDemo',
-    component: CarrouselPageDemo,
+    component: carrouselPageDemo,
     meta: {keepAlive: true}
   },
   {
     path: 'imglazyDemo',
     name: 'imglazyDemo',
-    component: ImglazyDemo,
+    component: imglazyDemo,
     meta: {keepAlive: true}
   }
 ]

@@ -1,0 +1,6 @@
+{
+  "name": "gaugeDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./gaugeDemo.vue"
+}

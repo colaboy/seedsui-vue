@@ -1,6 +1,6 @@
 {
-  "name": "TabbarDemo",
+  "name": "tabbarDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./TabbarDemo.vue"
+  "main": "./tabbarDemo.vue"
 }

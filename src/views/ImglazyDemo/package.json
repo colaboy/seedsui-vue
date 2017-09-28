@@ -1,6 +1,6 @@
 {
-  "name": "ImglazyDemo",
+  "name": "imglazyDemo",
   "version": "0.0.0",
   "private": true,
-  "main": "./ImglazyDemo.vue"
+  "main": "./imglazyDemo.vue"
 }
