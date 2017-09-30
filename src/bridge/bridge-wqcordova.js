@@ -1,14 +1,14 @@
-var WqCordova = {
+var BridgeWqCordova = {
   /* -------------------
   打开关闭窗口
   ------------------- */
-  open: function (url, callback) {
+  openWindow: function (url, callback) {
     var json = '{"url":"' + url + '"}'
     /* eslint-disable */
     wq.wqload.wqOpenUrl(callback || null, null, json)
     /* eslint-enable */
   },
-  close: function (data) {
+  closeWindow: function (data) {
     /* eslint-disable */
     wq.wqload.wqClosePage(data || null)
     /* eslint-enable */
@@ -18,4 +18,4 @@ var WqCordova = {
   }
 }
 
-export default WqCordova
+export default BridgeWqCordova

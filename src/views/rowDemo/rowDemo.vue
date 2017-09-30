@@ -1,28 +1,21 @@
 <template>
 <Page>
   <Header>
-    <Titlebar title="mark"></Titlebar>
+    <Titlebar title="Row"></Titlebar>
   </Header>
   <Container>
-      <Group title="标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info" text="info"></Mark>
-              <Mark type="success" text="success"></Mark>
-              <Mark type="cancel" text="cancel"></Mark>
-              <Mark type="warn">warn</Mark>
-              <Mark type="disable">disable</Mark>
-          </div>
-      </Group>
-
-      <Group title="框形标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info outline">info</Mark>
-              <Mark type="success outline">success</Mark>
-              <Mark type="cancel outline">cancel</Mark>
-              <Mark type="warn outline">warn</Mark>
-              <Mark type="disable outline">disable</Mark>
-          </div>
-      </Group>
+    <div class="row">
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+      <div class="col-2">col-2</div>
+    </div>
+    <div class="row">
+      <div class="col-4">col-4</div>
+      <div class="col-flex">col-flex</div>
+    </div>
   </Container>
 </Page>
 </template>
@@ -40,4 +33,12 @@ export default {
 </script>
 <style lang="less" scoped>
   @import "../../assets/seedsui/seedsui-variables.less";
+  [class ^= 'col-']{
+    background-color: rgb(235, 235, 239);
+    color: rgb(187, 187, 187);
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid #ddd;
+  }
 </style>

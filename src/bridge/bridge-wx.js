@@ -1,35 +1,34 @@
-var Weixin = {
+import http from '@/fetch/api'
+var BridgeWeiXin = {
   /* -------------------
   初始化配置
   ------------------- */
   config: function (fn) {
-    var url = '/app/std_mendian/hbtask/getSignature.action'
     var reqUrl = window.location.href.split('#')[0]
-    var reqData = {
+    var params = {
       url: reqUrl
     }
     /* eslint-disable */
-    $.ajax({
-      type: 'post',
-      url: url,
-      data: reqData,
-      dataType: 'json',
-      success: function(val) {
+    http.wxConfig(params).then(response => {
+      let result = response
+      if (result.code === '1') {
         var conf = {
-          appId: val.corpId,
-          timestamp: val.timestamp,
-          nonceStr: val.nonceStr,
-          signature: val.signature,
+          appId: result.corpId,
+          timestamp: result.timestamp,
+          nonceStr: result.nonceStr,
+          signature: result.signature,
           jsApiList: ['chooseImage', 'uploadImage', 'getLocation']
         }
         conf.debug = false
 
         wx.config(conf)
         if (fn) fn()
-      },
-      error: function() {
-        // alert('微信配置错误，请检查是否取得证书')
+      } else {
+        console.log('微信配置错误，请检查是否取得证书')
       }
+    })
+    .catch(err => {
+      console.log('微信配置错误，请检查是否取得证书')
     })
     /* eslint-enable */
   },
@@ -179,14 +178,31 @@ var Weixin = {
     }
   },
   /* -------------------
+  二维码扫描
+  ------------------- */
+  scanQRCode (callback) {
+    /* eslint-disable */
+    wx.scanQRCode({
+      needResult: 1,
+      desc: 'scanQRCode desc',
+      success: function (res) {
+        callback && callback(res)
+      }
+    })
+    /* eslint-enable */
+  },
+  /* -------------------
   打开关闭窗口
   ------------------- */
-  open: function (url) {
+  openWindow: function (url) {
     location.href = url
+  },
+  closeWindow: function () {
+    history.go(-1)
   },
   onBack: function (callback) {
     callback && callback()
   }
 }
 
-export default Weixin
+export default BridgeWeiXin

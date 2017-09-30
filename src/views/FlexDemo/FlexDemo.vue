@@ -8,7 +8,7 @@
   <Container>
     <Carrousel ref="refCarrousel" pagination="" :page="2" css="height:100%" :change="onSlideChangeEnd">
       <!--第一页:start-->
-      <div slot="carrousel-1" style="overflow:auto;width:100%;height:100%;">
+      <section slot="carrousel-1" class="scrollContainer">
         <!--第一页:start-->
         <div class="sliver">
           box布局(兼容android4.0及以上)
@@ -67,9 +67,9 @@
           <div class="case" style="background-color:lightgreen;"></div>
         </div>
         <!--第一页:end-->
-      </div>
+      </section>
       <!--第二页:start-->
-      <div slot="carrousel-2" style="overflow:hidden;width:100%;height:100%;position:relative;">
+      <section slot="carrousel-2" class="scrollContainer">
         <!--第二页:start-->
         <div class="sliver">
           flex布局(功能过新，兼容性不好)
@@ -175,7 +175,7 @@
           <div class="case" style="background-color:lightblue;height: auto;"></div>
         </div>
         <!--第二页:end-->
-      </div>
+      </section>
     </Carrousel>
   </Container>
 </Page>
@@ -212,6 +212,9 @@ export default {
 </script>
 <style lang="less" scoped>
   @import "../../assets/seedsui/seedsui-variables.less";
+  .scrollContainer {
+    overflow:hidden;width:100%;height:100%;overflow:auto;position:relative;
+  }
   #row {
     width: 100%;
     background-color: #fff;

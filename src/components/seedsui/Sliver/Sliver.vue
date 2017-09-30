@@ -1,11 +1,11 @@
 <template>
-  <div :class="'sliver' + (className?' '+className:'')" :style="css">{{text}}</div>
+  <div :class="'sliver' + (className?' '+className:'')" :style="css">{{title}}</div>
 </template>
 <script>
 export default {
   name: 'Sliver',
   props: {
-    text: {
+    title: {
       type: String,
       default: ''
     },

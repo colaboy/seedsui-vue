@@ -92,5 +92,9 @@ export default {
   // 请求真实接口
   getData (params) {
     return post('xx.do', params)
+  },
+  // 微信初始配置请求
+  wxConfig (params) {
+    return post('/app/getSignature.action', params)
   }
 }

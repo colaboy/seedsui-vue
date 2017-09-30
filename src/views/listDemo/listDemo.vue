@@ -1,28 +1,72 @@
 <template>
 <Page>
   <Header>
-    <Titlebar title="mark"></Titlebar>
+    <Titlebar title="List"></Titlebar>
   </Header>
   <Container>
-      <Group title="标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info" text="info"></Mark>
-              <Mark type="success" text="success"></Mark>
-              <Mark type="cancel" text="cancel"></Mark>
-              <Mark type="warn">warn</Mark>
-              <Mark type="disable">disable</Mark>
+      <Sliver title="普通列表" className="underline"/>
+      <ul class="list">
+      <li class="list-li underline noclick">
+        <div class="list-thumbnail">
+          <img src="http://mat1.gtimg.com/jiangsu/index_201704/img/logo.png" />
+          <div class="sticker sticker-icon top left">
+            <span class="size12 icon-fav-fill"></span>
           </div>
-      </Group>
-
-      <Group title="框形标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info outline">info</Mark>
-              <Mark type="success outline">success</Mark>
-              <Mark type="cancel outline">cancel</Mark>
-              <Mark type="warn outline">warn</Mark>
-              <Mark type="disable outline">disable</Mark>
+        </div>
+        <div class="list-container">
+          <div class="list-title">
+            新闻办公类标题
           </div>
-      </Group>
+          <div class="row box-middle">
+            <i class="list-icon icon-person color-primary"></i>
+            <p class="list-font">副标题</p>
+          </div>
+          <div class="row box-middle">
+            <i class="list-icon icon-computer color-primary"></i>
+            <p class="list-font">副标题</p>
+          </div>
+        </div>
+        <i class="list-icon icon-arrowright"></i>
+      </li>
+      <li class="list-li underline">
+        <div class="list-avatar">
+          <span></span>
+        </div>
+        <div class="list-container">
+          <p class="list-title">头像标题</p>
+          <p class="list-font">副标题</p>
+        </div>
+        <i class="list-icon icon-arrowright"></i>
+      </li>
+      <li class="list-li underline">
+        <p class="list-container">一般标题</p>
+        <i class="list-icon icon-arrowright"></i>
+      </li>
+    </ul>
+    <div class="space-lg"></div>
+    <Sliver title="时间轴列表" className="topline underline"/>
+    <div style="background-color:white;">
+      <ul class="timeline leftline" style="padding-top:1px;">
+        <li style="margin-top: 10px;">
+          <div class="timeline-badge">
+            Any
+          </div>
+          <div class="card box-flex-1" style="padding:8px;">
+            <p style="font-size:20px">11:24</p>
+            <small class="nowrap">到达南京南站</small>
+          </div>
+        </li>
+        <li style="margin-top: 10px;">
+          <div class="timeline-badge">
+            Any
+          </div>
+          <div class="card box-flex-1" style="padding:8px;">
+            <p style="font-size:20px">11:24</p>
+            <small class="nowrap">进入南京中转站</small>
+          </div>
+        </li>
+      </ul>
+    </div>
   </Container>
 </Page>
 </template>
@@ -40,4 +84,10 @@ export default {
 </script>
 <style lang="less" scoped>
   @import "../../assets/seedsui/seedsui-variables.less";
+  .list-title{
+    font-size: 16px;
+  }
+  .list-font{
+    color: #aaa;
+  }
 </style>
