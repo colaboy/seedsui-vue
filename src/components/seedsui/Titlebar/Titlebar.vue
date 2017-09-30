@@ -51,7 +51,9 @@ export default {
       default: function () {
         return [{
           icon: 'icon-arrowleft size20',
-          click: () => { this.bridge.close() }
+          click: () => {
+            this.onDefaultBack()
+          }
         }]
       }
     },
@@ -60,6 +62,13 @@ export default {
       default: function () {
         return []
       }
+    }
+  },
+  methods: {
+    onDefaultBack () {
+      this.bridge.onBack(function () {
+        history.go(-1)
+      })
     }
   }
 }

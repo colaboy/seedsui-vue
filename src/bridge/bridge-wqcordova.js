@@ -12,6 +12,9 @@ var WqCordova = {
     /* eslint-disable */
     wq.wqload.wqClosePage(data || null)
     /* eslint-enable */
+  },
+  onBack: function (callback) {
+    callback && callback()
   }
 }
 

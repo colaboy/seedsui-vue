@@ -67,7 +67,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../../assets/seedsui/styles/variables.less";
+  @import "../../../assets/seedsui/seedsui-variables.less";
   .scrollContainer{
     width: 100%;
     height: 100%;

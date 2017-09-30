@@ -49,7 +49,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../assets/seedsui/styles/variables.less";
+  @import "../../assets/seedsui/seedsui-variables.less";
   .description{
       color: #9e9e9e;
       text-align: center;

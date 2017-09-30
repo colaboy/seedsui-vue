@@ -376,5 +376,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-  @import "../../assets/seedsui/styles/variables.less";
+  @import "../../assets/seedsui/seedsui-variables.less";
 </style>

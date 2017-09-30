@@ -1,7 +1,7 @@
 <template>
-  <article :class="'page' + (className?' '+className:'')" :style="css">
+  <section :class="'page' + (className?' '+className:'')" :style="css">
     <slot></slot>
-  </article>
+  </section>
 </template>
 <script>
 export default {
@@ -19,5 +19,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../../assets/seedsui/styles/variables.less";
+  @import "../../../assets/seedsui/seedsui-variables.less";
 </style>

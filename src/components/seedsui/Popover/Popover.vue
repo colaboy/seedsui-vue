@@ -34,7 +34,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../../assets/seedsui/styles/variables.less";
+  @import "../../../assets/seedsui/seedsui-variables.less";
   .popover li:nth-of-type(1) .icon {
     color: #32a6f8;
   }

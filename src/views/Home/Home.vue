@@ -303,8 +303,10 @@
 </template>
 
 <script>
+import mixinBackPress from '@/mixin/mixin-backpress.js'
 export default {
   name: 'Home',
+  mixins: [mixinBackPress],
   data () {
     return {
       msg: 'Welcome to SeedsUI'
@@ -332,7 +334,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  @import "../../assets/seedsui/styles/variables.less";
+  @import "../../assets/seedsui/seedsui-variables.less";
   .titlebar-title{
     padding-left: 12px;
   }

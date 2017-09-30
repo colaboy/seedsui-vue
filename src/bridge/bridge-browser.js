@@ -5,8 +5,8 @@ var Browser = {
   open: function (url) {
     location.href = url
   },
-  close: function (url) {
-    history.go(-1)
+  onBack: function (callback) {
+    callback && callback()
   }
 }
 

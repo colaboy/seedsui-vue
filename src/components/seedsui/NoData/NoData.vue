@@ -1,5 +1,5 @@
 <style lang="less" scoped>
-  @import "../../../assets/seedsui/styles/variables.less";
+  @import "../../../assets/seedsui/seedsui-variables.less";
   .app-full{
     position: absolute;
     top: 0;

@@ -1,5 +1,5 @@
 <style lang="less" scoped>
-  @import "../../../assets/seedsui/styles/variables.less";
+  @import "../../../assets/seedsui/seedsui-variables.less";
 </style>
 <template>
   <ul :class="'tabbar tabbar-'+type+' animated'+(theme?' '+theme:'')+(type==='line'?' tabbar-line-width'+linewidth:'')+(disabled?' disabled':'')" :data-col="list.length" :style="tabbarCss+css">
