@@ -303,10 +303,8 @@
 </template>
 
 <script>
-import mixinBackPress from '@/mixin/mixin-backpress.js'
 export default {
   name: 'Home',
-  mixins: [mixinBackPress],
   data () {
     return {
       msg: 'Welcome to SeedsUI'

@@ -1,38 +1,25 @@
 <template>
 <Page>
   <Header>
-    <Titlebar title="mark"></Titlebar>
+    <Titlebar title="gauge"></Titlebar>
   </Header>
   <Container>
-      <Group title="标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info" text="info"></Mark>
-              <Mark type="success" text="success"></Mark>
-              <Mark type="cancel" text="cancel"></Mark>
-              <Mark type="warn">warn</Mark>
-              <Mark type="disable">disable</Mark>
-          </div>
-      </Group>
-
-      <Group title="框形标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info outline">info</Mark>
-              <Mark type="success outline">success</Mark>
-              <Mark type="cancel outline">cancel</Mark>
-              <Mark type="warn outline">warn</Mark>
-              <Mark type="disable outline">disable</Mark>
-          </div>
-      </Group>
+    <Gauge ref="refGauge" :min="0" :max="100" :current="20"/>
   </Container>
 </Page>
 </template>
 
 <script>
 export default {
-  name: 'FlexDemo',
+  name: 'gaugeDemo',
   data () {
     return {
     }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.$refs.refGauge.instance.update()
+    }, 100)
   },
   methods: {
   }

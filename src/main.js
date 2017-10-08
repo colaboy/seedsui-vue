@@ -39,6 +39,7 @@ if ('addEventListener' in document) {
     FastClick.attach(document.body)
   }, false)
 }
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

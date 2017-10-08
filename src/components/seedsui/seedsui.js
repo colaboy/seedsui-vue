@@ -45,6 +45,7 @@ import Sliver from './Sliver'
 import Mask1 from './Mask'
 import NoData from './NoData'
 import NoWifi from './NoWifi'
+import Gauge from './Gauge'
 
 var seedsui = {
   Page,
@@ -89,7 +90,8 @@ var seedsui = {
   Sliver,
   Mask1,
   NoData,
-  NoWifi
+  NoWifi,
+  Gauge
 }
 
 const install = function (Vue) {

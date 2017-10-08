@@ -1,24 +1,19 @@
+// 设置设备平台|系统|系统版本
 import Device from '@/utils/device.js'
 import { mapState, mapActions } from 'vuex'
 
 var mixinApp = {
-  // vuex
   computed: mapState({
     platform: state => state.system.platform,
     os: state => state.system.os,
-    osVersion: state => state.system.osVersion,
-    isBack: state => state.router.isBack
+    osVersion: state => state.system.osVersion
   }),
   methods: {
     ...mapActions([
       'setPlatform',
       'setOs',
-      'setOsVersion',
-      'setIsBack'
-    ]),
-    onPopstate () {
-      this.setIsBack(true)
-    }
+      'setOsVersion'
+    ])
   },
   mounted () {
     // 微信与安卓配置
@@ -30,20 +25,6 @@ var mixinApp = {
       /* eslint-disable */
       this.bridge.config()
       /* eslint-enable */
-    }
-    // 记录历史记录
-    window['addEventListener']('popstate', this.onPopstate, false)
-  },
-  watch: {
-    '$route' (to, from) {
-      setTimeout(() => {
-        let isBack = this.isBack
-        if (isBack) {
-          this.setIsBack(false)
-        } else {
-        }
-      }, 100)
-      // this.setIsBack(false)
     }
   }
 }

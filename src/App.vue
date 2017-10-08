@@ -7,10 +7,11 @@
 </template>
 
 <script>
-import mixinApp from '@/mixin/mixin-app.js'
+import mixinDevice from '@/mixin/mixin-device.js'
+import mixinBackPress from '@/mixin/mixin-backpress.js'
 export default {
   name: 'app',
-  mixins: [mixinApp]
+  mixins: [mixinDevice, mixinBackPress]
 }
 </script>
 
