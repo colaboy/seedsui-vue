@@ -4,7 +4,7 @@
     <Titlebar title="gauge"></Titlebar>
   </Header>
   <Container>
-    <Gauge ref="refGauge" :min="0" :max="100" :current="20"/>
+    <Gauge :delay="100" :min="0" :max="100" :current="20"/>
   </Container>
 </Page>
 </template>
@@ -17,9 +17,6 @@ export default {
     }
   },
   mounted () {
-    setTimeout(() => {
-      this.$refs.refGauge.instance.update()
-    }, 100)
   },
   methods: {
   }

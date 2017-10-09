@@ -1,35 +1,33 @@
 <template>
 <Page>
   <Header>
-    <Titlebar title="mark"></Titlebar>
+    <Titlebar title="doughnut"></Titlebar>
   </Header>
   <Container>
-      <Group title="标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info" text="info"></Mark>
-              <Mark type="success" text="success"></Mark>
-              <Mark type="cancel" text="cancel"></Mark>
-              <Mark type="warn">warn</Mark>
-              <Mark type="disable">disable</Mark>
-          </div>
-      </Group>
-
-      <Group title="框形标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info outline">info</Mark>
-              <Mark type="success outline">success</Mark>
-              <Mark type="cancel outline">cancel</Mark>
-              <Mark type="warn outline">warn</Mark>
-              <Mark type="disable outline">disable</Mark>
-          </div>
-      </Group>
+    <ul class="grid grid-bordered" data-col="4">
+      <li style="padding: 16px 0">
+        <Doughnut :delay="100" text="待审批" rotate="15" theme="yellow"/>
+      </li>
+      <li style="padding: 16px 0">
+        <Doughnut :delay="100" text="准备中" rotate="45" theme="orange"/>
+      </li>
+      <li style="padding: 16px 0;">
+        <Doughnut :delay="100" text="进行中" rotate="315" theme="green"/>
+      </li>
+      <li style="padding: 16px 0">
+        <Doughnut :delay="100" text="已结束" rotate="360" theme="red"/>
+      </li>
+      <li style="padding: 16px 0">
+        <Doughnut :delay="100" text="已取消" rotate="360" theme="gray"/>
+      </li>
+    </ul>
   </Container>
 </Page>
 </template>
 
 <script>
 export default {
-  name: 'FlexDemo',
+  name: 'doughnutDemo',
   data () {
     return {
     }

@@ -46,6 +46,8 @@ import Mask1 from './Mask'
 import NoData from './NoData'
 import NoWifi from './NoWifi'
 import Gauge from './Gauge'
+import Doughnut from './Doughnut'
+import Clock from './Clock'
 
 var seedsui = {
   Page,
@@ -91,7 +93,9 @@ var seedsui = {
   Mask1,
   NoData,
   NoWifi,
-  Gauge
+  Gauge,
+  Doughnut,
+  Clock
 }
 
 const install = function (Vue) {

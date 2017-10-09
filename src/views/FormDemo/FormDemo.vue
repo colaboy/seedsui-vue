@@ -10,7 +10,7 @@
       <Switch1 theme="reverse" :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange4"/>
       <Turn :change="onTurnChange"/>
       <NumBox :decimal="true" :digits="2" :value="0" :change="onNumBoxChange"/>
-      <InputPre :change="onPreChange"/>
+      <InputPre :change="onPreChange" placeholder="自增高控件"/>
       <InputSearch :change="onSearchChange" :submit="onSearchSubmit"/>
   </Container>
 </Page>

@@ -23,6 +23,10 @@ export default {
       type: Number, // primary|submit|cancel|info|success|warn|disabled
       default: 0
     },
+    delay: {
+      type: Number,
+      default: 0
+    },
     duration: {
       type: Number,
       default: 2000
@@ -47,6 +51,7 @@ export default {
     this.instance = new Gauge(this.$el, {
       minValue: this.min,
       maxValue: this.max,
+      delay: this.delay,
       currentValue: this.current,
       durationall: this.duration,
       onOut: (e) => {
@@ -60,6 +65,9 @@ export default {
         this.onChangeEnd && this.onChangeEnd(e)
       }
     })
+    setTimeout(() => {
+      this.instance.play()
+    }, 100)
   },
   methods: {
   }
