@@ -6,17 +6,17 @@
   <Container>
       <Group title="带标题">
         <ul class="list">
-          <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>
-          <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>
-          <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>
+          <li class="list-li border-b" style="padding:8px;"><p>内容内容</p></li>
+          <li class="list-li border-b" style="padding:8px;"><p>内容内容</p></li>
+          <li class="list-li border-b" style="padding:8px;"><p>内容内容</p></li>
           <li style="padding:8px;"><p>内容内容</p></li>
         </ul>
       </Group>
       <Group>
         <ul class="list">
-          <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>
-          <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>
-          <li class="list-li underline" style="padding:8px;"><p>内容内容</p></li>
+          <li class="list-li border-b" style="padding:8px;"><p>内容内容</p></li>
+          <li class="list-li border-b" style="padding:8px;"><p>内容内容</p></li>
+          <li class="list-li border-b" style="padding:8px;"><p>内容内容</p></li>
           <li style="padding:8px;"><p>内容内容</p></li>
         </ul>
       </Group>

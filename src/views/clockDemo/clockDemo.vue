@@ -4,7 +4,8 @@
     <Titlebar title="clock"></Titlebar>
   </Header>
   <Container>
-    <Clock className="size80" time="08:30" :delay="100" css="margin: 20px auto;"/>
+    <Clock className="size80" time="12:15" :delay="100" css="margin: 20px auto;"/>
+    <Clock time="12:15" :delay="100" css="margin: 20px auto;" color="#ff8800"/>
   </Container>
 </Page>
 </template>

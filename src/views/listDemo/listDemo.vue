@@ -4,9 +4,9 @@
     <Titlebar title="List"></Titlebar>
   </Header>
   <Container>
-      <Sliver title="普通列表" className="underline"/>
+      <Sliver title="普通列表" className="border-b"/>
       <ul class="list">
-      <li class="list-li underline noclick">
+      <li class="list-li border-b noclick">
         <div class="list-thumbnail">
           <img src="http://mat1.gtimg.com/jiangsu/index_201704/img/logo.png" />
           <div class="sticker sticker-icon top left">
@@ -28,7 +28,7 @@
         </div>
         <i class="list-icon icon-arrowright"></i>
       </li>
-      <li class="list-li underline">
+      <li class="list-li border-b">
         <div class="list-avatar">
           <span></span>
         </div>
@@ -38,13 +38,13 @@
         </div>
         <i class="list-icon icon-arrowright"></i>
       </li>
-      <li class="list-li underline">
+      <li class="list-li border-b">
         <p class="list-container">一般标题</p>
         <i class="list-icon icon-arrowright"></i>
       </li>
     </ul>
     <div class="space-lg"></div>
-    <Sliver title="时间轴列表" className="topline underline"/>
+    <Sliver title="时间轴列表" className="border-t border-b"/>
     <div style="background-color:white;">
       <ul class="timeline leftline" style="padding-top:1px;">
         <li style="margin-top: 10px;">

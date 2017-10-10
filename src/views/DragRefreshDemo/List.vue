@@ -1,7 +1,7 @@
 <template>
   <Dragrefresh className="scrollContainer" ref="refDrag" :topRefresh="onTopRefresh" :topComplete="onTopComplete" :bottomRefresh="onBottomRefresh" :bottomComplete="onBottomComplete">
     <ul class="list">
-      <li class="list-li underline" style="padding-left:0;margin-left:12px;" v-for="(item,index) in list" :key="index">
+      <li class="list-li border-b" style="padding-left:0;margin-left:12px;" v-for="(item,index) in list" :key="index">
         {{item.name}}
       </li>
     </ul>

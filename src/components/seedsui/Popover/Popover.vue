@@ -1,7 +1,7 @@
 <template>
   <div :class="'popover' + (className?' '+className:'')" :style="css">
 		<ul>
-			<li class="underline" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
+			<li class="border-b" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
         <i v-if="item.icon" :class="'icon '+item.icon"></i>
 				<label v-if="item.text">{{item.text}}</label>
 			</li>

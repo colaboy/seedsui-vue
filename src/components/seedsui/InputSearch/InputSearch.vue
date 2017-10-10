@@ -1,5 +1,5 @@
 <template>
-  <form class="inputbox inputbox-search underline" data-input="clear" @submit="onSubmit">
+  <form class="inputbox inputbox-search border-b" data-input="clear" @submit="onSubmit">
     <input type="search" class="search input-text" @input="onInput" @blur="onBlur">
     <i class="color-placeholder icon icon-rdoclose-fill hide size20"></i>
     <div v-show="showPlaceholder" class="inputbox-search-placeholder">

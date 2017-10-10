@@ -1,8 +1,8 @@
 <template>
-  <div :class="'clock'+(className && ' '+className)" :style="css">
-    <div class="clock-hour"></div>
-    <div class="clock-minute"></div>
-    <div class="clock-origin"></div>
+  <div :class="'clock'+(className && ' '+className)" :style="(color?'border-color:' + color+';':'')+css">
+    <div class="clock-hour" :style="color && 'background-color:' + color"></div>
+    <div class="clock-minute" :style="color && 'background-color:' + color"></div>
+    <div class="clock-origin" :style="color && 'background-color:' + color"></div>
   </div>
 </template>
 <script>
@@ -17,6 +17,9 @@ export default {
     css: {
       type: String,
       default: ''
+    },
+    color: {
+      type: String
     },
     time: {
       type: String,

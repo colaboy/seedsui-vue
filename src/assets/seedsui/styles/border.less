@@ -1,114 +1,140 @@
 /*----------------border.less(start)--------------*/
-hr{
-    position: relative;
-    border:0;
-    clear:both;
+@border-t-1:-webkit-gradient(linear, left bottom, left top, color-stop(0.5, rgba(0, 0, 0, 0)), color-stop(0.5, @border));
+@border-b-1:-webkit-gradient(linear, left top, left bottom, color-stop(0, @border), color-stop(1, @border));
+@border-l-1:-webkit-gradient(linear, right top, left top, color-stop(0, @border), color-stop(1, @border));
+@border-r-1:-webkit-gradient(linear, left top, right top, color-stop(0, @border), color-stop(1, @border));
+
+@border-t-2:-webkit-gradient(linear, left bottom, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @border));
+@border-b-2:-webkit-gradient(linear, left top, left bottom, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @border));
+@border-l-2:-webkit-gradient(linear, right top, left top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @border));
+@border-r-2:-webkit-gradient(linear, left top, right top, color-stop(.5, rgba(0, 0, 0, 0)), color-stop(.5, @border));
+
+.border-t {
+  background-position: left top;
+  background-image: @border-t-1;
 }
-.vline,.hline,hr:after,
-.topline:before,.underline:after,
-.leftline:before,.rightline:after,
-.basketline:before,.basketline:after {
-	content: '';
-    display: block;
-    position: absolute;
-    background-color: @border;
-    
-    //兼容UC线条不显示的BUG
-    z-index:1;overflow: hidden;-webkit-backface-visibility:hidden;
+
+.border-b {
+  background-position: left bottom;
+  background-image: @border-b-1;
 }
-//上横线
-.topline:before{
-    top: 0px;
-	right: auto;
-    bottom: auto;
-    left: 0;
-    height: @1px;
-    width: 100%;
-    -webkit-transform-origin:center top;
+
+.border-t,.border-b,.border-tb {
+  background-repeat: repeat-x;
+  -webkit-background-size: 100% 1px;
 }
-//下横线
-.underline:after,.hline,hr:after{
-	top: auto;
-	right: auto;
-    bottom: 0px;
-    left: 0;
-    height: @1px;
-    width: 100%;
-    -webkit-transform-origin:center bottom;
+
+.border-tb {
+  background-image: @border-t-1,@border-b-1;
+  background-position: top, bottom;
 }
-//左竖线
-.leftline:before{
-	top: 0;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    width: @1px;
-    height: 100%;
-    -webkit-transform-origin:left center;
+
+.border-l {
+  background-position: left top;
+  background-image: @border-l-1;
 }
-//右竖线
-.rightline:after,.vline{
-	top: 0;
-	bottom: auto;
-	left: auto;
-    right: 0;
-    width: @1px;
-    height: 100%;
-    -webkit-transform-origin:right center;
+
+.border-r {
+  background-position: right top;
+  background-image: @border-r-1;
 }
+
+.border-l,.border-r {
+  background-repeat: repeat-y;
+  -webkit-background-size: 1px 100%;
+}
+
+.border {
+  background-image: @border-t-1,@border-r-1,@border-b-1,@border-l-1;
+  -webkit-background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+  background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+  background-size: 100% 1px,1px 100% ,100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: top, right, bottom, left;
+}
+.border-rb {
+  background-image: @border-r-1,@border-b-1;
+  -webkit-background-size: 1px 100% ,100% 1px;
+  background-size: 1px 100% ,100% 1px;
+  background-size: 1px 100% ,100% 1px;
+  background-repeat: no-repeat;
+  background-position: right, bottom;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio : 2) {
+  .border-t {
+    background-image: @border-t-2;
+  }
+
+  .border-b {
+    background-image: @border-b-2;
+  }
+
+  .border-tb {
+    background-image: @border-t-2,@border-b-2;
+  }
+
+  .border-l {
+    background-image: @border-l-2;
+  }
+
+  .border-r {
+    background-image: @border-r-2;
+  }
+
+  .border {
+    background-image: @border-t-2,@border-r-2,@border-b-2,@border-l-2;
+  }
+
+  .border-rb {
+    background-image: @border-r-2,@border-b-2;
+  }
+}
+
+hr:extend(.border-b all){
+  border: 0;
+  clear: both;
+}
+
 //篮子线
-.basketline{
-	position: relative;
-	&:before,&:after{
-		width:@1px;
-		height:@5px;
-		bottom:0;
-	}
-	&:before{
-		left:0;
-		-webkit-transform-origin:left center;
-	}
-	&:after{
-		right:0;
-		-webkit-transform-origin:right center;
-	}
+.basketline:extend(.border-b all){
+  position: relative;
+  &:before,&:after{
+    .setConentLine();
+
+    bottom:0;
+    width:@1px;
+    height:@10px;
+  }
+  &:before{
+    left:0;
+    -webkit-transform-origin:left center;
+  }
+  &:after{
+    right:0;
+    -webkit-transform-origin:right center;
+  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	//横线
-	.topline:before,.underline:after,
-	.hline,hr:after {
-		-webkit-transform: scaleY(0.5);
-	}
-	//竖线
-	.leftline:before,.rightline:after,
-	.basketline:before,.basketline:after,
-	.vline {
-		-webkit-transform: scaleX(0.5);
-	}
+  .basketline:before,.basketline:after{
+    -webkit-transform: scaleX(0.5);
+  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
-	//横线
-	.topline:before,.underline:after,
-	.hline,hr:after {
-		-webkit-transform: scaleY(0.33);
-	}
-	//竖线
-	.leftline:before,.rightline:after,
-	.basketline:before,.basketline:after,
-	.vline {
-		-webkit-transform: scaleX(0.33);
-	}
+  .basketline:before,.basketline:after{
+    -webkit-transform: scaleX(0.33);
+  }
 }
 
 .bordered{
-	border-style:solid;
-	border-width:@1px;
-	border-color: @dpborder;
+  border-style:solid;
+  border-width:@1px;
+  border-color: @dpborder;
 }
 .dotted{
-	border-style:dotted;
+  border-style:dotted;
 }
 .dashed{
-	border-style:dashed;
+  border-style:dashed;
 }
 /*----------------border.less(end)--------------*/

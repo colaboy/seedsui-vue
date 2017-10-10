@@ -1,7 +1,7 @@
 <template>
   <Mask1 :show="show" css="top:44px;overflow:hidden;" :click="clickMask">
     <div :class="'app-dropdownList'+(show?' active':'')">
-      <div style="padding-left:0;margin-left:12px;" :class="'row wingpadding-md spacepadding-md underline'+isChecked(item,index)" v-for="(item,index) in list" :key="index" @click.stop.prevent="click(item,index)">
+      <div style="padding-left:0;margin-left:12px;" :class="'row wingpadding-md spacepadding-md border-b'+isChecked(item,index)" v-for="(item,index) in list" :key="index" @click.stop.prevent="click(item,index)">
         <p class="col-flex">{{item.name}}</p>
         <i class="icon size20 icon-hook-fill"></i>
       </div>

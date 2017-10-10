@@ -4,7 +4,7 @@
     <Titlebar title="下拉刷新"></Titlebar>
   </Header>
   <Container>
-      <List :params="listParams"/>
+    <List :params="listParams"/>
   </Container>
 </Page>
 </template>
