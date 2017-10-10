@@ -64,11 +64,14 @@ export default {
       }
     }
   },
+  created () {
+    this.bridge.onBack(function () {
+      history.go(-1)
+    })
+  },
   methods: {
     onDefaultBack () {
-      this.bridge.onBack(function () {
-        history.go(-1)
-      })
+      history.go(-1)
     }
   }
 }

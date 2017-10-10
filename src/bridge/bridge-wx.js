@@ -201,7 +201,7 @@ var BridgeWeiXin = {
     history.go(-1)
   },
   onBack: function (callback) {
-    callback && callback()
+    // 如果按下物理返回按键，则返回
   }
 }
 

@@ -91,16 +91,22 @@
   }
 }
 
-hr:extend(.border-b all){
+hr{
+  position: relative;
   border: 0;
   clear: both;
+}
+hr:after{
+  .setContentLine();
+  height: 1px;
+  background-color: @border;
 }
 
 //篮子线
 .basketline:extend(.border-b all){
   position: relative;
   &:before,&:after{
-    .setConentLine();
+    .setContentLine();
 
     bottom:0;
     width:@1px;
