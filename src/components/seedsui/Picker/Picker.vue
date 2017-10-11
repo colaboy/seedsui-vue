@@ -1,14 +1,14 @@
 <template>
   <div class="mask">
-    <div class="scrollpicker">
-      <div class="scrollpicker-header">
-        <a class="scrollpicker-cancel">取消</a>
-        <a class="scrollpicker-done">完成</a>
+    <div class="picker">
+      <div class="picker-header">
+        <a class="picker-cancel">取消</a>
+        <a class="picker-done">完成</a>
       </div>
-      <div class="scrollpicker-wrapper">
-        <div class="scrollpicker-slots"></div>
-        <div class="scrollpicker-layer">
-          <div class="scrollpicker-layer-frame"></div>
+      <div class="picker-wrapper">
+        <div class="picker-slots"></div>
+        <div class="picker-layer">
+          <div class="picker-layer-frame"></div>
         </div>
       </div>
     </div>

@@ -31,6 +31,8 @@ import Popover from './Popover'
 import Picker from './Picker'
 import InputDate from './Picker/InputDate.vue'
 import InputCity from './Picker/InputCity.vue'
+import DatePicker from './Picker/DatePicker.vue'
+import CityPicker from './Picker/CityPicker.vue'
 import Grid from './Grid'
 import ShareBox from './ShareBox'
 import Switch1 from './Switch'
@@ -80,6 +82,8 @@ var seedsui = {
   Picker,
   InputDate,
   InputCity,
+  DatePicker,
+  CityPicker,
   Grid,
   ShareBox,
   Switch1,

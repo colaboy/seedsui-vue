@@ -6,38 +6,54 @@
   <Container>
     <Group css="padding: 0 12px;">
       <div class="inputbox border-b">
-        <InputDate type="datetime" placeholder="请选择日期时间" :value="datetimeVal" :change="datetimeChange"/>
+        <!-- <InputDate type="datetime" placeholder="请选择日期时间" :value="datetimeVal" :change="datetimeChange"/> -->
+        <input class="input-text" type="text" readOnly="true" :value="datetimeVal" placeholder="请选择日期时间" @click="onClickDateTime"/>
         <i class="color-placeholder icon icon-calendar"></i>
       </div>
       <div class="inputbox border-b">
-        <InputDate type="date" placeholder="请选择日期" :value="dateVal" :change="dateChange"/>
+        <!-- <InputDate type="date" placeholder="请选择日期" :value="dateVal" :change="dateChange"/> -->
+        <input class="input-text" type="text" readOnly="true" :value="dateVal" placeholder="请选择日期" @click="onClickDate"/>
         <i class="color-placeholder icon icon-calendar"></i>
       </div>
       <div class="inputbox border-b">
-        <InputDate type="month" placeholder="请选择月份" :value="monthVal" :change="monthChange"/>
+        <!-- <InputDate type="month" placeholder="请选择月份" :value="monthVal" :change="monthChange"/> -->
+        <input class="input-text" type="text" readOnly="true" :value="monthVal" placeholder="请选择月份" @click="onClickMonth"/>
         <i class="color-placeholder icon icon-calendar"></i>
       </div>
       <div class="inputbox border-b">
-        <InputDate type="time" placeholder="请选择时间" :value="timeVal" :change="timeChange"/>
+        <!-- <InputDate type="time" placeholder="请选择时间" :value="timeVal" :change="timeChange"/> -->
+        <input class="input-text" type="text" readOnly="true" :value="timeVal" placeholder="请选择时间" @click="onClickTime"/>
         <i class="color-placeholder icon icon-time"></i>
       </div>
       <div class="inputbox border-b">
-        <InputDate :value="dateCustomVal" :data="dateCustomData" placeholder="自定义日期" :change="datecustomChange"/>
+        <!-- <InputDate :value="dateCustomVal" :data="dateCustomData" placeholder="自定义日期" :change="datecustomChange"/> -->
+        <input class="input-text" type="text" readOnly="true" :value="dateCustomVal" placeholder="自定义日期" @click="onClickDateCustom"/>
         <i class="color-placeholder icon icon-calendar"></i>
       </div>
     </Group>
 
     <Group css="padding: 0 12px">
       <div class="inputbox border-b">
-        <InputCity placeholder="请选择城市" type="city" :value="cityVal" :change="cityChange"/>
+        <!-- <InputCity placeholder="请选择城市" type="city" :value="cityVal" :change="cityChange"/> -->
+        <input class="input-text" type="text" readOnly="true" :value="cityVal" placeholder="请选择城市" @click="onClickCity"/>
         <i class="color-placeholder icon icon-position"></i>
       </div>
       <div class="inputbox border-b">
-        <InputCity placeholder="请选择省市区" :value="areaVal" :change="areaChange"/>
+        <!-- <InputCity placeholder="请选择省市区" :value="areaVal" :change="areaChange"/> -->
+        <input class="input-text" type="text" readOnly="true" :value="areaVal" placeholder="请选择省市区" @click="onClickArea"/>
         <i class="color-placeholder icon icon-position"></i>
       </div>
     </Group>
   </Container>
+  <!-- 日期 -->
+  <DatePicker :change="datetimeChange" ref="refDatetime" type="datetime" />
+  <DatePicker :change="dateChange" ref="refDate" type="date" />
+  <DatePicker :change="monthChange" ref="refMonth" type="month" />
+  <DatePicker :change="timeChange" ref="refTime" type="time" />
+  <DatePicker :data="dateCustomData" :change="datecustomChange" ref="refDateCustom" />
+  <!-- 地址 -->
+  <CityPicker :change="cityChange" ref="refCity" type="city" />
+  <CityPicker :change="areaChange" ref="refArea" type="area" />
 </Page>
 </template>
 
@@ -61,6 +77,7 @@ export default {
     }
   },
   methods: {
+    // Picker确定事件
     datetimeChange (val) {
       this.datetimeVal = val
     },
@@ -81,6 +98,28 @@ export default {
     },
     areaChange (val) {
       this.areaVal = val
+    },
+    // 点击文本框事件
+    onClickDateTime () {
+      this.$refs.refDatetime.instance.show()
+    },
+    onClickDate () {
+      this.$refs.refDate.instance.show()
+    },
+    onClickMonth () {
+      this.$refs.refMonth.instance.show()
+    },
+    onClickTime () {
+      this.$refs.refTime.instance.show()
+    },
+    onClickDateCustom () {
+      this.$refs.refDateCustom.instance.show()
+    },
+    onClickCity () {
+      this.$refs.refCity.instance.show()
+    },
+    onClickArea () {
+      this.$refs.refArea.instance.show()
     }
   }
 }

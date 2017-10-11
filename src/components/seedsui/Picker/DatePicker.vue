@@ -1,11 +1,24 @@
 <template>
-  <input :class="className" :style="css" type="text" style="width:100%" readOnly="true" :value="value" :placeholder="placeholder" @click="onClickPicker"/>
+  <div class="mask picker-mask">
+    <div class="picker">
+      <div class="picker-header">
+        <a class="picker-cancel">取消</a>
+        <a class="picker-done">完成</a>
+      </div>
+      <div class="picker-wrapper">
+        <div class="picker-layer">
+          <div class="picker-layer-frame"></div>
+        </div>
+        <div class="picker-slotbox"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import DatePicker from './picker.date.js'
 export default {
-  name: 'InputDate',
+  name: 'DatePicker',
   props: {
     type: {
       type: String,
@@ -17,18 +30,6 @@ export default {
     className: {
       type: String,
       default: 'input-text'
-    },
-    css: {
-      type: String,
-      default: ''
-    },
-    value: {
-      type: String,
-      default: ''
-    },
-    placeholder: {
-      type: String,
-      default: '请选择日期'
     },
     data: {
       type: Object
@@ -131,6 +132,7 @@ export default {
       }
       // render数据
       this.instance = new DatePicker({
+        mask: this.$el,
         viewType: this.type,
         yearsData: yearsData,
         monthsData: monthsData,

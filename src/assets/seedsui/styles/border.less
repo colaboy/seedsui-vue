@@ -91,15 +91,9 @@
   }
 }
 
-hr{
-  position: relative;
+hr:extend(.border-b all){
   border: 0;
   clear: both;
-}
-hr:after{
-  .setContentLine();
-  height: 1px;
-  background-color: @border;
 }
 
 //篮子线
