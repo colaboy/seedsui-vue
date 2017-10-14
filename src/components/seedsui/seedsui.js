@@ -36,8 +36,11 @@ import CityPicker from './Picker/CityPicker.vue'
 import Grid from './Grid'
 import ShareBox from './ShareBox'
 import Switch1 from './Switch'
+import Checkbox from './Checkbox'
+import Radio from './Radio'
 import Turn from './Turn'
 import NumBox from './NumBox'
+import Range from './Range'
 import Carrousel from './Carrousel'
 import ImgLazy from './ImgLazy'
 import InputPre from './InputPre'
@@ -87,8 +90,11 @@ var seedsui = {
   Grid,
   ShareBox,
   Switch1,
+  Checkbox,
+  Radio,
   Turn,
   NumBox,
+  Range,
   Carrousel,
   ImgLazy,
   InputPre,

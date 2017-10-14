@@ -10,8 +10,11 @@
       <Switch1 theme="reverse" :on="{text:'',value:'1'}" :off="{text:'',value:'0'}" :change="onSwitchChange4"/>
       <Turn :change="onTurnChange"/>
       <NumBox :decimal="true" :digits="2" :value="0" :change="onNumBoxChange"/>
+      <Radio name="rdo"/>
+      <Checkbox name="cbo"/>
       <InputPre :change="onPreChange" placeholder="自增高控件"/>
       <InputSearch :change="onSearchChange" :submit="onSearchSubmit"/>
+      <Range css="margin:10px 12px;" :min="1" :max="100" :value="50" :change="onRangeChange"/>
   </Container>
 </Page>
 </template>
@@ -49,6 +52,9 @@ export default {
       console.log(value)
     },
     onSearchSubmit (value) {
+      console.log(value)
+    },
+    onRangeChange (value) {
       console.log(value)
     }
   }

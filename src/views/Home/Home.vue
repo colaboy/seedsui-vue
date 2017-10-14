@@ -185,16 +185,18 @@
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-        <!-- <router-link class="list-li border-b" :to="{name: 'group-rowDemo'}">
-            <p class="list-container">行分组</p>
+        <router-link class="list-li border-b" :to="{name: 'tableDemo'}">
+            <p class="list-container">Table</p>
+            <small>表格</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         <li>
-          <router-link class="list-li border-b" :to="{name: 'tableDemo'}">
-            <p class="list-container">Table</p>
+          <router-link class="list-li border-b" :to="{name: 'shapeDemo'}">
+            <p class="list-container">Shape</p>
+            <small>形状</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
-        </li> -->
+        </li>
 
         <li class="sliver border-b">
           <p class="sliver-title">操作反馈 Feedback</p>
