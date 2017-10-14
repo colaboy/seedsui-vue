@@ -296,7 +296,7 @@
       </ul>
     </Container>
   </Page>
-  <transition name="slide">
+  <transition name="fade">
     <router-view></router-view>
   </transition>
 </div>

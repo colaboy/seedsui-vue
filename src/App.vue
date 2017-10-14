@@ -1,46 +1,25 @@
 <template>
   <div id="app">
-    <transition name="slide">
+    <LoadingFilling :show="isLoading"></LoadingFilling>
+    <transition name="fade">
       <router-view></router-view>
     </transition>
   </div>
 </template>
 
 <script>
-import mixinDevice from '@/mixin/mixin-device.js'
+// 安卓物理返回按键监听
 import mixinBackPress from '@/mixin/mixin-backpress.js'
+// 页面过渡Loading
+import mixinLoading from '@/mixin/mixin-loading.js'
 export default {
   name: 'app',
-  mixins: [mixinDevice, mixinBackPress]
+  mixins: [mixinBackPress, mixinLoading]
 }
 </script>
 
 <style lang="less">
   /* SeedsUI */
   @import "./assets/seedsui/seedsui.less";
-  /* router过渡动画 */
-  .slide-enter-active {
-    animation-name: slide-in;
-    animation-duration: .3s;
-  }
-  .slide-leave-active {
-    animation-name: slide-out;
-    animation-duration: .3s;
-  }
-  @keyframes slide-in {
-    0% {
-      transform: translate3d(100%, 0, 0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  @keyframes slide-out {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(100%, 0, 0);
-    }
-  }
+  @import "./assets/styles/router.less";
 </style>
