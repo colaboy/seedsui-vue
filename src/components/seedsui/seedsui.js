@@ -54,6 +54,8 @@ import Gauge from './Gauge'
 import Doughnut from './Doughnut'
 import Clock from './Clock'
 import Progress from './Progress'
+import Calendar from './Calendar'
+import Timepart from './Timepart'
 
 var seedsui = {
   Page,
@@ -107,7 +109,9 @@ var seedsui = {
   Gauge,
   Doughnut,
   Clock,
-  Progress
+  Progress,
+  Calendar,
+  Timepart
 }
 
 const install = function (Vue) {

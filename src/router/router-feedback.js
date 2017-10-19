@@ -3,13 +3,13 @@ import popupDemo from '@/views/popupDemo'
 import historyDemo from '@/views/historyDemo'
 import calendarDemo from '@/views/calendarDemo'
 import timepartDemo from '@/views/timepartDemo'
+import animateDemo from '@/views/animateDemo'
 
 export default [
   {
     path: 'loadingDemo',
     name: 'loadingDemo',
-    component: loadingDemo,
-    meta: {keepAlive: true}
+    component: loadingDemo
   },
   {
     path: 'popupDemo',
@@ -18,21 +18,23 @@ export default [
     meta: {keepAlive: true}
   },
   {
+    path: 'animateDemo',
+    name: 'animateDemo',
+    component: animateDemo
+  },
+  {
     path: 'timepartDemo',
     name: 'timepartDemo',
-    component: timepartDemo,
-    meta: {keepAlive: true}
+    component: timepartDemo
   },
   {
     path: 'calendarDemo',
     name: 'calendarDemo',
-    component: calendarDemo,
-    meta: {keepAlive: true}
+    component: calendarDemo
   },
   {
     path: 'historyDemo',
     name: 'historyDemo',
-    component: historyDemo,
-    meta: {keepAlive: true}
+    component: historyDemo
   }
 ]

@@ -204,12 +204,21 @@
         <li>
           <router-link class="list-li border-b" :to="{name: 'popupDemo'}">
             <p class="list-container">Popup</p>
+            <small>弹出框</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
+          <router-link class="list-li border-b" :to="{name: 'animateDemo'}">
+            <p class="list-container">Animate</p>
+            <small>动画</small>
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'loadingDemo'}">
-            <p class="list-container">Loading</p> <i class="list-icon icon-arrowright"></i>
+            <p class="list-container">Loading</p>
+            <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
         <li>

@@ -1,14 +1,9 @@
 <template>
 <Page>
   <Header>
-    <Titlebar title="mark"></Titlebar>
+    <Titlebar title="shapeDemo"></Titlebar>
   </Header>
   <Container>
-    <p class="description">评星</p>
-    <div style="text-align: center;">
-      <div class="star"></div>
-      <div class="star active"></div>
-    </div>
     <p class="description">聊天框</p>
     <div class="box box-center" style="padding:8px;">
       <div class="chatbox">
@@ -139,7 +134,7 @@
 
 <script>
 export default {
-  name: 'ButtonDemo',
+  name: 'shapeDemo',
   data () {
     return {
       fadShow: false,

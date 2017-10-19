@@ -50,7 +50,7 @@ export default {
       type: Array,
       default: function () {
         return [{
-          icon: 'icon-arrowleft size20',
+          icon: 'shape-arrow-left',
           click: () => {
             this.onDefaultBack()
           }

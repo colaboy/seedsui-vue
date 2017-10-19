@@ -1,0 +1,6 @@
+{
+  "name": "animateDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./animateDemo.vue"
+}

@@ -1,40 +1,32 @@
 <template>
 <Page>
   <Header>
-    <Titlebar title="mark"></Titlebar>
+    <Titlebar title="shake"></Titlebar>
   </Header>
-  <Container>
-      <Group title="标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info" text="info"></Mark>
-              <Mark type="success" text="success"></Mark>
-              <Mark type="cancel" text="cancel"></Mark>
-              <Mark type="warn">warn</Mark>
-              <Mark type="disable">disable</Mark>
-          </div>
-      </Group>
-
-      <Group title="框形标签">
-          <div style="padding: 10px 12px;">
-              <Mark type="info outline">info</Mark>
-              <Mark type="success outline">success</Mark>
-              <Mark type="cancel outline">cancel</Mark>
-              <Mark type="warn outline">warn</Mark>
-              <Mark type="disable outline">disable</Mark>
-          </div>
-      </Group>
+  <Container css="background-color:#888;color:white;" className="box box-middlecenter">
+    <p ref="refShakeFont" style="font-size:20px;">摇一摇您的手机</p>
   </Container>
 </Page>
 </template>
 
 <script>
+import Animate from '@/utils/animate.js'
+import EventUtil from '@/utils/eventutil.js'
 export default {
-  name: 'ClockDemo',
+  name: 'ShakeDemo',
   data () {
     return {
+      shakeFont: null
     }
   },
+  mounted () {
+    this.shakeFont = this.$refs.refShakeFont
+    EventUtil.addHandler(window, 'shake', this.onShook)
+  },
   methods: {
+    onShook () {
+      Animate.one(this.shakeFont, 'shake animated')
+    }
   }
 }
 </script>
