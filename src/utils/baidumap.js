@@ -1,9 +1,11 @@
 // BaiduMap
-import BMap from 'http://api.map.baidu.com/api?v=2.0&ak=8830f84901336e9afd2c6d7033d2ebe5'
-var BaiduMap = function (container, params) {
+var BaiduMap = (function () {
+  var BMap = window.BMap
+  var BMAP_STATUS_SUCCESS = window.BMAP_STATUS_SUCCESS
   /* ---------------------
   Params
   --------------------- */
+  var params = {}
   var defaults = {
     // 定义弹出框样式
     'infoWindowStyle': {
@@ -39,39 +41,32 @@ var BaiduMap = function (container, params) {
   // Params
   s.params = params
   // 初始化地图控件
-  s.map = new BMap.Map(container)
-  s.container = document.querySelector('#' + container)
-
+  function mapById (id) {
+    return new BMap.Map(id)
+  }
   /* ---------------------
   Method
   --------------------- */
-  // 标记点击，打开infowWindow
-  function addClickHandler (content, marker) {
-    marker.addEventListener('click', function (e) {
-      openInfo(content, e)
-    }
-    )
-  }
   // 打开infowWindow
-  function openInfo (content, e) {
+  function openInfo (map, content, e) {
     var p = e.target
     var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat)
-    var infoWindow = new BMap.InfoWindow(content, s.params.infoWindowStyle)  //  创建信息窗口对象 
-    s.map.openInfoWindow(infoWindow, point) // 开启信息窗口
+    var infoWindow = new BMap.InfoWindow(content, s.params.infoWindowStyle)
+    map.openInfoWindow(infoWindow, point) // 开启信息窗口
   }
   // 显示地图标记
-  s.show = function (markerData) {
-    s.map.clearOverlays()
+  function draw (map, markerData) {
+    map.clearOverlays()
     if (!markerData) {
-      s.map.centerAndZoom('南京', 15)
+      map.centerAndZoom('南京', 15)
       return
     }
     if (arguments.length === 2) {
-      s.map.centerAndZoom(new BMap.Point(arguments[0], arguments[1]), 15)
+      map.centerAndZoom(new BMap.Point(arguments[0], arguments[1]), 15)
       return
     }
     // 显示区域
-    s.map.centerAndZoom(new BMap.Point(markerData[0][0], markerData[0][1]), 15)
+    map.centerAndZoom(new BMap.Point(markerData[0][0], markerData[0][1]), 15)
     for (var i = 0; i < markerData.length; i++) {
       // 添加label对象
       if (s.params.labelStyle) {
@@ -84,16 +79,18 @@ var BaiduMap = function (container, params) {
       if (s.params.markerIcon) marker.setIcon(s.params.markerIcon)
       marker.setLabel(myLabel)
       var content = markerData[i][2]
-      s.map.addOverlay(marker)
-      // 添加点击
-      addClickHandler(content, marker)
+      map.addOverlay(marker)
+      // 标记点击，打开infowWindow
+      marker.addEventListener('click', function (e) {
+        openInfo(map, content, e)
+      })
     }
   }
   // 获得gps位置信息
-  s.gps = function (featureHandler, feature) {
+  function gps (featureHandler, feature) {
     var geolocation = new BMap.Geolocation()
     geolocation.getCurrentPosition(function (pos) {
-      if (this.getStatus() === 'BMAP_STATUS_SUCCESS') {
+      if (this.getStatus() === BMAP_STATUS_SUCCESS) {
         var point = pos.point
         /* var y = point.lng
         var x = point.lat */
@@ -118,7 +115,7 @@ var BaiduMap = function (container, params) {
     }, { enableHighAccuracy: true })
   }
   // 根据坐标获得地址
-  s.place = function (point, featureHandler, feature) {
+  function address (point, featureHandler, feature) {
     // 根据point得到地址
     var gpsPlace = new BMap.Geocoder()
     gpsPlace.getLocation(point, function (result) {
@@ -131,7 +128,7 @@ var BaiduMap = function (container, params) {
     })
   }
   // 一键导航
-  s.mapGuide = function (guideopts) {
+  function guide (guideopts) {
     var lng = guideopts.point.lng
     var lat = guideopts.point.lat
     var title = guideopts.title
@@ -140,7 +137,7 @@ var BaiduMap = function (container, params) {
   }
 
   // 返回地址截图
-  s.mapImg = function (mapImgOpt) {
+  function img (mapImgOpt) {
     var lng = mapImgOpt.point.lng
     var lat = mapImgOpt.point.lat
     /* var title = mapImgOpt.title
@@ -151,6 +148,14 @@ var BaiduMap = function (container, params) {
     var imgSrc = 'http:// api.map.baidu.com/staticimage?width=' + width + '&height=' + height + '&center=' + lng + ',' + lat + '&markers=' + lng + ',' + lat + '&scale=1&zoom=15&markerStyles=-1,http:// api.map.baidu.com/images/marker_red.png'
     return imgSrc
   }
-}
+  return {
+    mapById: mapById,
+    draw: draw,
+    gps: gps,
+    address: address,
+    guide: guide,
+    img: img
+  }
+})()
 
 export default BaiduMap
