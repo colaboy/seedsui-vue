@@ -37,6 +37,19 @@ var DragCircle = function (params) {
       overflowContainer.appendChild(bottomContainer)
     }
   }
+  var errorContainer
+  if (params.onBottomRefresh) {
+    errorContainer = overflowContainer.querySelector('.SID-Dragrefresh-ErrorContainer')
+    if (!errorContainer) {
+      errorContainer = document.createElement('div')
+      errorContainer.setAttribute('class', 'SID-Dragrefresh-ErrorContainer df-pull hide')
+      errorContainer.setAttribute('style', 'height: 50px;')
+      errorContainer.innerHTML = '<div class="df-pull-box">' +
+      '<div class="df-pull-caption">加载失败，请稍后重试</div>' +
+      '</div>'
+      overflowContainer.appendChild(errorContainer)
+    }
+  }
   /* ----------------------
   params
   ---------------------- */
@@ -44,6 +57,7 @@ var DragCircle = function (params) {
     overflowContainer: overflowContainer,
     topContainer: topContainer,
     bottomContainer: bottomContainer,
+    errorContainer: errorContainer,
     baseline: params.baseline || -50,
     threshold: params.threshold || 120,
     onTopComplete: function (e) {
@@ -55,6 +69,9 @@ var DragCircle = function (params) {
       bottomContainer.classList.add('df-circle-icon-none')
       // 回调
       if (onNoData) onNoData(e)
+    },
+    onClickError: function (e) {
+      console.log('点击错误容器')
     },
     // 实体操作
     onPull: function (e) {

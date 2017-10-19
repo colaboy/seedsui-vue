@@ -13,6 +13,12 @@
         <div class="df-pull-caption">正在加载...</div>
       </div>
     </div>
+    <div v-if="bottomRefresh" class="SID-Dragrefresh-ErrorContainer df-pull hide" style="height: 50px;">
+      <div class="df-pull-box">
+        <div class="df-pull-caption">加载失败，请稍后再试</div>
+      </div>
+    </div>
+    <NoData :show="noData"></NoData>
   </div>
 </template>
 <script>
@@ -39,6 +45,17 @@ export default {
     },
     bottomComplete: {
       type: Function
+    },
+    noData: {
+      type: Boolean,
+      default: false
+    }
+  },
+  watch: {
+    noData: function (val, oldval) {
+      console.log('nodata变化了' + val)
+      if (val === true) this.instance.detach()
+      else this.instance.attach()
     }
   },
   data () {
