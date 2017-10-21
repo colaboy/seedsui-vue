@@ -172,6 +172,13 @@
           </router-link>
         </li>
         <li>
+          <router-link class="list-li border-b" :to="{name: 'counterDemo'}">
+            <p class="list-container">Counter</p>
+            <small>计数器</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
           <router-link class="list-li border-b" :to="{name: 'progressDemo'}">
             <p class="list-container">Progress</p>
             <small>进度条</small>

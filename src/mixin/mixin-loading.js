@@ -3,7 +3,8 @@ import { mapState } from 'vuex'
 
 var mixinLoading = {
   computed: mapState({
-    isLoading: state => state.loading.isLoading
+    isLoading: state => state.loading.isLoading,
+    onLine: state => state.system.onLine
   })
 }
 

@@ -67,18 +67,28 @@
         </li>
       </ul>
     </div>
+    <Stencil v-if="showStencil"></Stencil>
   </Container>
 </Page>
 </template>
 
 <script>
 export default {
-  name: 'FlexDemo',
+  name: 'listDemo',
   data () {
     return {
+      showStencil: true
     }
   },
+  mounted () {
+    this.queryData()
+  },
   methods: {
+    queryData () {
+      setTimeout(() => {
+        this.showStencil = false
+      }, 1000)
+    }
   }
 }
 </script>

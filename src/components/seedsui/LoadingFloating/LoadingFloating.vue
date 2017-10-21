@@ -1,7 +1,7 @@
 <template>
   <div v-if="show" class="loading-mask mask active" id="ID-LoadingFad" :style="css">
       <slot></slot>
-      <div class="loading-floating active">
+      <div class="loading-floating animated">
           <div class="loading-floating-wrapper">
               <div class="loading-floating-blade"></div>
               <div class="loading-floating-blade"></div>

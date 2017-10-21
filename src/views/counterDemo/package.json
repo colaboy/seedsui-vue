@@ -1,0 +1,6 @@
+{
+  "name": "counterDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./counterDemo.vue"
+}

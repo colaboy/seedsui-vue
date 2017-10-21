@@ -1,0 +1,6 @@
+{
+  "name": "treeDemo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./treeDemo.vue"
+}

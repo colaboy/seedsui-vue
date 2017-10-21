@@ -1,0 +1,6 @@
+{
+  "name": "Stencil",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Stencil.vue"
+}

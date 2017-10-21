@@ -53,9 +53,12 @@ import NoWifi from './NoWifi'
 import Gauge from './Gauge'
 import Doughnut from './Doughnut'
 import Clock from './Clock'
+import Counter from './Counter'
 import Progress from './Progress'
 import Calendar from './Calendar'
 import Timepart from './Timepart'
+import Table from './Table'
+import Stencil from './Stencil'
 
 var seedsui = {
   Page,
@@ -109,9 +112,12 @@ var seedsui = {
   Gauge,
   Doughnut,
   Clock,
+  Counter,
   Progress,
   Calendar,
-  Timepart
+  Timepart,
+  Table,
+  Stencil
 }
 
 const install = function (Vue) {

@@ -2,7 +2,8 @@
 let state = {
   platform: '',
   os: 'ios',
-  osVersion: '0.0'
+  osVersion: '0.0',
+  onLine: false
 }
 const actions = {
   setPlatform ({ commit }, arg) {
@@ -13,6 +14,9 @@ const actions = {
   },
   setOsVersion ({ commit }, arg) {
     commit('storeOsVersion', arg)
+  },
+  setOnLine ({ commit }, arg) {
+    commit('storeOnLine', arg)
   }
 }
 const mutations = {
@@ -24,6 +28,9 @@ const mutations = {
   },
   storeOsVersion: (state, arg) => {
     state.osVersion = arg
+  },
+  storeOnLine: (state, arg) => {
+    state.onLine = arg
   }
 }
 const getters = {

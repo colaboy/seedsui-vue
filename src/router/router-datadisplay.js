@@ -9,6 +9,11 @@ import carrouselPageDemo from '@/views/carrouselPageDemo'
 import imglazyDemo from '@/views/imglazyDemo'
 import tableDemo from '@/views/tableDemo'
 import shapeDemo from '@/views/shapeDemo'
+import gaugeDemo from '@/views/gaugeDemo'
+import doughnutDemo from '@/views/doughnutDemo'
+import clockDemo from '@/views/clockDemo'
+import counterDemo from '@/views/counterDemo'
+import progressDemo from '@/views/progressDemo'
 
 export default [
   {
@@ -65,5 +70,30 @@ export default [
     path: 'shapeDemo',
     name: 'shapeDemo',
     component: shapeDemo
+  },
+  {
+    path: 'gaugeDemo',
+    name: 'gaugeDemo',
+    component: gaugeDemo
+  },
+  {
+    path: 'doughnutDemo',
+    name: 'doughnutDemo',
+    component: doughnutDemo
+  },
+  {
+    path: 'clockDemo',
+    name: 'clockDemo',
+    component: clockDemo
+  },
+  {
+    path: 'counterDemo',
+    name: 'counterDemo',
+    component: counterDemo
+  },
+  {
+    path: 'progressDemo',
+    name: 'progressDemo',
+    component: progressDemo
   }
 ]

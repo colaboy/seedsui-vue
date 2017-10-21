@@ -46,6 +46,15 @@ import Device from '@/utils/device.js'
 store.dispatch('setPlatform', Device.platform)
 store.dispatch('setOs', Device.os)
 store.dispatch('setOsVersion', Device.osVersion)
+store.dispatch('setOnLine', Device.isOnLine)
+Device.onLine((bool) => {
+  store.dispatch('setOnLine', bool)
+  if (bool) {
+    console.log('有网')
+  } else {
+    console.log('无网')
+  }
+})
 console.log('平台:' + store.state.system.platform)
 console.log('操作系统:' + store.state.system.os)
 console.log('系列版本:' + store.state.system.osVersion)
