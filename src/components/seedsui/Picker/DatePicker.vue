@@ -33,6 +33,9 @@ export default {
     },
     data: {
       type: Object
+    },
+    value: {
+      type: String
     }
   },
   data () {
@@ -144,13 +147,17 @@ export default {
         defaultDay: defaultDay,
         defaultHour: defaultHour,
         defaultMinute: defaultMinute,
+        onClickCancel: (e) => {
+          this.reset(e)
+          e.hide()
+        },
         onClickDone: (e) => {
           if (this.change) this.change(e.activeText)
           e.hide()
         }
       })
     },
-    onClickPicker (e) {
+    reset (e) {
       this.instance.update()
       this.instance.show()
     }

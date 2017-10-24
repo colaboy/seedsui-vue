@@ -46,8 +46,8 @@
     </Group>
   </Container>
   <!-- 日期 -->
-  <DatePicker :change="datetimeChange" ref="refDatetime" type="datetime" />
-  <DatePicker :change="dateChange" ref="refDate" type="date" />
+  <DatePicker :change="datetimeChange" :value="datetimeVal" ref="refDatetime" type="datetime" />
+  <DatePicker :change="dateChange" :value="dateVal" ref="refDate" type="date" />
   <DatePicker :change="monthChange" ref="refMonth" type="month" />
   <DatePicker :change="timeChange" ref="refTime" type="time" />
   <DatePicker :data="dateCustomData" :change="datecustomChange" ref="refDateCustom" />
@@ -68,8 +68,8 @@ export default {
         month: ['02', '03', '05', '06', '07', '08', '09'],
         day: ['01', '02', '03', '04', '05', '31']
       },
-      datetimeVal: '',
-      dateVal: '',
+      datetimeVal: '2017-08-22 08:22',
+      dateVal: '2017-10-24',
       monthVal: '',
       timeVal: '',
       cityVal: '江苏省-南京市',
