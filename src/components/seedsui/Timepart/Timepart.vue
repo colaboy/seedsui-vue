@@ -61,3 +61,7 @@
     }
   }
 </script>
+<style lang="less">
+  @import "timepart.less";
+  @import "../seedsui-tool.less";
+</style>

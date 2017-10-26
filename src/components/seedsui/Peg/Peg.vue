@@ -12,3 +12,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "peg.less";
+  @import "../seedsui-tool.less";
+</style>

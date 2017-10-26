@@ -12,3 +12,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "tip.less";
+  @import "../seedsui-tool.less";
+</style>

@@ -1,3 +1,4 @@
+// Dialog 自定义弹出框
 var Dialog = function (params) {
   /* -------------------------
   Model

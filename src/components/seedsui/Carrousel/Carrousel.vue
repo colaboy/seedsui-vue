@@ -92,3 +92,7 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+  @import "carrousel.less";
+  @import "../seedsui-tool.less";
+</style>

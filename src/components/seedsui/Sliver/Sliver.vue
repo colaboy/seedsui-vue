@@ -18,3 +18,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "sliver.less";
+  @import "../seedsui-tool.less";
+</style>

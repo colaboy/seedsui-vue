@@ -40,3 +40,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "inputpre.less";
+  @import "../seedsui-tool.less";
+</style>

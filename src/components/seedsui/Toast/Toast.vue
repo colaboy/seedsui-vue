@@ -24,3 +24,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "toast.less";
+  @import "../seedsui-tool.less";
+</style>

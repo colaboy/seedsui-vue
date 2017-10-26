@@ -35,7 +35,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../../assets/seedsui/seedsui-variables.less";
+  @import "star.less";
+  @import "../seedsui-tool.less";
   .star::before{
     font-family: "iconfont";
     content: "\e94d";

@@ -1,6 +1,3 @@
-<style lang="less" scoped>
-  @import "../../../assets/seedsui/seedsui-variables.less";
-</style>
 <template>
   <ul :class="'tabbar tabbar-'+type+' animated'+(theme?' '+theme:'')+(type==='line'?' tabbar-line-width'+linewidth:'')+(disabled?' disabled':'')" :data-col="list.length" :style="tabbarCss+css">
     <li v-for="(item, index) in list" :class="'tab'+(activeIndex===index?' active':'')" :key="index" @click.stop.prevent="onClick(item,index,item.click)">
@@ -85,3 +82,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "tabbar.less";
+  @import "../seedsui-tool.less";
+</style>

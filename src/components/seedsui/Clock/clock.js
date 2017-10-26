@@ -68,8 +68,8 @@ var Clocks = function (params) {
   }
   s.update()
   s.play = function () {
-    for (var n of s.clocks) {
-      n.play()
+    for (var i = 0; i < s.clocks.length; i++) {
+      s.clocks[i].play()
     }
   }
 }

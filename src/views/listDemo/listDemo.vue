@@ -9,9 +9,9 @@
       <li class="list-li border-b noclick">
         <div class="list-thumbnail">
           <img src="http://mat1.gtimg.com/jiangsu/index_201704/img/logo.png" />
-          <div class="sticker sticker-icon top left">
-            <span class="size12 icon-fav-fill"></span>
-          </div>
+          <Sticker position="top left">
+            <Icon className="size12 icon-fav-fill" css="position: absolute;top: -25px;left: 2px;"/>
+          </Sticker>
         </div>
         <div class="list-container">
           <div class="list-title">
@@ -22,7 +22,7 @@
             <p class="list-font">副标题</p>
           </div>
           <div class="row box-middle">
-            <i class="list-icon icon-computer color-primary"></i>
+            <Icon class="list-icon icon-computer color-primary"/>
             <p class="list-font">副标题</p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../assets/seedsui/seedsui-variables.less";
+  @import "../../components/seedsui/seedsui-variables.less";
   .list-title{
     font-size: 16px;
   }

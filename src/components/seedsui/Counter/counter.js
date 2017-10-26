@@ -86,8 +86,8 @@ var Counters = function (params) {
   }
   s.update()
   s.play = function () {
-    for (var n of s.counters) {
-      n.play()
+    for (var i = 0; i < s.counters.length; i++) {
+      s.counters[i].play()
     }
   }
 }

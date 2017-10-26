@@ -1,0 +1,59 @@
+@import "../seedsui-variables.less";
+/*----------------toast.less(start)--------------*/
+//是否允许点击
+.toast-propagation{
+	pointer-events:none;
+}
+//遮罩透明
+.toast-mask{
+	background-color: transparent;
+	z-index:999;
+}
+
+.toast{
+	position:absolute;
+	bottom:-@100px;
+	width:100%;
+	font-size:@font-size-sm;
+	text-align:center;
+	pointer-events:none;
+	opacity: 0;
+
+	-webkit-transition-property:-webkit-transform,opacity,visibility;
+  -webkit-transition-duration:150ms;
+  -webkit-transition-timing-function:ease;
+
+  &.active{
+  	opacity: 1;
+  	-webkit-transform:translate3d(0,-@150px,0);
+  }
+}
+.toast-wrapper{
+	display:inline-block;
+	padding:@10px;
+	border-radius:@6px;
+	max-width:90%;
+	max-height:@35px;
+	line-height:@20px;
+	overflow:hidden;
+	text-align:left;
+
+	color:white;
+	background-color:@toast-bg;
+}
+.toast-icon{
+	background-size:cover;
+	width:@16px;
+	height:@16px;
+	font-size: @16px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.toast-font{
+	display:line-block;
+	height: @18px;
+	line-height: @16px;
+	vertical-align:middle;
+	margin-left:@4px;
+}
+/*----------------toast.less(end)--------------*/

@@ -99,7 +99,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../assets/seedsui/seedsui-variables.less";
+  @import "../../components/seedsui/seedsui-variables.less";
   .button {
     width:40%;
     margin:8px 4%;

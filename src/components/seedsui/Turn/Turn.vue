@@ -49,3 +49,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "turn.less";
+  @import "../seedsui-tool.less";
+</style>

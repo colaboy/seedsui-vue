@@ -12,3 +12,7 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+  @import "dot.less";
+  @import "../seedsui-tool.less";
+</style>

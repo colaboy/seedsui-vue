@@ -53,5 +53,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-    @import "../../../assets/seedsui/seedsui-variables.less";
+    @import "actionsheet.less";
+    @import "../seedsui-tool.less";
 </style>

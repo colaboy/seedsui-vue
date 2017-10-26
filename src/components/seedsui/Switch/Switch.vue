@@ -52,3 +52,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "switch.less";
+  @import "../seedsui-tool.less";
+</style>

@@ -61,3 +61,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "sharebox.less";
+  @import "../seedsui-tool.less";
+</style>

@@ -30,3 +30,7 @@ export default {
   }
 }
 </script>
+<style lang="less">
+  @import "mark.less";
+  @import "../seedsui-tool.less";
+</style>

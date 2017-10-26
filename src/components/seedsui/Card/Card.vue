@@ -24,3 +24,7 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+  @import "card.less";
+  @import "../seedsui-tool.less";
+</style>

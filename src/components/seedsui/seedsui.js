@@ -3,9 +3,10 @@ import '@/utils/object.js'
 import '@/utils/math.js'
 import '@/utils/string.js'
 import Page from './Page'
-import Container from './Container'
-import Header from './Header'
-import Footer from './Footer'
+import Container from './Page/Container.vue'
+import Header from './Page/Header.vue'
+import Footer from './Page/Footer.vue'
+import Icon from './Icon/Icon.vue'
 import Alert from './Alert'
 import Actionsheet from './Actionsheet'
 import Badge from './Badge'
@@ -15,8 +16,8 @@ import Close from './Close'
 import Dialog from './Dialog'
 import Dot from './Dot'
 import Group from './Group'
-import LoadingFloating from './LoadingFloating'
-import LoadingFilling from './LoadingFilling'
+import LoadingFloating from './Loading/LoadingFloating.vue'
+import LoadingFilling from './Loading/LoadingFilling.vue'
 import Mark from './Mark'
 import Peg from './Peg'
 import Star from './Star'
@@ -44,12 +45,12 @@ import Range from './Range'
 import Carrousel from './Carrousel'
 import ImgLazy from './ImgLazy'
 import InputPre from './InputPre'
+import InputText from './InputText'
 import InputSearch from './InputSearch'
+import Textarea from './Textarea'
 import Dragrefresh from './Dragrefresh'
 import Sliver from './Sliver'
 import Mask1 from './Mask'
-import NoData from './NoData'
-import NoWifi from './NoWifi'
 import Gauge from './Gauge'
 import Doughnut from './Doughnut'
 import Clock from './Clock'
@@ -60,11 +61,15 @@ import Timepart from './Timepart'
 import Table from './Table'
 import Stencil from './Stencil'
 
+import NoData from './../NoData'
+import NoWifi from './../NoWifi'
+
 var seedsui = {
   Page,
   Container,
   Header,
   Footer,
+  Icon,
   Alert,
   Actionsheet,
   Badge,
@@ -103,7 +108,9 @@ var seedsui = {
   Carrousel,
   ImgLazy,
   InputPre,
+  InputText,
   InputSearch,
+  Textarea,
   Dragrefresh,
   Sliver,
   Mask1,

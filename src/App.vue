@@ -21,6 +21,6 @@ export default {
 
 <style lang="less">
   /* SeedsUI */
-  @import "./assets/seedsui/seedsui.less";
+  @import "./components/seedsui/seedsui-core.less";
   @import "./assets/styles/router.less";
 </style>

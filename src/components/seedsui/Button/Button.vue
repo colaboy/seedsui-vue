@@ -1,8 +1,8 @@
 <template>
   <a :class="'button'+(type?' '+type:'')+(block?' block':'')" :style="(block?'-webkit-box-flex:1;':'')+(radius?'border-radius:'+radius+'px;':'')+css" href="javascript:;" @click.stop.prevent="onClick">
-      <i v-if="icon" :class="'icon '+icon"></i>
+      <Icon v-if="icon" :class="icon"/>
       <span>{{text}}</span>
-      <i v-if="ricon" :class="'icon '+ricon"></i>
+      <Icon v-if="ricon" :className="ricon"/>
       <span v-if="tipText" class="tip">{{tipText}}</span>
       <span v-if="badgeText" class="badge">{{badgeText}}</span>
   </a>
@@ -71,3 +71,7 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+  @import "button.less";
+  @import "../seedsui-tool.less";
+</style>
