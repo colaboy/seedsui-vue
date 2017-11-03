@@ -46,7 +46,6 @@ import Device from '@/utils/device.js'
 store.dispatch('setPlatform', Device.platform)
 store.dispatch('setOs', Device.os)
 store.dispatch('setOsVersion', Device.osVersion)
-store.dispatch('setOnLine', Device.isOnLine)
 Device.onLine((bool) => {
   store.dispatch('setOnLine', bool)
   if (bool) {

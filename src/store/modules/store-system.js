@@ -3,7 +3,7 @@ let state = {
   platform: '',
   os: 'ios',
   osVersion: '0.0',
-  onLine: false
+  onLine: true
 }
 const actions = {
   setPlatform ({ commit }, arg) {
