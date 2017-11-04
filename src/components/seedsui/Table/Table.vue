@@ -1,5 +1,5 @@
 <template>
-  <table align="center" :style="css" :class="'table ' + className" style="background-color:white;">
+  <table align="center" :style="css" :class="'table ' + classname" style="background-color:white;">
     <slot></slot>
   </table>
 </template>
@@ -7,7 +7,7 @@
 export default {
   name: 'Table',
   props: {
-    className: {
+    classname: {
       type: String,
       default: 'border-tb'
     },

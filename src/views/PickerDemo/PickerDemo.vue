@@ -5,44 +5,45 @@
   </Header>
   <Container>
     <Group css="padding: 0 12px;">
-      <div class="inputbox border-b">
+      <InputBox classname="border-b">
         <!-- <InputDate type="datetime" placeholder="请选择日期时间" :value="datetimeVal" :change="datetimeChange"/> -->
-        <input class="input-text" type="text" readOnly="true" :value="datetimeVal" placeholder="请选择日期时间" @click="onClickDateTime"/>
-        <i class="color-placeholder icon icon-calendar"></i>
-      </div>
-      <div class="inputbox border-b">
+        <!-- <input class="input-text" type="text" readOnly="true" :value="datetimeVal" placeholder="请选择日期时间" @click="onClickDateTime"/> -->
+        <InputText readOnly="true" :value="datetimeVal" placeholder="请选择日期时间" @click="onClickDateTime"/>
+        <Icon classname="color-placeholder icon-calendar"/>
+      </InputBox>
+      <InputBox classname="border-b">
         <!-- <InputDate type="date" placeholder="请选择日期" :value="dateVal" :change="dateChange"/> -->
         <input class="input-text" type="text" readOnly="true" :value="dateVal" placeholder="请选择日期" @click="onClickDate"/>
-        <i class="color-placeholder icon icon-calendar"></i>
-      </div>
-      <div class="inputbox border-b">
+        <Icon classname="color-placeholder icon-calendar"/>
+      </InputBox>
+      <InputBox classname="border-b">
         <!-- <InputDate type="month" placeholder="请选择月份" :value="monthVal" :change="monthChange"/> -->
         <input class="input-text" type="text" readOnly="true" :value="monthVal" placeholder="请选择月份" @click="onClickMonth"/>
-        <i class="color-placeholder icon icon-calendar"></i>
-      </div>
-      <div class="inputbox border-b">
+        <Icon classname="color-placeholder icon-calendar"/>
+      </InputBox>
+      <InputBox classname="border-b">
         <!-- <InputDate type="time" placeholder="请选择时间" :value="timeVal" :change="timeChange"/> -->
         <input class="input-text" type="text" readOnly="true" :value="timeVal" placeholder="请选择时间" @click="onClickTime"/>
-        <i class="color-placeholder icon icon-time"></i>
-      </div>
-      <div class="inputbox border-b">
+        <Icon classname="color-placeholder icon-time"/>
+      </InputBox>
+      <InputBox classname="border-b">
         <!-- <InputDate :value="dateCustomVal" :data="dateCustomData" placeholder="自定义日期" :change="datecustomChange"/> -->
         <input class="input-text" type="text" readOnly="true" :value="dateCustomVal" placeholder="自定义日期" @click="onClickDateCustom"/>
-        <i class="color-placeholder icon icon-calendar"></i>
-      </div>
+        <Icon classname="color-placeholder icon-calendar"/>
+      </InputBox>
     </Group>
 
     <Group css="padding: 0 12px">
-      <div class="inputbox border-b">
+      <InputBox classname="border-b">
         <!-- <InputCity placeholder="请选择城市" type="city" :value="cityVal" :change="cityChange"/> -->
         <input class="input-text" type="text" readOnly="true" :value="cityVal" placeholder="请选择城市" @click="onClickCity"/>
         <i class="color-placeholder icon icon-position"></i>
-      </div>
-      <div class="inputbox border-b">
+      </InputBox>
+      <InputBox classname="border-b">
         <!-- <InputCity placeholder="请选择省市区" :value="areaVal" :change="areaChange"/> -->
         <input class="input-text" type="text" readOnly="true" :value="areaVal" placeholder="请选择省市区" @click="onClickArea"/>
         <i class="color-placeholder icon icon-position"></i>
-      </div>
+      </InputBox>
     </Group>
   </Container>
   <!-- 日期 -->

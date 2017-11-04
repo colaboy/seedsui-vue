@@ -9,10 +9,8 @@
       </Titlebar>
     </Header>
     <Container>
-      <ul class="list">
-        <li class="sliver border-b">
-          <p class="sliver-title">布局 Layout</p>
-        </li>
+      <List tag="ul">
+        <Sliver tag="li" classname="border-b" title="布局 Layout"/>
         <li>
           <router-link class="list-li border-b" :to="{name: 'flexDemo'}">
             <p class="list-container">Flex</p>
@@ -42,9 +40,7 @@
           </router-link>
         </li>
 
-        <li class="sliver border-b">
-          <p class="sliver-title">导航 Navigation</p>
-        </li>
+        <Sliver tag="li" classname="border-b" title="导航 Navigation"/>
         <li>
           <router-link class="list-li border-b" :to="{name: 'titlebarDemo'}">
             <p class="list-container">TitleBar</p>
@@ -59,9 +55,7 @@
           </router-link>
         </li>
 
-        <li class="sliver border-b">
-          <p class="sliver-title">数据录入 Data Entry</p>
-        </li>
+        <Sliver tag="li" classname="border-b" title="数据录入 Data Entry"/>
         <li>
           <router-link class="list-li border-b" :to="{name: 'buttonDemo'}">
             <p class="list-container">Button</p>
@@ -90,9 +84,7 @@
           </router-link>
         </li>
 
-        <li class="sliver border-b">
-          <p class="sliver-title">数据展示 Data Display</p>
-        </li>
+        <Sliver tag="li" classname="border-b" title="数据展示 Data Display"/>
         <li>
           <router-link class="list-li border-b" :to="{name: 'iconfontDemo'}">
             <p class="list-container">Iconfont</p>
@@ -205,9 +197,7 @@
           </router-link>
         </li>
 
-        <li class="sliver border-b">
-          <p class="sliver-title">操作反馈 Feedback</p>
-        </li>
+        <Sliver tag="li" classname="border-b" title="操作反馈 Feedback"/>
         <li>
           <router-link class="list-li border-b" :to="{name: 'popupDemo'}">
             <p class="list-container">Popup</p>
@@ -249,9 +239,7 @@
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-        <li class="sliver border-b">
-          <p class="sliver-title">手势 Gesture</p>
-        </li>
+        <Sliver tag="li" classname="border-b" title="手势 Gesture"/>
         <li>
           <router-link class="list-li border-b" :to="{name: 'dragRefreshDemo'}">
             <p class="list-container">Dragrefresh</p>
@@ -287,9 +275,7 @@
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-        <li class="sliver border-b">
-          <p class="sliver-title">本地能力 Native</p>
-        </li>
+        <Sliver tag="li" classname="border-b" title="本地能力 Native"/>
         <li>
           <router-link class="list-li border-b" :to="{name: 'mediaDemo'}">
             <p class="list-container">Media</p>
@@ -311,7 +297,7 @@
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-      </ul>
+      </List>
     </Container>
   </Page>
   <transition name="fade">

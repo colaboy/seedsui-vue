@@ -1,5 +1,5 @@
 <template>
-  <div :class="'clock'+(className && ' '+className)" :style="(color?'border-color:' + color+';':'')+css">
+  <div :class="'clock'+(classname && ' '+classname)" :style="(color?'border-color:' + color+';':'')+css">
     <div class="clock-hour" :style="color && 'background-color:' + color"></div>
     <div class="clock-minute" :style="color && 'background-color:' + color"></div>
     <div class="clock-origin" :style="color && 'background-color:' + color"></div>
@@ -10,7 +10,7 @@ import {Clock} from './clock.js'
 export default {
   name: 'Clock',
   props: {
-    className: {
+    classname: {
       type: String,
       default: ''
     },

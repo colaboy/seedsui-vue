@@ -3,7 +3,7 @@
   <Header>
     <Titlebar title="imglazy" :rBtn="[{text:'新增图片',click:onClickAdd}]"/>
   </Header>
-  <ImgLazy ref="refImgLazy" className="container" css="text-align:center">
+  <ImgLazy ref="refImgLazy" classname="container" css="text-align:center">
     <img v-for="(item,index) in imgs" :key="index" :data-load-src="item" :data-error-src="imgDefault" src="" class="lazyimg" />
     <div v-for="(item,index) in imgs" :key="index" :data-load-src="item" data-error-src="imgDefault" class="lazyimg"></div>
   </ImgLazy>

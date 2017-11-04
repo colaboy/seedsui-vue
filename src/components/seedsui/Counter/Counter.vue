@@ -6,7 +6,7 @@ import {Counter} from './counter.js'
 export default {
   name: 'Counter',
   props: {
-    className: {
+    classname: {
       type: String,
       default: ''
     },

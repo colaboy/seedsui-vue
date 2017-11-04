@@ -1,8 +1,8 @@
 <template>
-  <a :class="'button' + (type ? ' ' + type : '')+(block ? ' block' : '') + ( disable ? ' disabled' : '') + ( active ? ' active' : '')" :style="(block ? '-webkit-box-flex:1;' : '')+(radius?'border-radius:'+radius+'px;':'')+css" @click.stop.prevent="onClick">
+  <a :class="'button' + (type ? ' ' + type : '')+(block ? ' block' : '') + (disable ? ' disabled' : '') + (active ? ' active' : '') + (classname ? ' ' + classname : '')" :style="(block ? '-webkit-box-flex:1;' : '')+(radius?'border-radius:'+radius+'px;':'')+css" @click.stop.prevent="onClick">
       <Icon v-if="icon" :class="icon"/>
       <span>{{text}}</span>
-      <Icon v-if="ricon" :className="ricon"/>
+      <Icon v-if="ricon" :classname="ricon"/>
       <span v-if="tipText" class="tip">{{tipText}}</span>
       <span v-if="badgeText" class="badge">{{badgeText}}</span>
   </a>
@@ -32,6 +32,10 @@ export default {
       default: ''
     },
     css: {
+      type: String,
+      default: ''
+    },
+    classname: {
       type: String,
       default: ''
     },

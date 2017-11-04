@@ -1,5 +1,5 @@
 <template>
-  <input :class="className" :style="css" type="text" readOnly="true" :value="value" :placeholder="placeholder" @click="onClickPicker"/>
+  <input :class="classname" :style="css" type="text" readOnly="true" :value="value" :placeholder="placeholder" @click="onClickPicker"/>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
     change: {
       type: Function
     },
-    className: {
+    classname: {
       type: String,
       default: 'input-text'
     },

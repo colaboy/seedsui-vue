@@ -1,5 +1,5 @@
 <template>
-  <section :class="'page' + (className?' '+className:'')" :style="css">
+  <section :class="'page' + (classname?' '+classname:'')" :style="css">
     <slot></slot>
   </section>
 </template>
@@ -7,7 +7,7 @@
 export default {
   name: 'Page',
   props: {
-    className: {
+    classname: {
       type: String,
       default: ''
     },

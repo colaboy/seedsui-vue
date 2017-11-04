@@ -3,7 +3,7 @@
     <li v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
       <a class="grid-icon" :style="getIconStyle(index)">
         <img v-if="type==='album' && item.img" :src="item.img">
-        <Icon v-if="(type==='square' || type==='pure') && item.icon" :className="item.icon"/>
+        <Icon v-if="(type==='square' || type==='pure') && item.icon" :classname="item.icon"/>
         <span v-if="item.tip" class="tip">{{item.tip}}</span>
         <span v-if="item.badge" class="badge">{{item.badge}}</span>
         <span v-if="item.close" class="close" @click.stop.prevent="item.clickClose">
@@ -14,7 +14,7 @@
     </li>
     <li v-if="this.type === 'album' && this.add === true">
       <a class="grid-icon grid-icon-add">
-        <Icon className="icon-plus size50"/>
+        <Icon classname="icon-plus size50"/>
       </a>
     </li>
   </ul>

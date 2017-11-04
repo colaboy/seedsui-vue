@@ -1,5 +1,5 @@
 <template>
-  <div :class="'mask'+(className?' '+className:'')+(show?' active':'')" :style="css" @click="click">
+  <div :class="'mask'+(classname?' '+classname:'')+(show?' active':'')" :style="css" @click="click">
     <slot></slot>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
       type: Boolean,
       default: true
     },
-    className: {
+    classname: {
       type: String
     },
     css: {

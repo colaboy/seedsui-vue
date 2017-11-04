@@ -4,13 +4,13 @@
     <Titlebar title="List"></Titlebar>
   </Header>
   <Container>
-      <Sliver title="普通列表" className="border-b"/>
+      <Sliver title="普通列表" classname="border-b"/>
       <ul class="list">
       <li class="list-li border-b noclick">
         <div class="list-thumbnail">
           <img src="http://mat1.gtimg.com/jiangsu/index_201704/img/logo.png" />
           <Sticker position="top left">
-            <Icon className="size12 icon-fav-fill" css="position: absolute;top: -25px;left: 2px;"/>
+            <Icon classname="size12 icon-fav-fill" css="position: absolute;top: -25px;left: 2px;"/>
           </Sticker>
         </div>
         <div class="list-container">
@@ -44,7 +44,7 @@
       </li>
     </ul>
     <div class="space-lg"></div>
-    <Sliver title="时间轴列表" className="border-t border-b"/>
+    <Sliver title="时间轴列表" classname="border-t border-b"/>
     <div style="background-color:white;">
       <ul class="timeline leftline" style="padding-top:1px;">
         <li style="margin-top: 10px;">

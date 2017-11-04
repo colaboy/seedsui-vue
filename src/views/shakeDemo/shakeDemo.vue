@@ -3,7 +3,7 @@
   <Header>
     <Titlebar title="shake"></Titlebar>
   </Header>
-  <Container css="background-color:#888;color:white;" className="box box-middlecenter">
+  <Container css="background-color:#888;color:white;" classname="box box-middlecenter">
     <p ref="refShakeFont" style="font-size:20px;">摇一摇您的手机</p>
   </Container>
 </Page>

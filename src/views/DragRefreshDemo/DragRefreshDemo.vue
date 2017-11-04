@@ -4,17 +4,17 @@
     <Titlebar title="下拉刷新"></Titlebar>
   </Header>
   <Container>
-    <List :params="listParams"/>
+    <DragList :params="listParams"/>
   </Container>
 </Page>
 </template>
 
 <script>
-import List from './List.vue'
+import DragList from './DragList.vue'
 export default {
-  name: 'ButtonDemo',
+  name: 'dragRefreshDemo',
   components: {
-    List
+    DragList
   },
   data () {
     return {

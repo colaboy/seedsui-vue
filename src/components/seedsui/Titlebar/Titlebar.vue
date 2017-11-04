@@ -1,7 +1,7 @@
 <template>
   <div :class="'titlebar' + (theme==='reverse'?' reverse':'')">
     <div class="titlebar-left">
-      <a v-for="(item, index) in lBtn" :key="index" @click.stop.prevent="item.click" :class="'titlebar-button'+(item.className?' '+item.className:'')" :style="item.css">
+      <a v-for="(item, index) in lBtn" :key="index" @click.stop.prevent="item.click" :class="'titlebar-button'+(item.classname?' '+item.classname:'')" :style="item.css">
         <i v-if="item.icon" :class="'icon '+item.icon"></i>
         <span v-if="item.text">{{item.text}}</span>
       </a>
@@ -10,7 +10,7 @@
       <h1 :class="'titlebar-title nowrap text-center'" v-html="title" @click.stop.prevent="click"></h1>
     </slot>
     <div class="titlebar-right">
-      <a v-for="(item, index) in rBtn" :key="index" @click.stop.prevent="item.click" :class="'titlebar-button'+(item.className?' '+item.className:'')" :style="item.css">
+      <a v-for="(item, index) in rBtn" :key="index" @click.stop.prevent="item.click" :class="'titlebar-button'+(item.classname?' '+item.classname:'')" :style="item.css">
         <i v-if="item.icon" :class="'icon '+item.icon"></i>
         <span v-if="item.text">{{item.text}}</span>
       </a>
@@ -32,10 +32,10 @@ export default {
     click: {
       type: Function
     },
-    lBtnClassName: {
+    lBtnclassname: {
       type: String
     },
-    rBtnClassName: {
+    rBtnclassname: {
       type: String
     },
     lBtnCss: {

@@ -1,12 +1,12 @@
 <template>
-  <div :class="'timepart' + (className && ' '+className)"></div>
+  <div :class="'timepart' + (classname && ' '+classname)"></div>
 </template>
 <script>
   import Timepart from './timepart.js'
   export default {
     name: 'Calendar',
     props: {
-      className: {
+      classname: {
         type: String
       },
       startTime: {

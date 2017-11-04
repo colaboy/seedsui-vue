@@ -4,7 +4,7 @@
     <Titlebar title="timepart"></Titlebar>
   </Header>
   <Container>
-    <Timepart ref="refTimepart" :error="onTimepartError" className="border-b"/>
+    <Timepart ref="refTimepart" :error="onTimepartError" classname="border-b"/>
     <Button :block="true" text="禁用到当前时间" css="margin:10px 12px" :click="onClickDisable"/>
     <Button :block="true" text="禁用17:00到18:00" css="margin:10px 12px" :click="onClickDisableCustom"/>
     <Button :block="true" text="选中9:10到12:10" css="margin:10px 12px" :click="onClickActive"/>

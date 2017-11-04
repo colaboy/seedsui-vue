@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" :style="css">
+  <div :class="classname" :style="css">
     <div v-if="topRefresh" class="SID-Dragrefresh-TopContainer df-pull" style="transition-duration: 150ms; height: 0px;">
       <div class="df-pull-box">
         <div class="df-pull-icon"></div>
@@ -31,7 +31,7 @@ export default {
     css: {
       type: String
     },
-    className: {
+    classname: {
       type: String
     },
     topRefresh: {

@@ -1,10 +1,14 @@
 <template>
-  <div v-if="tag === 'div'" :class="'sliver' + (classname?' '+classname:'')" :style="css">{{title}}</div>
-  <li v-else-if="tag === 'li'" :class="'sliver' + (classname?' '+classname:'')" :style="css">{{title}}</li>
+  <div v-if="tag === 'div'" :class="'list-li' + (classname?' '+classname:'')" :style="css">
+    <slot></slot>
+  </div>
+  <li v-else-if="tag === 'li'" :class="'list-li' + (classname?' '+classname:'')" :style="css">
+    <slot></slot>
+  </li>
 </template>
 <script>
 export default {
-  name: 'Sliver',
+  name: 'Li',
   props: {
     title: {
       type: String,
@@ -24,6 +28,6 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "sliver.less";
+  @import "list.less";
   @import "../seedsui-tool.less";
 </style>

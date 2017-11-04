@@ -1,5 +1,5 @@
 <template>
-  <article :class="'container' + (className?' '+className:'')" :style="css">
+  <article :class="'container' + (classname?' '+classname:'')" :style="css">
     <slot></slot>
   </article>
 </template>
@@ -7,7 +7,7 @@
 export default {
   name: 'Container',
   props: {
-    className: {
+    classname: {
       type: String,
       default: ''
     },

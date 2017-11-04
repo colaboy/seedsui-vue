@@ -29,9 +29,14 @@ import Titlebar from './Titlebar'
 import Toast from './Toast'
 import Prompt from './Prompt'
 import Popover from './Popover'
-import Picker from './Picker'
+import InputBox from './InputBox/InputBox.vue'
+import InputPre from './InputPre'
+import InputText from './InputText'
+import InputSearch from './InputSearch'
+import Textarea from './Textarea'
 import InputDate from './Picker/InputDate.vue'
 import InputCity from './Picker/InputCity.vue'
+import Picker from './Picker'
 import DatePicker from './Picker/DatePicker.vue'
 import CityPicker from './Picker/CityPicker.vue'
 import Grid from './Grid'
@@ -44,11 +49,9 @@ import NumBox from './NumBox'
 import Range from './Range'
 import Carrousel from './Carrousel'
 import ImgLazy from './ImgLazy'
-import InputPre from './InputPre'
-import InputText from './InputText'
-import InputSearch from './InputSearch'
-import Textarea from './Textarea'
 import Dragrefresh from './Dragrefresh'
+import List from './List/List.vue'
+import Li from './List/Li.vue'
 import Sliver from './Sliver'
 import Mask1 from './Mask'
 import Gauge from './Gauge'
@@ -92,9 +95,14 @@ var seedsui = {
   Toast,
   Prompt,
   Popover,
-  Picker,
+  InputBox,
+  InputPre,
+  InputText,
+  InputSearch,
+  Textarea,
   InputDate,
   InputCity,
+  Picker,
   DatePicker,
   CityPicker,
   Grid,
@@ -107,11 +115,9 @@ var seedsui = {
   Range,
   Carrousel,
   ImgLazy,
-  InputPre,
-  InputText,
-  InputSearch,
-  Textarea,
   Dragrefresh,
+  List,
+  Li,
   Sliver,
   Mask1,
   NoData,

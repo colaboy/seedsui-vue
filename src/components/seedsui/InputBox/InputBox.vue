@@ -1,24 +1,26 @@
 <template>
-  <header :class="'header' + (classname?' '+classname:'')" :style="css">
+  <div :class="'inputbox' + (classname?' '+classname:'')" :style="css">
     <slot></slot>
-  </header>
+  </div>
 </template>
 <script>
 export default {
-  name: 'Header',
+  name: 'InputBox',
   props: {
-    classname: {
+    title: {
       type: String,
       default: ''
     },
+    classname: {
+      type: String
+    },
     css: {
-      type: String,
-      default: ''
+      type: String
     }
   }
 }
 </script>
 <style lang="less">
-  @import "page.less";
+  @import "inputbox.less";
   @import "../seedsui-tool.less";
 </style>

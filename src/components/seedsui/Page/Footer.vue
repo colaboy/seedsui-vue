@@ -1,5 +1,5 @@
 <template>
-  <footer :class="'footer' + (className?' '+className:'')" :style="css">
+  <footer :class="'footer' + (classname?' '+classname:'')" :style="css">
     <slot></slot>
   </footer>
 </template>
@@ -7,7 +7,7 @@
 export default {
   name: 'Footer',
   props: {
-    className: {
+    classname: {
       type: String,
       default: ''
     },
