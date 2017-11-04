@@ -1,5 +1,5 @@
 <template>
-  <a :class="'button'+(type?' '+type:'')+(block?' block':'')" :style="(block?'-webkit-box-flex:1;':'')+(radius?'border-radius:'+radius+'px;':'')+css" href="javascript:;" @click.stop.prevent="onClick">
+  <a :class="'button' + (type ? ' ' + type : '')+(block ? ' block' : '') + ( disable ? ' disabled' : '') + ( active ? ' active' : '')" :style="(block ? '-webkit-box-flex:1;' : '')+(radius?'border-radius:'+radius+'px;':'')+css" @click.stop.prevent="onClick">
       <Icon v-if="icon" :class="icon"/>
       <span>{{text}}</span>
       <Icon v-if="ricon" :className="ricon"/>
@@ -15,6 +15,14 @@ export default {
       type: Number,
       default: 0
     },
+    active: {
+      type: Boolean,
+      default: false
+    },
+    disable: {
+      type: Boolean,
+      default: false
+    },
     block: {
       type: Boolean,
       default: false
@@ -29,7 +37,7 @@ export default {
     },
     text: {
       type: String,
-      default: '按钮'
+      default: ''
     },
     tipText: {
       type: String,
