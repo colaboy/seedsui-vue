@@ -75,5 +75,4 @@ export default {
 </script>
 <style lang="less">
   @import "picker.less";
-  @import "../seedsui-tool.less";
 </style>

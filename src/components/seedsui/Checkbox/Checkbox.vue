@@ -20,7 +20,6 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "checkbox.less";
-  @import "../seedsui-tool.less";
 </style>

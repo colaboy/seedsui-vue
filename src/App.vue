@@ -20,7 +20,5 @@ export default {
 </script>
 
 <style lang="less">
-  /* SeedsUI */
-  @import "./components/seedsui/seedsui-core.less";
   @import "./assets/styles/router.less";
 </style>

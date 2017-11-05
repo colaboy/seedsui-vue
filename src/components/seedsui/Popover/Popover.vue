@@ -36,7 +36,6 @@ export default {
 
 <style lang="less">
   @import "popover.less";
-  @import "../seedsui-tool.less";
   .popover li:nth-of-type(1) .icon {
     color: #32a6f8;
   }

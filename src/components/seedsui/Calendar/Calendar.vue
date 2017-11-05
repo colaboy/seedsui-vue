@@ -54,7 +54,6 @@
     }
   }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "calendar.less";
-  @import "../seedsui-tool.less";
 </style>

@@ -26,5 +26,4 @@ export default {
 </script>
 <style lang="less">
   @import "prompt.less";
-  @import "../seedsui-tool.less";
 </style>

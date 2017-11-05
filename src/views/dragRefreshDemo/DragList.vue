@@ -105,4 +105,9 @@ export default {
 </script>
 <style lang="less" scoped>
   @import "../../components/seedsui/seedsui-variables.less";
+  .scrollContainer {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+  }
 </style>

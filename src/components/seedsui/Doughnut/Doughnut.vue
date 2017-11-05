@@ -43,7 +43,6 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "doughnut.less";
-  @import "../seedsui-tool.less";
 </style>

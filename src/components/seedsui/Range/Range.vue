@@ -110,5 +110,4 @@ export default {
 <style lang="less">
   @import "range.less";
   @import "tooltip.less";
-  @import "../seedsui-tool.less";
 </style>

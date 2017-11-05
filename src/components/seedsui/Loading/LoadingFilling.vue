@@ -25,7 +25,6 @@
 
 <style lang="less">
   @import "loading.less";
-  @import "../seedsui-tool.less";
   .loading-mask{
     background-color: white;
   }

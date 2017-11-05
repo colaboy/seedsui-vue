@@ -78,5 +78,4 @@ export default {
 </script>
 <style lang="less">
   @import "titlebar.less";
-  @import "../seedsui-tool.less";
 </style>

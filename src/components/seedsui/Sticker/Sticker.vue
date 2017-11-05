@@ -16,5 +16,4 @@ export default {
 </script>
 <style lang="less">
   @import "sticker.less";
-  @import "../seedsui-tool.less";
 </style>

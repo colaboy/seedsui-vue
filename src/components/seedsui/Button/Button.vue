@@ -83,7 +83,6 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "button.less";
-  @import "../seedsui-tool.less";
 </style>

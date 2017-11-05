@@ -69,7 +69,6 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "dialog.less";
-  @import "../seedsui-tool.less";
 </style>

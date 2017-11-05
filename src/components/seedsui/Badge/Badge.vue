@@ -12,7 +12,6 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "badge.less";
-  @import "../seedsui-tool.less";
 </style>

@@ -32,5 +32,4 @@ export default {
 </script>
 <style lang="less">
   @import "textarea.less";
-  @import "../seedsui-tool.less";
 </style>

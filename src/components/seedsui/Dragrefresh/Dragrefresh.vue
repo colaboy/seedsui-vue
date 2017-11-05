@@ -85,5 +85,4 @@ export default {
 </script>
 <style lang="less">
   @import "dragrefresh.less";
-  @import "../seedsui-tool.less";
 </style>

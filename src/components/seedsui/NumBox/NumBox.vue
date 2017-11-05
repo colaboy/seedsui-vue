@@ -153,5 +153,4 @@ export default {
 </script>
 <style lang="less">
   @import "numbox.less";
-  @import "../seedsui-tool.less";
 </style>

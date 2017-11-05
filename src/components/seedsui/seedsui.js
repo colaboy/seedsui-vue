@@ -1,3 +1,5 @@
+import './seedsui-core.less'
+
 import '@/utils/dateutil.js'
 import '@/utils/object.js'
 import '@/utils/math.js'

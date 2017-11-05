@@ -25,7 +25,6 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "../base/extend/icon.less";
+  @import "../base/tool/icon.less";
   @import "iconfont.less";
-  @import "../seedsui-tool.less";
 </style>

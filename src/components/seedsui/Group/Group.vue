@@ -26,5 +26,4 @@ export default {
 </script>
 <style lang="less">
   @import "group.less";
-  @import "../seedsui-tool.less";
 </style>

@@ -53,7 +53,6 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
   @import "clock.less";
-  @import "../seedsui-tool.less";
 </style>

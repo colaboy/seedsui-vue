@@ -42,5 +42,4 @@
 </script>
 <style lang="less">
   @import "loading.less";
-  @import "../seedsui-tool.less";
 </style>

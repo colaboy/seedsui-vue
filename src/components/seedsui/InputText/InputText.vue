@@ -36,5 +36,4 @@ export default {
 </script>
 <style lang="less">
   @import "inputtext.less";
-  @import "../seedsui-tool.less";
 </style>

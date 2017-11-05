@@ -52,7 +52,6 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-    @import "actionsheet.less";
-    @import "../seedsui-tool.less";
+<style lang="less">
+  @import "actionsheet.less";
 </style>

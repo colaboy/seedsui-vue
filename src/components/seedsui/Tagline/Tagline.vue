@@ -20,5 +20,4 @@ export default {
 </script>
 <style lang="less">
   @import "tagline.less";
-  @import "../seedsui-tool.less";
 </style>

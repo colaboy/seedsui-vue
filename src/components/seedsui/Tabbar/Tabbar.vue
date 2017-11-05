@@ -84,5 +84,4 @@ export default {
 </script>
 <style lang="less">
   @import "tabbar.less";
-  @import "../seedsui-tool.less";
 </style>

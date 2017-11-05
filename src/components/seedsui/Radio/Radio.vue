@@ -22,5 +22,4 @@ export default {
 </script>
 <style lang="less">
   @import "radio.less";
-  @import "../seedsui-tool.less";
 </style>

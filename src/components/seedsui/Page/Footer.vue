@@ -20,5 +20,4 @@ export default {
 </script>
 <style lang="less">
   @import "page.less";
-  @import "../seedsui-tool.less";
 </style>

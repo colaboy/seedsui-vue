@@ -5,7 +5,7 @@
   </Header>
   <Container>
       <Sliver title="普通列表" classname="border-b"/>
-      <ul class="list">
+      <List tag="ul">
       <li class="list-li border-b noclick">
         <div class="list-thumbnail">
           <img src="http://mat1.gtimg.com/jiangsu/index_201704/img/logo.png" />
@@ -17,11 +17,11 @@
           <div class="list-title">
             新闻办公类标题
           </div>
-          <div class="row box-middle">
-            <i class="list-icon icon-person color-primary"></i>
+          <div class="row-flex box-middle">
+            <Icon class="list-icon icon-person color-primary"/>
             <p class="list-font">副标题</p>
           </div>
-          <div class="row box-middle">
+          <div class="row-flex box-middle">
             <Icon class="list-icon icon-computer color-primary"/>
             <p class="list-font">副标题</p>
           </div>
@@ -42,7 +42,7 @@
         <p class="list-container">一般标题</p>
         <i class="list-icon icon-arrowright"></i>
       </li>
-    </ul>
+    </List>
     <div class="space-lg"></div>
     <Sliver title="时间轴列表" classname="border-t border-b"/>
     <div style="background-color:white;">
