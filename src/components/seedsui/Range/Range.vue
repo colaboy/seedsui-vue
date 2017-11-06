@@ -108,6 +108,6 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "range.less";
-  @import "tooltip.less";
+
+
 </style>

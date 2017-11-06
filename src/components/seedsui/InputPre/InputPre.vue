@@ -41,5 +41,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "inputpre.less";
+
 </style>

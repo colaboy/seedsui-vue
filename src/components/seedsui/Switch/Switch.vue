@@ -53,5 +53,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "switch.less";
+
 </style>

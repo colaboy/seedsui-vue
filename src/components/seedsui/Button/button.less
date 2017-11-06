@@ -1,9 +1,8 @@
-@import "../seedsui-variables.less";
 /*----------------button.less(start)----------------*/
 .button{
 	display:-webkit-inline-box;
-    -webkit-box-align:center;
-    -webkit-box-pack:center;
+  -webkit-box-align:center;
+  -webkit-box-pack:center;
 
 	height:@40px;
 	/* line-height:normal; */
@@ -15,14 +14,15 @@
 
 	border-style:solid;
 	border-width: @1px;
-	border-radius:0;
 
 	color:@button-color;
 	background-color:@button-bg;
 	border-color: @button-border;
 
-	&:active{
-		background-color:@button-bg-active;
+	&:active,&.active{
+    color:@button-active-color;
+    background-color:@button-active-bg;
+    border-color: @button-active-border;
 	}
 
 	&.block{
@@ -33,7 +33,7 @@
 		color: white;
 		background-color:@primary-bg;
 		border-color: @primary-bg;
-		&:active{
+		&:active,&.active{
 			background-color:@primary-bg-active;
 			border-color:@primary-bg-active;
 		}
@@ -43,7 +43,7 @@
 		color: white;
 		background-color:@cancel-bg;
 		border-color: @cancel-bg;
-		&:active{
+		&:active,&.active{
 			background-color:@cancel-bg-active;
 			border-color:@cancel-bg-active;
 		}
@@ -53,7 +53,7 @@
 		color: white;
 		background-color:@submit-bg;
 		border-color: @submit-bg;
-		&:active{
+		&:active,&.active{
 			background-color:@submit-bg-active;
 			border-color:@submit-bg-active;
 		}
@@ -63,7 +63,7 @@
 		color: white;
 		background-color:@info-bg;
 		border-color: @info-bg;
-		&:active{
+		&:active,&.active{
 			background-color:@info-bg-active;
 			border-color:@info-bg-active;
 		}
@@ -73,7 +73,7 @@
 		color: white;
 		background-color:@warn-bg;
 		border-color: @warn-bg;
-		&:active{
+		&:active,&.active{
 			background-color:@warn-bg-active;
 			border-color:@warn-bg-active;
 		}
@@ -83,7 +83,7 @@
 		color: white;
 		background-color:@success-bg;
 		border-color: @success-bg;
-		&:active{
+		&:active,&.active{
 			background-color:@success-bg-active;
 			border-color:@success-bg-active;
 		}
@@ -93,10 +93,11 @@
 		pointer-events: none;
 		color:@button-disable-color;
 		background-color:@button-disable-bg;
-		border-color:@button-disable-bg;
-		&:active{
+		border-color:@button-disable-border;
+		&:active,&.active{
 			color:@button-disable-color;
-			border-color:@button-disable-bg;
+      background-color:@button-disable-bg;
+      border-color:@button-disable-border;
 		}
 		.tip,.badge{
 			background-color: @disable-bg;
@@ -107,7 +108,7 @@
 		color:@body-color;
 		background-color:white;
 		border-color:white;
-		&:active{
+		&:active,&.active{
 			background-color:transparentize(white, .5);
 			border-color:transparent;
 		}
@@ -126,7 +127,7 @@
 		color: @primary-bg;
 		background-color:transparent;
 		border-color: @primary-bg;
-		&:active{
+		&:active,&.active{
 			color:@primary-bg-active;
 			border-color:@primary-bg-active;
 		}
@@ -136,7 +137,7 @@
 		color:@cancel-bg;
 		background-color:transparent;
 		border-color:@cancel-bg;
-		&:active{
+		&:active,&.active{
 			color:@cancel-bg-active;
 			border-color:@cancel-bg-active;
 		}
@@ -146,7 +147,7 @@
 		color:@submit-bg;
 		background-color:transparent;
 		border-color:@submit-bg;
-		&:active{
+		&:active,&.active{
 			color:@submit-bg-active;
 			border-color:@submit-bg-active;
 		}
@@ -156,7 +157,7 @@
 		color:@info-bg;
 		background-color:transparent;
 		border-color:@info-bg;
-		&:active{
+		&:active,&.active{
 			color:@info-bg-active;
 			border-color:@info-bg-active;
 		}
@@ -166,7 +167,7 @@
 		color:@warn-bg;
 		background-color:transparent;
 		border-color:@warn-bg;
-		&:active{
+		&:active,&.active{
 			color:@warn-bg-active;
 			border-color:@warn-bg-active;
 		}
@@ -176,7 +177,7 @@
 		color:@success-bg;
 		background-color:transparent;
 		border-color:@success-bg;
-		&:active{
+		&:active,&.active{
 			color:@success-bg-active;
 			border-color:@success-bg-active;
 		}
@@ -185,7 +186,7 @@
 	/*线框-禁用按钮*/
 	&.disabled,&[disabled]{
 		background-color:transparent;
-		&:active{
+		&:active,&.active{
 			background-color:transparent;
 		}
 	}
@@ -195,7 +196,7 @@
 		color:white;
 		background-color:transparent;
 		border-color:white;
-		&:active{
+		&:active,&.active{
 			color:transparentize(white,.5);
 			border-color:transparentize(white,.5);
 		}
@@ -210,7 +211,7 @@
 /*投影按钮*/
 .button.shadow{
 	box-shadow:0 @2px @3px 0 rgba(0, 0, 0, 0.2);/*分别指投影的：右、下、模糊、扩展、颜色*/
-	&:active{
+	&:active,&.active{
 		-webkit-box-shadow:0 0 0 0 rgba(0, 0, 0, 0.2);
 		-moz-box-shadow:0 0 0 0 rgba(0, 0, 0, 0.2);
 		box-shadow:0 0 0 0 rgba(0, 0, 0, 0.2);

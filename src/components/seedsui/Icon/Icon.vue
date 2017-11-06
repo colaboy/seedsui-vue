@@ -25,6 +25,6 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "../base/tool/icon.less";
-  @import "iconfont.less";
+
+
 </style>

@@ -44,5 +44,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "progress.less";
+
 </style>

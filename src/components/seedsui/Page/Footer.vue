@@ -19,5 +19,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "page.less";
+
 </style>

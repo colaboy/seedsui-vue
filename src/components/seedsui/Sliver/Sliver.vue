@@ -24,5 +24,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "sliver.less";
+
 </style>

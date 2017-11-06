@@ -55,5 +55,5 @@
   }
 </script>
 <style lang="less">
-  @import "calendar.less";
+
 </style>

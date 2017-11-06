@@ -90,5 +90,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "grid.less";
+
 </style>

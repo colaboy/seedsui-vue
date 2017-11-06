@@ -62,5 +62,5 @@
   }
 </script>
 <style lang="less">
-  @import "timepart.less";
+
 </style>

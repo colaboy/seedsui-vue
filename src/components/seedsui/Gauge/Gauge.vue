@@ -74,5 +74,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "gauge.less";
+
 </style>

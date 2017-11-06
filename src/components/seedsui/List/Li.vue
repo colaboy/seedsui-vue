@@ -28,5 +28,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "list.less";
+
 </style>

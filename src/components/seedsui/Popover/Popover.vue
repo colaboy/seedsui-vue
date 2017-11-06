@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="less">
-  @import "popover.less";
+
   .popover li:nth-of-type(1) .icon {
     color: #32a6f8;
   }

@@ -54,5 +54,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "clock.less";
+
 </style>

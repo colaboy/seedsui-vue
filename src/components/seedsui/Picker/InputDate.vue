@@ -156,5 +156,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "picker.less";
+
 </style>

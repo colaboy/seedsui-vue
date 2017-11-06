@@ -41,5 +41,5 @@
   }
 </script>
 <style lang="less">
-  @import "loading.less";
+
 </style>

@@ -24,7 +24,7 @@
 </script>
 
 <style lang="less">
-  @import "loading.less";
+
   .loading-mask{
     background-color: white;
   }

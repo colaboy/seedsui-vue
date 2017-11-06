@@ -15,5 +15,5 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "sticker.less";
+
 </style>

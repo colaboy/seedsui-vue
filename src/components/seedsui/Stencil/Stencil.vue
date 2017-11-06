@@ -13,6 +13,6 @@
   }
 </script>
 <style lang="less">
-  @import "stencil.less";
-  @import "../seedsui-tool.less";
+
+
 </style>

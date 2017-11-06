@@ -35,7 +35,7 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "star.less";
+
   .star::before{
     font-family: "iconfont";
     content: "\e94d";
