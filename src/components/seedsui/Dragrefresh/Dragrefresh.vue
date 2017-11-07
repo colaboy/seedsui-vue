@@ -87,6 +87,7 @@ export default {
         console.log('无更多数据了')
       }
     })
+    if (this.hasMore === false) this.instance.setPagination(true, true)
     this.lazyInstance = new ImgLazy({
       overflowContainer: this.$el
     })
