@@ -65,6 +65,8 @@ import Timepart from './Timepart'
 import Table from './Table'
 import Stencil from './Stencil'
 import Notice from './Notice/Notice.vue'
+import NoData from './NoData/NoData.vue'
+import NoWifi from './NoWifi/NoWifi.vue'
 
 var seedsui = {
   Page,
@@ -128,7 +130,9 @@ var seedsui = {
   Timepart,
   Table,
   Stencil,
-  Notice
+  Notice,
+  NoData,
+  NoWifi
 }
 
 const install = function (Vue) {

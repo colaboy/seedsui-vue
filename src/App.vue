@@ -4,7 +4,7 @@
     <transition name="fade">
       <router-view></router-view>
     </transition>
-    <Notice :show="!onLine" css="top:44px" type="nowifi"></Notice>
+    <NoWifi :show="!onLine" css="top:44px"></NoWifi>
   </div>
 </template>
 

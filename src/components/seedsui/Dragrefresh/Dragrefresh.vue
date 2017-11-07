@@ -18,7 +18,7 @@
         <div class="df-pull-caption">加载失败，请稍后再试</div>
       </div>
     </div>
-    <NoData :show="noData"></NoData>
+    <NoData :show="nodata"></NoData>
   </div>
 </template>
 <script>
@@ -28,6 +28,9 @@ import ImgLazy from './../ImgLazy/imglazy.js'
 export default {
   name: 'Dragrefresh',
   props: {
+    hasMore: {
+      type: Boolean
+    },
     css: {
       type: String
     },
@@ -46,16 +49,25 @@ export default {
     bottomComplete: {
       type: Function
     },
-    noData: {
+    nodata: {
       type: Boolean,
       default: false
     }
   },
   watch: {
-    noData: function (val, oldval) {
+    nodata: function (val, oldval) {
       console.log('nodata变化了' + val)
       if (val === true) this.instance.detach()
       else this.instance.attach()
+    },
+    hasMore: function (val, oldval) {
+      if (val === true) {
+        console.log('hasMore还有')
+        this.instance.setPagination(false, false)
+      } else {
+        console.log('hasMore没有了')
+        this.instance.setPagination(true, true)
+      }
     }
   },
   data () {
