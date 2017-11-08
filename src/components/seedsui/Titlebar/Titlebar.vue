@@ -32,20 +32,6 @@ export default {
     click: {
       type: Function
     },
-    lBtnclassname: {
-      type: String
-    },
-    rBtnclassname: {
-      type: String
-    },
-    lBtnCss: {
-      type: String,
-      default: ''
-    },
-    rBtnCss: {
-      type: String,
-      default: ''
-    },
     lBtn: {
       type: Array,
       default: function () {
