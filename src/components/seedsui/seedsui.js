@@ -62,6 +62,7 @@ import Counter from './Counter'
 import Progress from './Progress'
 import Calendar from './Calendar'
 import Timepart from './Timepart'
+import Timeline from './Timeline/Timeline.vue'
 import Table from './Table'
 import Stencil from './Stencil'
 import Notice from './Notice/Notice.vue'
@@ -118,6 +119,7 @@ var seedsui = {
   ImgLazy,
   Dragrefresh,
   List,
+  Timeline,
   Li,
   Sliver,
   Mask1,

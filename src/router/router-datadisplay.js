@@ -14,6 +14,7 @@ import doughnutDemo from '@/views/doughnutDemo'
 import clockDemo from '@/views/clockDemo'
 import counterDemo from '@/views/counterDemo'
 import progressDemo from '@/views/progressDemo'
+import timelineDemo from '@/views/timelineDemo/timelineDemo.vue'
 
 export default [
   {
@@ -95,5 +96,10 @@ export default [
     path: 'progressDemo',
     name: 'progressDemo',
     component: progressDemo
+  },
+  {
+    path: 'timelineDemo',
+    name: 'timelineDemo',
+    component: timelineDemo
   }
 ]

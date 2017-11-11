@@ -178,6 +178,13 @@
           </router-link>
         </li>
         <li>
+          <router-link class="list-li border-b" :to="{name: 'timelineDemo'}">
+            <p class="list-container">Timeline</p>
+            <small>时间线</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li>
           <router-link class="list-li border-b" :to="{name: 'progressDemo'}">
             <p class="list-container">Weather</p>
             <small>天气</small>

@@ -1,6 +1,9 @@
 <template>
-  <div v-if="tag === 'div'" :class="'sliver' + (classname?' '+classname:'')" :style="css">{{title}}</div>
-  <li v-else-if="tag === 'li'" :class="'sliver' + (classname?' '+classname:'')" :style="css">{{title}}</li>
+  <div v-if="tag === 'div'" :class="'sliver' + (classname?' '+classname:'')" :style="css">
+    <div v-html="licon"></div>
+    <div class="sliver-title" v-html="title"></div>
+    <div v-html="ricon"></div>
+  </div>
 </template>
 <script>
 export default {
@@ -19,6 +22,12 @@ export default {
     tag: {
       type: String,
       default: 'div'
+    },
+    licon: {
+      type: String
+    },
+    ricon: {
+      type: String
     }
   }
 }

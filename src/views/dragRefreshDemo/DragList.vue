@@ -1,11 +1,10 @@
 <template>
-  <Dragrefresh classname="scrollContainer" ref="refDrag" :topRefresh="onTopRefresh" :topComplete="onTopComplete" :bottomRefresh="onBottomRefresh" :bottomComplete="onBottomComplete">
+  <Dragrefresh :noData="showNodata" classname="scrollContainer" ref="refDrag" :topRefresh="onTopRefresh" :topComplete="onTopComplete" :bottomRefresh="onBottomRefresh" :bottomComplete="onBottomComplete">
     <ul class="list">
       <li class="list-li border-b" style="padding-left:0;margin-left:12px;" v-for="(item,index) in list" :key="index">
         {{item.name}}
       </li>
     </ul>
-    <NoData :show="showNodata" text="暂无数据"></NoData>
   </Dragrefresh>
 </template>
 <script>
@@ -72,14 +71,9 @@ export default {
           } else {
             this.list = data
           }
-          // 如果是最后一页，则不发请求
-          var isNoData = false
-          if (data.length < this.limit) {
-            isNoData = true
-          }
           // 设置分页
           setTimeout(() => {
-            this.$refs.refDrag.instance.setPagination(isNext, isNoData)
+            this.$refs.refDrag.instance.setPagination(isNext, data.length < this.limit)
           }, 500)
           // 设置暂无数据
           if (this.list.length === 0) this.showNodata = true
@@ -106,6 +100,7 @@ export default {
 <style lang="less" scoped>
   @import "../../components/seedsui/seedsui-variables.less";
   .scrollContainer {
+    position: relative;
     height: 100%;
     width: 100%;
     overflow: auto;
