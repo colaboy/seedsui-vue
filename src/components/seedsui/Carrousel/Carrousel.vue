@@ -57,7 +57,7 @@ export default {
           img: '',
           icon: '',
           text: '',
-          click: function () { }
+          onClick: function () { }
         }]
       }
     },

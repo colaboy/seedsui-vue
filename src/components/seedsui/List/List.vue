@@ -1,8 +1,8 @@
 <template>
-  <div v-if="tag === 'div'" :class="'list' + (classname?' '+classname:'')" :style="css">
+  <div v-if="tag === 'div'" :class="'list' + (classsName?' '+classsName:'')" :style="css">
     <slot></slot>
   </div>
-  <ul v-else-if="tag === 'ul'" :class="'list' + (classname?' '+classname:'')" :style="css">
+  <ul v-else-if="tag === 'ul'" :class="'list' + (classsName?' '+classsName:'')" :style="css">
     <slot></slot>
   </ul>
 </template>
@@ -14,7 +14,7 @@ export default {
       type: String,
       default: ''
     },
-    classname: {
+    classsName: {
       type: String
     },
     css: {

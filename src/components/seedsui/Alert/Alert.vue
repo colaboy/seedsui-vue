@@ -32,10 +32,10 @@ export default {
       type: String,
       default: '取消'
     },
-    clickSubmit: {
+    onClickSubmit: {
       type: Function
     },
-    clickCancel: {
+    onClickCancel: {
       type: Function
     }
   }

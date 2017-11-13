@@ -1,5 +1,5 @@
 <template>
-  <div class="notice" v-show="show" :class="classname" :style="css">
+  <div class="notice" v-show="show" :class="classsName" :style="css">
     <div class="notice-content" @click.stop.prevent="click">
       <img class="notice-icon" :src="img"/>
       <p>{{text}}</p>
@@ -22,7 +22,7 @@
       css: {
         type: String
       },
-      classname: {
+      classsName: {
         type: String
       },
       show: {
@@ -31,7 +31,7 @@
       args: {
         type: Array
       },
-      click: {
+      onClick: {
         type: Function,
         default: function () {}
       }

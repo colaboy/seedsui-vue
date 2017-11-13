@@ -1,5 +1,5 @@
 <template>
-  <div :class="'popover' + (classname?' '+classname:'')" :style="css">
+  <div :class="'popover' + (classsName?' '+classsName:'')" :style="css">
 		<ul>
 			<li class="border-b" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
         <i v-if="item.icon" :class="'icon '+item.icon"></i>
@@ -12,7 +12,7 @@
 export default {
   name: 'Popover',
   props: {
-    classname: {
+    classsName: {
       type: String,
       default: ''
     },
@@ -26,7 +26,7 @@ export default {
         return [{
           icon: '',
           text: '',
-          click: function () { }
+          onClick: function () { }
         }]
       }
     }

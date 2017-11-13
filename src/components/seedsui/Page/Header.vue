@@ -1,5 +1,5 @@
 <template>
-  <header :class="'header' + (classname?' '+classname:'')" :style="css">
+  <header :class="'header' + (classsName?' '+classsName:'')" :style="css">
     <slot></slot>
   </header>
 </template>
@@ -7,7 +7,7 @@
 export default {
   name: 'Header',
   props: {
-    classname: {
+    classsName: {
       type: String,
       default: ''
     },

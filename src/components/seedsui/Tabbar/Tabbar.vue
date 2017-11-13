@@ -37,7 +37,7 @@ export default {
         return [{
           icon: '',
           text: '',
-          click: function () { }
+          onClick: function () { }
         }]
       }
     },

@@ -1,11 +1,11 @@
 <template>
-  <i :class="'icon' + (classname?' '+classname:'')" :style="css"></i>
+  <i :class="'icon' + (classsName?' '+classsName:'')" :style="css"></i>
 </template>
 <script>
 export default {
   name: 'InputText',
   props: {
-    classname: {
+    classsName: {
       type: String,
       default: ''
     },

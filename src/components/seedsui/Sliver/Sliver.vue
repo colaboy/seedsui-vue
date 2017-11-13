@@ -1,5 +1,5 @@
 <template>
-  <div v-if="tag === 'div'" :class="'sliver' + (classname?' '+classname:'')" :style="css">
+  <div v-if="tag === 'div'" :class="'sliver' + (classsName?' '+classsName:'')" :style="css">
     <div v-html="licon"></div>
     <div class="sliver-title" v-html="title"></div>
     <div v-html="ricon"></div>
@@ -13,7 +13,7 @@ export default {
       type: String,
       default: ''
     },
-    classname: {
+    classsName: {
       type: String
     },
     css: {

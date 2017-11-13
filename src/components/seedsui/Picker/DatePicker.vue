@@ -27,7 +27,7 @@ export default {
     change: {
       type: Function
     },
-    classname: {
+    classsName: {
       type: String,
       default: 'input-text'
     },

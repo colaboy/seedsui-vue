@@ -29,7 +29,7 @@ export default {
         return [{
           icon: '',
           text: '',
-          click: function () { }
+          onClick: function () { }
         }]
       }
     }
@@ -46,7 +46,7 @@ export default {
     })
   },
   methods: {
-    clickOption (e, callback) {
+    onClickOption (e, callback) {
       callback()
     }
   }

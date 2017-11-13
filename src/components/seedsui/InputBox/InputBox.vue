@@ -1,5 +1,5 @@
 <template>
-  <div :class="'inputbox' + (classname?' '+classname:'')" :style="css">
+  <div :class="'inputbox' + (classsName?' '+classsName:'')" :style="css">
     <slot></slot>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
       type: String,
       default: ''
     },
-    classname: {
+    classsName: {
       type: String
     },
     css: {

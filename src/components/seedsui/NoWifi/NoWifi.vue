@@ -1,5 +1,5 @@
 <template>
-  <Notice :text="text" :show="show" :classname="classname" :css="css" :click="click" :args="args" :img="img"/>
+  <Notice :text="text" :show="show" :classsName="classsName" :css="css" :click="click" :args="args" :img="img"/>
 </template>
 <script>
   export default {
@@ -18,7 +18,7 @@
       css: {
         type: String
       },
-      classname: {
+      classsName: {
         type: String
       },
       show: {
@@ -27,7 +27,7 @@
       args: {
         type: Array
       },
-      click: {
+      onClick: {
         type: Function
       }
     },

@@ -29,12 +29,12 @@ export default {
     }
   },
   created () {
-    if (this.list.indexOf('qq') >= 0) this.shareList.push({ icon: 'icon-qq-fill', text: 'QQ好友', click: this.onClickIcon })
-    if (this.list.indexOf('qqzone') >= 0) this.shareList.push({ icon: 'icon-qqzone-fill', text: 'QQ空间', click: this.onClickIcon })
-    if (this.list.indexOf('weixin') >= 0) this.shareList.push({ icon: 'icon-weixin-fill', text: '微信', click: this.onClickIcon })
-    if (this.list.indexOf('fweixin') >= 0) this.shareList.push({ icon: 'icon-fweixin-fill', text: '微信朋友圈', click: this.onClickIcon })
-    if (this.list.indexOf('tsina') >= 0) this.shareList.push({ icon: 'icon-tsina-fill', text: '新浪微博', click: this.onClickIcon })
-    if (this.list.indexOf('link') >= 0) this.shareList.push({ icon: 'icon-link-fill', text: '复制链接', click: this.onClickIcon })
+    if (this.list.indexOf('qq') >= 0) this.shareList.push({ icon: 'icon-qq-fill', text: 'QQ好友', onClick: this.onClickIcon })
+    if (this.list.indexOf('qqzone') >= 0) this.shareList.push({ icon: 'icon-qqzone-fill', text: 'QQ空间', onClick: this.onClickIcon })
+    if (this.list.indexOf('weixin') >= 0) this.shareList.push({ icon: 'icon-weixin-fill', text: '微信', onClick: this.onClickIcon })
+    if (this.list.indexOf('fweixin') >= 0) this.shareList.push({ icon: 'icon-fweixin-fill', text: '微信朋友圈', onClick: this.onClickIcon })
+    if (this.list.indexOf('tsina') >= 0) this.shareList.push({ icon: 'icon-tsina-fill', text: '新浪微博', onClick: this.onClickIcon })
+    if (this.list.indexOf('link') >= 0) this.shareList.push({ icon: 'icon-link-fill', text: '复制链接', onClick: this.onClickIcon })
   },
   mounted () {
     this.instance = this.$refs._refSharebox.instance

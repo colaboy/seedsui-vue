@@ -27,10 +27,10 @@ export default {
       type: Boolean,
       default: false
     },
-    clickSubmit: {
+    onClickSubmit: {
       type: Function
     },
-    clickCancel: {
+    onClickCancel: {
       type: Function
     }
   },

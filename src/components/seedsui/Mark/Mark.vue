@@ -21,7 +21,7 @@ export default {
       type: String,
       default: '标签'
     },
-    click: {
+    onClick: {
       type: Function,
       default: function () {}
     }

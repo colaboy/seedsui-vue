@@ -1,5 +1,5 @@
 <template>
-  <div :style="'position:relative;padding:1px 0px;' + css" :class="classname">
+  <div :style="'position:relative;padding:1px 0px;' + css" :class="classsName">
     <div ref="refTip" class="range-tooltip" :style="(tipShow?'display:block;':'')+'left:'+tipLeft">{{truthValue}}</div>
     <input ref="refRange" type="range" class="input-range block" :min="min" :max="max" :step="step" :value="truthValue" id="range"/>
   </div>
@@ -28,7 +28,7 @@ export default {
       type: String,
       default: ''
     },
-    classname: {
+    classsName: {
       type: String,
       default: ''
     },

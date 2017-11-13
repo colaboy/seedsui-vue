@@ -1,5 +1,5 @@
 <template>
-  <div :class="classname" :style="css">
+  <div :class="classsName" :style="css">
     <slot></slot>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
     css: {
       type: String
     },
-    classname: {
+    classsName: {
       type: String
     }
   },
