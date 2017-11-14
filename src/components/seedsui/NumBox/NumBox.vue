@@ -1,7 +1,7 @@
 <template>
   <div :style="css" class="numbox bordered">
     <input type="button" class="numbox-button" :disabled="minusDisabled" value="-" @click.stop.prevent="onClickMinus">
-    <input type="tel" class="numbox-input" :value="truthValue" @blur.stop.prevent="onBlur" @click.stop.prevent="onClick" @input.stop.prevent="onInput" @change.stop.prevent="onChange">
+    <input type="number" class="numbox-input" :value="truthValue" @blur.stop.prevent="onBlur" @click.stop.prevent="onClick" @input.stop.prevent="onInput" @change.stop.prevent="onChange">
     <input type="button" class="numbox-button" :disabled="plusDisabled" value="+" @click.stop.prevent="onClickPlus">
   </div>
 </template>
@@ -15,9 +15,8 @@ export default {
     change: {
       type: Function
     },
-    decimal: {
-      type: Boolean,
-      default: false
+    integer: {
+      type: Number
     },
     digits: {
       type: Number
@@ -90,8 +89,24 @@ export default {
     correctNum (numstr) {
       if (numstr === '') return ''
       var value = ''
-      if (this.decimal) {
-        console.log(numstr)
+      // 判断整数位数
+      if (this.integer) {
+        var integerVal = ''
+        var decimalVal = ''
+        if (numstr.indexOf('.') > 0) {
+          integerVal = numstr.split('.')[0]
+          decimalVal = '.' + numstr.split('.')[1]
+        } else {
+          integerVal = numstr
+        }
+        if (integerVal.length > this.integer) {
+          // callback error
+          if (this.error) this.error('整数位不能超过' + this.integer + '位')
+          return (integerVal.substring(0, this.integer) + decimalVal)
+        }
+      }
+      // 判断小数
+      if (this.digits) {
         // 如果输入的内容不是一个数字，则转为数字
         if (!/^(0|([1-9][0-9]*))(\.[0-9]*)?$/.test(numstr)) {
           console.log('不是一个正数')
@@ -114,7 +129,8 @@ export default {
       } else {
         // 如果输入的不是一个正整数，则转为正整数
         if (!/^[1-9]{1,}[0-9]*$/.test(numstr)) {
-          value = numstr.match(/[1-9]{1,}[0-9]*/)[0]
+          const result = numstr.match(/[1-9]{1,}[0-9]*/)
+          value = result ? result[0] : '0'
           // callback error
           if (this.error) this.error('必须要输入正整数')
         } else {
@@ -151,6 +167,3 @@ export default {
   }
 }
 </script>
-<style lang="less">
-
-</style>
