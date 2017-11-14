@@ -1,12 +1,12 @@
 <template>
   <ul :class="'grid '+gridClass+(bordered?' grid-bordered':'')" :data-col="col" :style="css">
-    <li v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
+    <li v-for="(item, index) in list" :key="index" @click.stop.prevent="item.onClick">
       <a class="grid-icon" :style="getIconStyle(index)">
         <img v-if="type==='album' && item.img" :src="item.img">
         <Icon v-if="(type==='square' || type==='pure') && item.icon" :classsName="item.icon"/>
         <span v-if="item.tip" class="tip">{{item.tip}}</span>
         <span v-if="item.badge" class="badge">{{item.badge}}</span>
-        <span v-if="item.close" class="close" @click.stop.prevent="item.clickClose">
+        <span v-if="item.close" class="close" @click.stop.prevent="item.onClickClose">
           <i class="icon icon-close"></i>
         </span>
       </a>

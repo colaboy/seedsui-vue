@@ -1,5 +1,5 @@
 <template>
-  <Mask1 :show="show" css="top:44px;overflow:hidden;" :click="clickMask">
+  <Mask1 :show="show" css="top:44px;overflow:hidden;" :onClick="clickMask">
     <div :class="'app-dropdownList'+(show?' active':'')">
       <div style="padding-left:0;margin-left:12px;" :class="'row-flex wingpadding-md spacepadding-md border-b'+isChecked(item,index)" v-for="(item,index) in list" :key="index" @click.stop.prevent="click(item,index)">
         <p class="col-flex">{{item.name}}</p>

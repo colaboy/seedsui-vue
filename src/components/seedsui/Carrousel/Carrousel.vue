@@ -8,7 +8,7 @@
     </div>
     <!-- 轮播图 -->
     <div v-else class="carrousel-wrapper">
-      <div class="carrousel-slide" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click">
+      <div class="carrousel-slide" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.onClick">
         <img v-if="item.img" class="slide-banner" :src="imgs.default.url" :data-load-src="item.img"/>
         <div class="slide-title" v-if="item.text">
           <i :class="'icon slide-title-icon'+(item.icon?' '+item.icon:'')"></i>

@@ -1,6 +1,6 @@
 <template>
   <div class="notice" v-show="show" :class="classsName" :style="css">
-    <div class="notice-content" @click.stop.prevent="click">
+    <div class="notice-content" @click.stop.prevent="onClickNotice">
       <img class="notice-icon" :src="img"/>
       <p>{{text}}</p>
     </div>
@@ -26,7 +26,8 @@
         type: String
       },
       show: {
-        type: Boolean
+        type: Boolean,
+        default: true
       },
       args: {
         type: Array
@@ -43,8 +44,8 @@
     created () {
     },
     methods: {
-      onClick (e) {
-        if (this.click) this.click(e, ...this.args)
+      onClickNotice (e) {
+        if (this.onClick) this.onClick(e, ...this.args)
       }
     }
   }

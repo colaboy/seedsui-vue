@@ -1,5 +1,5 @@
 <template>
-  <Notice :text="text" :show="show" :classsName="classsName" :css="css" :click="click" :args="args" :img="img"/>
+  <Notice :text="text" :show="show" :classsName="classsName" :css="css" :onClick="onClick" :args="args" :img="img"/>
 </template>
 <script>
   export default {

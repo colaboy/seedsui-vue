@@ -1,7 +1,8 @@
 <template>
-  <a :class="'button' + (type ? ' ' + type : '')+(block ? ' block' : '') + (disable ? ' disabled' : '') + (active ? ' active' : '') + (classsName ? ' ' + classsName : '')" :style="(block ? '-webkit-box-flex:1;' : '')+(radius?'border-radius:'+radius+'px;':'')+css" @click.stop.prevent="onClick">
+  <a :class="'button' + (type ? ' ' + type : '')+(block ? ' block' : '') + (disable ? ' disabled' : '') + (active ? ' active' : '') + (classsName ? ' ' + classsName : '')" :style="(block ? '-webkit-box-flex:1;' : '')+(radius?'border-radius:'+radius+'px;':'')+css" @click.stop.prevent="onClickBtn">
       <Icon v-if="icon" :class="icon"/>
-      <span>{{text}}</span>
+      <span v-if="isShowSpan">{{text}}</span>
+      <template v-else>{{text}}</template>
       <Icon v-if="ricon" :classsName="ricon"/>
       <span v-if="tipText" class="tip">{{tipText}}</span>
       <span v-if="badgeText" class="badge">{{badgeText}}</span>
@@ -74,11 +75,17 @@ export default {
     return {
     }
   },
+  computed: {
+    isShowSpan: () => {
+      if (this.ricon || this.tipText || this.badgeText) return true
+      return false
+    }
+  },
   mounted () {
   },
   methods: {
-    onClick (e) {
-      if (this.click) this.click(e, ...this.args)
+    onClickBtn (e) {
+      if (this.onClick) this.onClick(e, ...this.args)
     }
   }
 }

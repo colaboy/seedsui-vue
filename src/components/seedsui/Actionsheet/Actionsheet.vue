@@ -2,7 +2,7 @@
   <div class="mask actionsheet-mask">
     <div class="actionsheet">
       <div class="actionsheet-group">
-        <a class="actionsheet-option" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.click(item)">
+        <a class="actionsheet-option" v-for="(item, index) in list" :key="index" @click.stop.prevent="item.onClick(item)">
           {{item.text}}
         </a>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <ul :class="'tabbar tabbar-'+type+' animated'+(theme?' '+theme:'')+(type==='line'?' tabbar-line-width'+linewidth:'')+(disabled?' disabled':'')" :data-col="list.length" :style="tabbarCss+css">
-    <li v-for="(item, index) in list" :class="'tab'+(activeIndex===index?' active':'')" :key="index" @click.stop.prevent="onClick(item,index,item.click)">
+    <li v-for="(item, index) in list" :class="'tab'+(activeIndex===index?' active':'')" :key="index" @click.stop.prevent="onClick(item,index,item.onClick)">
       <i v-if="item.icon && type!=='dropdown'" :class="'icon '+item.icon"></i>
       <label class="tab-label">{{item.text}}</label>
       <i v-if="item.icon && type==='dropdown'" :class="'icon size12 '+item.icon"></i>

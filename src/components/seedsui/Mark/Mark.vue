@@ -1,5 +1,5 @@
 <template>
-  <span v-if="show" :class="'mark-'+type" :style="css" @click="click">{{text}}</span>
+  <span v-if="show" :class="'mark-'+type" :style="css" @click.stop.prevent="onClick">{{text}}</span>
 </template>
 <script>
 export default {

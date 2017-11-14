@@ -1,5 +1,5 @@
 <template>
-  <div :class="'mask'+(classsName?' '+classsName:'')+(show?' active':'')" :style="css" @click="click">
+  <div :class="'mask'+(classsName?' '+classsName:'')+(show?' active':'')" :style="css" @click.stop.prevent="onClick">
     <slot></slot>
   </div>
 </template>

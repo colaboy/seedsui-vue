@@ -1,13 +1,13 @@
 <template>
 <Page>
-  <Alert text="提示框" :show="alertShow" :clickSubmit="onAlertSubmit"/>
-  <Alert text="对话框" :show="confirmShow" :clickSubmit="onConfirmSubmit" :clickCancel="onConfirmCancel"/>
+  <Alert text="提示框" :show="alertShow" :onClickSubmit="onAlertSubmit"/>
+  <Alert text="对话框" :show="confirmShow" :onClickSubmit="onConfirmSubmit" :onClickCancel="onConfirmCancel"/>
   <Toast :mask="true" :text="toastText" :show="toastShow" />
   <Prompt :mask="true" :text="promptText" :show="promptShow" />
 
   <Dialog ref="refPopover" position="top-right" animation="zoom" css="overflow:visible; top: 54px; right: 6px;">
     <Popover :list="[
-    {icon:'icon-qrcode',text:'扫码签到',click:onClickDecode},
+    {icon:'icon-qrcode',text:'扫码签到', onClick:onClickDecode},
     {icon:'icon-chats',text:'会议群聊'},
     {icon:'icon-rdominus',text:'取消会议'},
     {icon:'icon-rdook',text:'结束会议'},
@@ -20,7 +20,7 @@
   <Actionsheet ref="refActionsheet" :show="showActionsheet" :list="[
     {text:'菜单一'},
     {text:'菜单二'},
-    {text:'自定义退出',click:onClickCustomExit}
+    {text:'自定义退出', onClick:onClickCustomExit}
   ]"/>
 
   <Dialog ref="refDialogLt" position="left" animation="slideRight">
@@ -78,56 +78,56 @@
   <Dialog ref="refDialogM" position="middle" animation="fade">
     <div style="display:block;background-color: white;width: 200px;height:100px;">middle</div>
   </Dialog>
-  <DropFilter :show="dropFilterShow" :checked="dropFilterChecked" :clickMask="onClickDropFilterMask" :click="onClickDropFilterList"/>
+  <DropFilter :show="dropFilterShow" :checked="dropFilterChecked" :onClickMask="onClickDropFilterMask" :onClick="onClickDropFilterList"/>
   
   <Header>
-    <Titlebar title="popup<i class='shape-triangle-up'></i>" :click="onClickDropFilter" :rBtn="[{icon:'icon-share',click:this.onClickBtnShare},{icon:'icon-menudot',click:this.onClickBtnMenu}]"/>
+    <Titlebar title="popup<i class='shape-triangle-up'></i>" :onClick="onClickDropFilter" :rBtn="[{icon:'icon-share', onClick:this.onClickBtnShare},{icon:'icon-menudot', onClick:this.onClickBtnMenu}]"/>
   </Header>
   <Container>
       <Card css="padding:10px 12px;">
     		<p class="color-primary" css="padding: 0 0 6px 0;">系统弹出框</p>
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnAlert" text="alert" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnConfirm" text="confirm" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnActionsheet" text="actionsheet" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickToast" :args="['提示框']" text="toast" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickPrompt" :args="['提示框']" text="prompt" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnAlert" text="alert" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnConfirm" text="confirm" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnActionsheet" text="actionsheet" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickToast" :args="['提示框']" text="toast" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickPrompt" :args="['提示框']" text="prompt" />
       </Card>
 
       <Card css="padding:10px 12px;">
         <p class="color-primary" css="padding: 0 0 6px 0;">左弹出框</p>
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnLeftTop" text="left-top" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnLeftMiddle" text="left-middle" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnLeftBottom" text="left-bottom" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnLeftFull" text="left-full" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnLeftTop" text="left-top" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnLeftMiddle" text="left-middle" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnLeftBottom" text="left-bottom" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnLeftFull" text="left-full" />
     	</Card>
     	
     	<Card css="padding:10px 12px;">
     		<p class="color-primary" css="padding: 0 0 6px 0;">右弹出框</p>
-			  <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnRightTop" text="right-top" />
-	      <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnRightMiddle" text="right-middle" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnRightBottom" text="right-bottom" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnRightFull" text="right-full" />
+			  <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnRightTop" text="right-top" />
+	      <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnRightMiddle" text="right-middle" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnRightBottom" text="right-bottom" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnRightFull" text="right-full" />
     	</Card>
 
     	<Card css="padding:10px 12px;">
     		<p class="color-primary" css="padding: 0 0 6px 0;">上弹出框</p>
-    		<Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnTopLeft" text="top-left" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnTopCenter" text="top-center" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnTopRight" text="top-right" />
-        <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnTopFull" text="top-full" />
+    		<Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnTopLeft" text="top-left" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnTopCenter" text="top-center" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnTopRight" text="top-right" />
+        <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnTopFull" text="top-full" />
     	</Card>
 
     	<Card css="padding:10px 12px;">
     		<p class="color-primary" css="padding: 0 0 6px 0;">下弹出框</p>
-    		<Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnBottomLeft" text="bottom-left" />
-	      <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnBottomCenter" text="bottom-center" />
-	      <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnBottomRight" text="bottom-right" />
-	      <Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnBottomFull" text="bottom-full" />
+    		<Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnBottomLeft" text="bottom-left" />
+	      <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnBottomCenter" text="bottom-center" />
+	      <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnBottomRight" text="bottom-right" />
+	      <Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnBottomFull" text="bottom-full" />
     	</Card>
 
     	<Card css="padding:10px 12px;">
     		<p class="color-primary" css="padding: 0 0 6px 0;">中弹出框</p>
-    		<Button css="padding:0 8px;margin:2px 0;" :click="onClickBtnMiddle" text="middle" />
+    		<Button css="padding:0 8px;margin:2px 0;" :onClick="onClickBtnMiddle" text="middle" />
     	</Card>
   </Container>
 </Page>

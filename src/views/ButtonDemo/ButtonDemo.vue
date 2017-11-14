@@ -6,7 +6,7 @@
   <Container>
       <Group title="普通按钮">
           <div style="line-height: 50px;padding: 4px 12px 8px 12px;">
-              <Button text="默认" tipText="1"></Button>
+              <Button text="默认" css="padding: 0 4px;" tipText="1"></Button>
               <Button text="禁用" tipText="1" type="disabled"></Button>
               <Button text="禁用" badgeText="99+" type="primary"></Button>
               <Button text="提交" icon="icon-rdohook" type="submit"></Button>

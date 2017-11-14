@@ -4,8 +4,8 @@
     <Titlebar title="loading"></Titlebar>
   </Header>
   <Container>
-    <Button text="填料环filling ring" type="block" css="margin:12px 10px;" :click="onClickFilling"></Button>
-    <Button text="流光floating ray" type="block" css="margin:12px 10px;" :click="onClickFloating"></Button>
+    <Button text="填料环filling ring" type="block" css="margin:12px 10px;" :onClick="onClickFilling"></Button>
+    <Button text="流光floating ray" type="block" css="margin:12px 10px;" :onClick="onClickFloating"></Button>
   </Container>
   <LoadingFilling :show="fillingShow" css="top:44px;"></LoadingFilling>
   <LoadingFloating :show="floatingShow" css="top:44px;"></LoadingFloating>

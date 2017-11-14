@@ -5,11 +5,11 @@
   </Header>
   <Container>
     <Timepart ref="refTimepart" :error="onTimepartError" classname="border-b"/>
-    <Button :block="true" text="禁用到当前时间" css="margin:10px 12px" :click="onClickDisable"/>
-    <Button :block="true" text="禁用17:00到18:00" css="margin:10px 12px" :click="onClickDisableCustom"/>
-    <Button :block="true" text="选中9:10到12:10" css="margin:10px 12px" :click="onClickActive"/>
-    <Button :block="true" text="提交" css="margin:10px 12px" :click="onClickSubmit"/>
-    <Button :block="true" text="重置" css="margin:10px 12px" :click="onClickReset"/>
+    <Button :block="true" text="禁用到当前时间" css="margin:10px 12px" :onClick="onClickDisable"/>
+    <Button :block="true" text="禁用17:00到18:00" css="margin:10px 12px" :onClick="onClickDisableCustom"/>
+    <Button :block="true" text="选中9:10到12:10" css="margin:10px 12px" :onClick="onClickActive"/>
+    <Button :block="true" text="提交" css="margin:10px 12px" :onClick="onClickSubmit"/>
+    <Button :block="true" text="重置" css="margin:10px 12px" :onClick="onClickReset"/>
   </Container>
 </Page>
 </template>

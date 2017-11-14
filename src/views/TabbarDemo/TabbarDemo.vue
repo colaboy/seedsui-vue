@@ -48,67 +48,67 @@ export default {
       tabbar: [
         {
           text: '首页',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '消息',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '通讯录',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '工作台',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '更多',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         }
       ],
       dropdownTabbar: [
         {
           icon: 'shape-triangle-up',
           text: '分类',
-          click: this.onClickDropDown
+          onClick: this.onClickDropDown
         },
         {
           icon: 'shape-triangle-up',
           text: '品牌',
-          click: this.onClickDropDown
+          onClick: this.onClickDropDown
         },
         {
           icon: 'shape-triangle-up',
           text: '全部商品',
-          click: this.onClickDropDown
+          onClick: this.onClickDropDown
         }
       ],
       footerTabbar: [
         {
           text: '首页',
           icon: 'icon-home',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '消息',
           icon: 'icon-chat',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '通讯录',
           icon: 'icon-contact',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '工作台',
           icon: 'icon-grid',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         },
         {
           text: '更多',
           icon: 'icon-rdomore',
-          click: this.onClickTabbar
+          onClick: this.onClickTabbar
         }
       ]
     }
