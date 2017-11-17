@@ -1,6 +1,6 @@
 <template>
-  <a :class="'button' + (type ? ' ' + type : '')+(block ? ' block' : '') + (disable ? ' disabled' : '') + (active ? ' active' : '') + (classsName ? ' ' + classsName : '')" :style="(block ? '-webkit-box-flex:1;' : '')+(radius?'border-radius:'+radius+'px;':'')+css" @click.stop.prevent="onClickBtn">
-      <Icon v-if="icon" :class="icon"/>
+  <a :class="'button' + (classsName ? ' ' + classsName : '')" :style="css" @click.stop.prevent="onClickBtn">
+      <Icon v-if="licon" :class="licon"/>
       <span v-if="isShowSpan">{{text}}</span>
       <template v-else>{{text}}</template>
       <Icon v-if="ricon" :classsName="ricon"/>
@@ -12,26 +12,6 @@
 export default {
   name: 'Button',
   props: {
-    radius: {
-      type: Number,
-      default: 0
-    },
-    active: {
-      type: Boolean,
-      default: false
-    },
-    disable: {
-      type: Boolean,
-      default: false
-    },
-    block: {
-      type: Boolean,
-      default: false
-    },
-    type: {
-      type: String, // primary|submit|cancel|info|success|warn|disabled
-      default: ''
-    },
     css: {
       type: String,
       default: ''
@@ -52,7 +32,7 @@ export default {
       type: String,
       default: ''
     },
-    icon: {
+    licon: {
       type: String,
       default: ''
     },

@@ -1,5 +1,5 @@
 <template>
-  <div :style="css" class="numbox bordered">
+  <div :style="css" :class="'numbox bordered' + (disable ? ' disabled' : '')">
     <input type="button" class="numbox-button" :disabled="minusDisabled" value="-" @click.stop.prevent="onClickMinus">
     <input type="number" class="numbox-input" :value="truthValue" @blur.stop.prevent="onBlur" @click.stop.prevent="onClick" @input.stop.prevent="onInput" @change.stop.prevent="onChange">
     <input type="button" class="numbox-button" :disabled="plusDisabled" value="+" @click.stop.prevent="onClickPlus">
@@ -41,13 +41,17 @@ export default {
       default: () => {
         return []
       }
+    },
+    disabled: {
+      type: Boolean
     }
   },
   data () {
     return {
       minusDisabled: false,
       plusDisabled: false,
-      truthValue: this.value
+      truthValue: this.value,
+      disable: this.disabled
     }
   },
   created () {
@@ -130,7 +134,7 @@ export default {
         // 如果输入的不是一个正整数，则转为正整数
         if (!/^[1-9]{1,}[0-9]*$/.test(numstr)) {
           const result = numstr.match(/[1-9]{1,}[0-9]*/)
-          value = result ? result[0] : '0'
+          value = result ? result[0] : this.min
           // callback error
           if (this.error) this.error('必须要输入正整数')
         } else {
