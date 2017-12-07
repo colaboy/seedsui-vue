@@ -82,6 +82,44 @@ devMiddleware.waitUntilValid(() => {
 })
 
 var server = app.listen(port)
+// 跨域
+var httpProxy = require('http-proxy')
+const targetUrl = 'http://172.31.3.232:7050';
+const proxy = httpProxy.createProxyServer({
+  target: targetUrl,
+  // 20秒超时
+  proxyTimeout: 20 * 1000,
+  ws: false
+});
+app.use('/api', (req, res) => {
+  proxy.web(req, res, {target: targetUrl + '/'});
+});
+app.use('/test', (req, res) => {
+  proxy.web(req, res, {target: targetUrl + '/'});
+});
+app.use('/login', (req, res) => {
+  proxy.web(req, res, {target: targetUrl + '/login'});
+});
+/*
+  接口直接登录: /server/login.html
+*/
+/* app.get('/_react_/login', (req, resp) => {
+  const request = superagent.post(targetUrl + '/portal/logon.action');
+  request.type('form');
+  request.send({
+    'identifiers.src': 'waiqin365',
+    'identifiers.type': 0,
+    'identifiers.password': 'a11111',
+    'identifiers.verifyCode': undefined,
+    'refer': 'https%3A%2F%2Fcloud.waiqin365.com',
+    'identifiers.tenantname': 'test_flow',
+    'identifiers.code': 'flow_01'
+  });
+  request.end((err, res = {}) => {
+    resp.append('Set-Cookie', res.header['set-cookie']);
+    resp.json({success: true, cookie: res.header['set-cookie']});
+  });
+}); */
 
 module.exports = {
   ready: readyPromise,

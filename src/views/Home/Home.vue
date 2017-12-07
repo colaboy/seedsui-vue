@@ -9,8 +9,8 @@
       </Titlebar>
     </Header>
     <Container>
-      <List tag="ul">
-        <Sliver tag="li" classname="border-b" title="布局 Layout"/>
+      <ul class="ul">
+        <li class="sliver border-b">布局 Layout</li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'flexDemo'}">
             <p class="list-container">Flex</p>
@@ -40,7 +40,7 @@
           </router-link>
         </li>
 
-        <Sliver tag="li" classname="border-b" title="导航 Navigation"/>
+        <li class="sliver border-b">导航 Navigation</li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'titlebarDemo'}">
             <p class="list-container">TitleBar</p>
@@ -55,7 +55,7 @@
           </router-link>
         </li>
 
-        <Sliver tag="li" classname="border-b" title="数据录入 Data Entry"/>
+        <li class="sliver border-b">数据录入 Data Entry</li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'buttonDemo'}">
             <p class="list-container">Button</p>
@@ -84,7 +84,7 @@
           </router-link>
         </li>
 
-        <Sliver tag="li" classname="border-b" title="数据展示 Data Display"/>
+        <li class="sliver border-b">数据展示 Data Display</li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'iconfontDemo'}">
             <p class="list-container">Iconfont</p>
@@ -204,7 +204,7 @@
           </router-link>
         </li>
 
-        <Sliver tag="li" classname="border-b" title="操作反馈 Feedback"/>
+        <li class="sliver border-b">操作反馈 Feedback</li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'popupDemo'}">
             <p class="list-container">Popup</p>
@@ -246,7 +246,14 @@
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-        <Sliver tag="li" classname="border-b" title="手势 Gesture"/>
+        <li>
+          <router-link class="list-li border-b" :to="{name: 'handsignDemo'}">
+            <p class="list-container">HandSign</p>
+            <small>手写签名</small>
+            <i class="list-icon icon-arrowright"></i>
+          </router-link>
+        </li>
+        <li class="sliver border-b">手势 Gesture</li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'dragRefreshDemo'}">
             <p class="list-container">Dragrefresh</p>
@@ -282,7 +289,7 @@
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-        <Sliver tag="li" classname="border-b" title="本地能力 Native"/>
+        <li class="sliver border-b">本地能力 Native</li>
         <li>
           <router-link class="list-li border-b" :to="{name: 'mediaDemo'}">
             <p class="list-container">Media</p>
@@ -304,7 +311,7 @@
             <i class="list-icon icon-arrowright"></i>
           </router-link>
         </li>
-      </List>
+      </ul>
     </Container>
   </Page>
   <transition name="fade">

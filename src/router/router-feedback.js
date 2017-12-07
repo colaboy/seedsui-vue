@@ -4,6 +4,7 @@ import historyDemo from '@/views/historyDemo'
 import calendarDemo from '@/views/calendarDemo'
 import timepartDemo from '@/views/timepartDemo'
 import animateDemo from '@/views/animateDemo'
+import handsignDemo from '@/views/handsignDemo/handsignDemo.vue'
 
 export default [
   {
@@ -36,5 +37,10 @@ export default [
     path: 'historyDemo',
     name: 'historyDemo',
     component: historyDemo
+  },
+  {
+    path: 'handsignDemo',
+    name: 'handsignDemo',
+    component: handsignDemo
   }
 ]

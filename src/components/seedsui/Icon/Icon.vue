@@ -1,15 +1,19 @@
 <template>
-  <i :class="'icon' + (classsName?' '+classsName:'')" :style="css"></i>
+  <i :class="'icon' + (classsName?' '+classsName:'')" :style="'background-image: url(' + src + ');' + css"></i>
 </template>
 <script>
 export default {
-  name: 'InputText',
+  name: 'Icon',
   props: {
     classsName: {
       type: String,
       default: ''
     },
     css: {
+      type: String,
+      default: ''
+    },
+    src: {
       type: String,
       default: ''
     }
@@ -25,6 +29,4 @@ export default {
 }
 </script>
 <style lang="less">
-
-
 </style>
