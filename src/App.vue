@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="less">
-  @import "./assets/styles/router.less";
+  @import "./router/router.less";
 </style>
