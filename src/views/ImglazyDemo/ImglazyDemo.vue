@@ -40,7 +40,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../components/seedsui/seedsui-variables.less";
+  @import "../../components/seedsui/core/seedsui-variables.less";
   .lazyimg{
     display: block;
     width: 300px;

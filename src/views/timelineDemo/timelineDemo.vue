@@ -43,7 +43,7 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "../../components/seedsui/seedsui-variables.less";
+  @import "../../components/seedsui/core/seedsui-variables.less";
   .app-li {
     padding: 12px 0;
   }

@@ -32,8 +32,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @import "../../components/seedsui/seedsui-variables.less";
-  @import "../../components/seedsui/base/core/border.less";
+  @import "../../components/seedsui/core/seedsui-variables.less";
+  @import "../../components/seedsui/core/begin/border.less";
   [class ^= 'col-']:extend(.border-rb all){
     background-color: rgb(235, 235, 239);
     color: rgb(187, 187, 187);

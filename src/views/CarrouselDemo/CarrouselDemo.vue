@@ -50,7 +50,7 @@ export default {
 }
 </script>
 <style lang="less">
-  @import "../../components/seedsui/seedsui-variables.less";
+  @import "../../components/seedsui/core/seedsui-variables.less";
   .carrousel-slide{
     overflow: hidden;
   }

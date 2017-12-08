@@ -154,7 +154,7 @@ export default {
 }
 </script>
 <style scoped>
-  @import "../../components/seedsui/seedsui-variables.less";
+  @import "../../components/seedsui/core/seedsui-variables.less";
   /*箭头*/
   .arrow-top:after,.arrow-bottom:after,.arinputbox-left:after,.arinputbox-right:after {
     content: '';

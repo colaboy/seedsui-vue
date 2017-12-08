@@ -51,5 +51,4 @@
   }
 </script>
 <style lang="less" scoped>
-  @import "../seedsui-variables.less";
 </style>

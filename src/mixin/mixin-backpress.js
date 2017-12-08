@@ -1,5 +1,5 @@
 // 设置store设备返回按键
-import bridge from '@/bridge'
+import bridge from '@/bridge/bridge.js'
 import { mapState, mapActions } from 'vuex'
 
 var mixinBackPress = {

@@ -20,9 +20,9 @@
 	border-color: @button-border;
 
 	&:active,&.active{
-    color:@button-active-color;
-    background-color:@button-active-bg;
-    border-color: @button-active-border;
+    color:@button-checked-color;
+    background-color:@button-checked-bg;
+    border-color: @button-checked-border;
 	}
 
 	&.block{
@@ -87,17 +87,19 @@
 			background-color:@success-bg-active;
 			border-color:@success-bg-active;
 		}
-	}
+  }
+  &[disabled]{
+    pointer-events: none;
+  }
 	/*禁用按钮*/
 	&.disabled,&[disabled]{
-		pointer-events: none;
-		color:@button-disable-color;
-		background-color:@button-disable-bg;
-		border-color:@button-disable-border;
+		color:@button-disabled-color;
+		background-color:@button-disabled-bg;
+		border-color:@button-disabled-border;
 		&:active,&.active{
-			color:@button-disable-color;
-      background-color:@button-disable-bg;
-      border-color:@button-disable-border;
+			color:@button-disabled-color;
+      background-color:@button-disabled-bg;
+      border-color:@button-disabled-border;
 		}
 		.tip,.badge{
 			background-color: @disable-bg;
@@ -217,5 +219,11 @@
 		box-shadow:0 0 0 0 rgba(0, 0, 0, 0.2);
 		margin:@2px 0 -@2px 0;
 	}
+}
+/*小按钮*/
+.button-small{
+  padding: 0 6px;
+  height: 26px;
+  font-size: 12px;
 }
 /*----------------button.less(end)----------------*/

@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 
 // 配置桥接
-import bridge from '@/bridge'
+import bridge from '@/bridge/bridge.js'
 Vue.prototype.bridge = bridge
 
 // 配置路由的开发环境和生产环境
@@ -25,12 +25,12 @@ import store from '@/store'
 
 // 配置数据请求
 import axios from 'axios'
-import http from '@/fetch/api'
+import http from '@/helpers/api.js'
 Vue.prototype.axios = axios
 Vue.prototype.$http = http
 
 // 配置全局组件
-import seedsui from '@/components/seedsui/seedsui'
+import seedsui from '@/components/seedsui/seedsui.vue.js'
 Vue.use(seedsui)
 
 // 配置快速点击
