@@ -1,6 +1,6 @@
-import mediaDemo from '@/views/mediaDemo'
-import mapDemo from '@/views/mapDemo'
-import otherDemo from '@/views/otherDemo'
+import mediaDemo from '@/containers/mediaDemo'
+import mapDemo from '@/containers/mapDemo'
+import otherDemo from '@/containers/otherDemo'
 
 export default [
   {

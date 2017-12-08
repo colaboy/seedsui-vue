@@ -1,10 +1,10 @@
-import loadingDemo from '@/views/loadingDemo'
-import popupDemo from '@/views/popupDemo'
-import historyDemo from '@/views/historyDemo'
-import calendarDemo from '@/views/calendarDemo'
-import timepartDemo from '@/views/timepartDemo'
-import animateDemo from '@/views/animateDemo'
-import handsignDemo from '@/views/handsignDemo/handsignDemo.vue'
+import loadingDemo from '@/containers/loadingDemo'
+import popupDemo from '@/containers/popupDemo'
+import historyDemo from '@/containers/historyDemo'
+import calendarDemo from '@/containers/calendarDemo'
+import timepartDemo from '@/containers/timepartDemo'
+import animateDemo from '@/containers/animateDemo'
+import handsignDemo from '@/containers/handsignDemo/handsignDemo.vue'
 
 export default [
   {

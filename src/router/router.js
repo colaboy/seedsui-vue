@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '@/views/Home'
+import Home from '@/containers/Home'
 
 import RouterLayout from './router-layout.js'
 import RouterNavigation from './router-navigation.js'

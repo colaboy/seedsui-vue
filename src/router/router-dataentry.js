@@ -1,7 +1,7 @@
-import pickerDemo from '@/views/pickerDemo'
-import formDemo from '@/views/formDemo'
-import buttonDemo from '@/views/buttonDemo'
-import starDemo from '@/views/starDemo'
+import pickerDemo from '@/containers/pickerDemo'
+import formDemo from '@/containers/formDemo'
+import buttonDemo from '@/containers/buttonDemo'
+import starDemo from '@/containers/starDemo'
 
 export default [
   {

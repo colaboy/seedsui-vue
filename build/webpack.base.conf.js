@@ -28,7 +28,9 @@ module.exports = {
       'store': resolve('src/store'),
       'router': resolve('src/router'),
       'utils': resolve('src/utils'),
-      'helpers': resolve('src/helpers')
+      'helpers': resolve('src/helpers'),
+      'bridge': resolve('src/bridge'),
+      'mixin': resolve('src/mixin')
     }
   },
   module: {

@@ -1,8 +1,8 @@
-import dragRefreshDemo from '@/views/dragRefreshDemo'
-import pullListDemo from '@/views/pullListDemo'
-import asideDemo from '@/views/asideDemo'
-import shakeDemo from '@/views/shakeDemo'
-import indexbarDemo from '@/views/indexbarDemo'
+import dragRefreshDemo from '@/containers/dragRefreshDemo'
+import pullListDemo from '@/containers/pullListDemo'
+import asideDemo from '@/containers/asideDemo'
+import shakeDemo from '@/containers/shakeDemo'
+import indexbarDemo from '@/containers/indexbarDemo'
 
 export default [
   {

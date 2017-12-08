@@ -1,7 +1,7 @@
-import flexDemo from '@/views/flexDemo'
-import spaceDemo from '@/views/spaceDemo'
-import rowDemo from '@/views/rowDemo'
-import listDemo from '@/views/listDemo'
+import flexDemo from '@/containers/flexDemo'
+import spaceDemo from '@/containers/spaceDemo'
+import rowDemo from '@/containers/rowDemo'
+import listDemo from '@/containers/listDemo'
 
 export default [
   {

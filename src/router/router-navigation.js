@@ -1,5 +1,5 @@
-import titlebarDemo from '@/views/titlebarDemo'
-import tabbarDemo from '@/views/tabbarDemo'
+import titlebarDemo from '@/containers/titlebarDemo'
+import tabbarDemo from '@/containers/tabbarDemo'
 
 export default [
   {
